@@ -1,0 +1,250 @@
+@import 'fonts.sass'
+body
+  font-family: 'Avenir Next Cyr 400', sans-serif
+  color: #373944
+  font-size: 16px
+  overflow-x: hidden
+
+a
+  color: inherit
+  text-decoration: none
+section
+  margin-bottom: 140px
+
+.text-fs18
+  font-size: 18px
+
+.text-mak
+  font-family: 'Mak', sans-serif
+
+.text-avenir-300
+  font-family: 'Avenir Next Cyr 300', sans-serif
+
+.text-avenir-400
+  font-family: 'Avenir Next Cyr 400', sans-serif
+
+.text-avenir-450
+  font-family: 'Avenir Next Cyr 450', sans-serif !important
+
+.text-avenir-600
+  font-family: 'Avenir Next Cyr 600', sans-serif
+
+.text-playfair
+  font-family: 'Playfair Display', sans-serif
+
+.text-montserrat
+  font-family: 'Montserrat', sans-serif
+
+.text-lh-150
+  line-height: 150%
+
+.text-lh-200
+  line-height: 200%
+.container
+  max-width: 1140px
+  padding: 0 10px
+  margin: 0 auto
+.auth-container
+  max-width: 630px
+  padding: 0 10px
+  margin: 0 auto
+.auth-form
+  width: 630px
+  max-width: 90vw
+.title
+  font-size: 48px
+  line-height: 58px
+  margin-top: 0
+  font-family: 'Mak', sans-serif
+  color: $dark
+.sub-title
+  font-size: 48px
+  line-height: 58px
+  margin-top: 0
+  font-family: 'Mak', sans-serif
+  color: $dark
+.img
+  max-width: 100%
+  height: auto
+
+.slide-btn
+  cursor: pointer
+  position: relative
+  z-index: 1
+  svg
+    fill: #6a6b6a
+    transition: all .2s linear
+  &.prev
+    &::before
+      position: absolute
+      content: ''
+      width: 2px
+      height: 2px
+      border-radius: 100%
+      opacity: 0
+      transition: all .2s linear
+      z-index: -1
+      top: 7px
+      left: 4px
+    &:hover
+      &::before
+        transform: scale(25)
+        opacity: 1
+  &.next
+    &::after
+      position: absolute
+      content: ''
+      width: 2px
+      height: 2px
+      opacity: 0
+      border-radius: 100%
+      transition: all .2s linear
+      z-index: -1
+      top: 7px
+      right: 4px
+    &:hover
+      &::after
+        transform: scale(25)
+        opacity: 1
+
+  &.offer-slider-btn
+    &.prev
+      &::before
+        background: #6a6b6a
+
+    &.next
+      &::after
+        background: #6a6b6a
+
+    &:hover
+      svg
+        fill: #fff
+
+  &.gallery-slider-btn
+    svg
+        fill: $grey-4
+    &:hover
+      svg
+        fill: $dark
+    &.prev
+      &::before
+        background: #BFBEBF
+
+    &.next
+      &::after
+        background: #BFBEBF
+
+.link
+  display: inline-block
+  border-bottom: 1px solid #5C606A
+
+.carousel__prev
+  opacity: 0
+.carousel__next
+  opacity: 0
+.gallery-item
+  &__img
+    background: #FFFFFF
+    border: 14px solid $dark
+    box-sizing: border-box
+    padding: 50px 20px
+    position: relative
+    img
+      object-fit: contain
+    &-overlay
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      background: #373944
+      opacity: 0
+      box-shadow: 0px 24px 42px rgba(0, 0, 0, 0.5)
+      transition: all .2s linear
+      cursor: pointer
+    &:hover > div
+      opacity: .7
+  &__title
+    max-width: 200px
+    font-size: 14px
+  &__subtitle
+    max-width: 200px
+    font-size: 12px
+@media (max-width: 1024px)
+  .gallery-item
+    &__img
+      border: 10px solid $dark
+      padding: 30px 15px
+.overlay-img
+  position: relative
+  &__overlay
+    position: absolute
+    opacity: 0
+    left: 0
+    right: 0
+    bottom: 6px
+    top: 0
+    background: #373944
+    transition: all .2s linear
+    box-shadow: 0px 24px 42px rgba(0, 0, 0, 0.14)
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+  &:hover > div
+    opacity: .7
+  &.bordered
+    border: 14px solid #2A2B33
+    box-sizing: border-box
+    padding: 50px 25px
+    & .overlay-img__overlay
+      bottom: 0
+@media (max-width: 1024px)
+  .overlay-img
+    &.bordered
+      border: 10px solid $dark
+      padding: 30px 15px
+      height: fit-content
+
+
+.page
+  padding-top: 40px
+  padding-bottom: 140px
+.breadcrumbs
+  margin-bottom: 40px
+  font-size: 14px
+  &.lk
+    margin-top: 40px
+
+.q-checkbox__bg
+  border: 1px solid #2A2B33
+  box-sizing: border-box
+  border-radius: 4px
+
+.lk-card
+  background: #FFFFFF
+  padding: 24px 32px
+  &-title
+    padding-bottom: 14px
+    border-bottom: 1px solid #EBEEF1
+    margin-bottom: 24px
+
+@media (max-width: 1024px)
+  section
+    margin-bottom: 60px
+  .page
+    padding-top: 20px
+    padding-bottom: 60px
+  .title
+    font-size: 36px
+    line-height: 43px
+  .sub-title
+    font-size: 24px
+    line-height: 28px
+    span
+      display: block
+  .text-lh-200
+    line-height: 150%
