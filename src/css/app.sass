@@ -145,18 +145,20 @@ section
 .gallery-item
   &__img
     background: #FFFFFF
-    border: 14px solid $dark
+    //border: 7px solid $dark
     box-sizing: border-box
-    padding: 50px 20px
+    //padding: 0px 10px
     position: relative
     img
       object-fit: contain
+      height: 155px
+      width: 235px
     &-overlay
       position: absolute
       left: 0
       right: 0
       top: 0
-      bottom: 0
+      bottom: 6px
       display: flex
       align-items: center
       justify-content: center
@@ -176,8 +178,8 @@ section
 @media (max-width: 1024px)
   .gallery-item
     &__img
-      border: 10px solid $dark
-      padding: 30px 15px
+      //border: 10px solid $dark
+      //padding: 30px 15px
 .overlay-img
   position: relative
   &__overlay

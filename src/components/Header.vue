@@ -2,15 +2,16 @@
   <q-header class="bg-white header">
       <div class="container header-wrapper">
         <q-btn class="lt-md" @click="leftDrawerOpen=!leftDrawerOpen" round unelevated icon="menu" text-color="dark"/>
+        <div class="header-logo cursor-pointer flex" @click="$router.push({name:'index'})">
+            <img src="~assets/logo.png" alt="">
+        </div>
         <div class="gt-sm nav">
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'about'}">О нас</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'profit'}">Доход</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'gallery'}">Галерея</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'about'}">Контакты</router-link>
         </div>
-        <div class="header-logo cursor-pointer flex" @click="$router.push({name:'index'})">
-            <img src="~assets/logo.svg" alt="">
-        </div>
+
         <div class="header-buttons flex items-center ">
           <div class="gt-sm q-gutter-md">
             <q-btn class="q-px-lg" :to="{name:'login'}" outline rounded unelevated no-caps text-color="dark" label="Вход"/>
@@ -90,7 +91,7 @@ export default {
     display: flex
     align-items: center
     justify-content: space-between
-    padding: 30px 0
+    padding: 10px 0
   &-mobile
     position: absolute
     background: #FFFFFF
@@ -119,7 +120,7 @@ export default {
       color: $dark
 @media (max-width: 1024px)
   .header-wrapper
-    padding: 20px 10px
+    padding: 10px 10px
   .nav-link
     font-size: 24px
     margin-bottom: 32px

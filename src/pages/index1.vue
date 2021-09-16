@@ -2,23 +2,46 @@
   <q-page>
 
     <section class="offer">
-      <div class=" relative-position">
-       <q-carousel
-      animated
-      v-model="offer_slide"
-      arrows
-      :autoplay="5000"
-      class="offer-slider"
-      transition-prev="jump-right"
+      <div class="container relative-position">
+        <q-carousel
+          swipeable
+          animated
+          transition-prev="jump-right"
           transition-next="jump-left"
-      swipeable
-      infinite
-    >
-      <q-carousel-slide :name="1" img-src="https://cdn.quasar.dev/img/mountains.jpg" />
-      <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg" />
-      <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg" />
-      <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg" />
-    </q-carousel>
+          v-model="offer_slide"
+          :autoplay="5000"
+          ref="offerSlider"
+          class="offer-slider"
+          infinite>
+          <q-carousel-slide class="offer-slide" :name="index+1"  v-for="(slide,index) in offerSlides" :key="index">
+            <div class="offer-slide-text">
+              <h1 class="title  text-dark">{{slide.title}}</h1>
+              <p class="q-mb-none text-h5 subtitle text-avenir-300 text-dark">{{slide.text}}</p>
+            </div>
+            <div class="text-center offer-slide-img"><img class="img" :src="slide.img" alt=""></div>
+          </q-carousel-slide>
+        </q-carousel>
+        <div class="offer-slide-controls">
+          <div class="">
+            <div class="offer-slide-controls__progress-num">
+              <p class="no-margin text-caption" :class="{'text-dark':offer_slide===index+1}" v-for="(slide,index) in offerSlides" :key="index">0{{index+1}}</p>
+            </div>
+            <q-linear-progress class="offer-slide-controls__progress" track-color="grey-5" size="1px" :value="offerSliderProgress" color="grey-9" />
+          </div>
+          <div class="offer-slide-controls__buttons">
+            <div @click="$refs.offerSlider.previous()" class="slide-btn offer-slider-btn prev">
+              <svg width="45" height="16" viewBox="0 0 45 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.292893 7.29289C-0.0976295 7.68341 -0.0976296 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41422 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31945 8.07107 0.928929C7.68054 0.538405 7.04738 0.538404 6.65685 0.928929L0.292893 7.29289ZM45 7L1 7L1 9L45 9L45 7Z" />
+              </svg>
+            </div>
+            <div @click="$refs.offerSlider.next()" class="slide-btn offer-slider-btn next">
+              <svg width="45" height="16" viewBox="0 0 45 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M44.7071 7.29289C45.0976 7.68341 45.0976 8.31658 44.7071 8.7071L38.3431 15.0711C37.9526 15.4616 37.3195 15.4616 36.9289 15.0711C36.5384 14.6805 36.5384 14.0474 36.9289 13.6569L42.5858 8L36.9289 2.34314C36.5384 1.95262 36.5384 1.31945 36.9289 0.928929C37.3195 0.538405 37.9526 0.538404 38.3431 0.928929L44.7071 7.29289ZM-8.74228e-08 7L44 7L44 9L8.74228e-08 9L-8.74228e-08 7Z" />
+              </svg>
+
+            </div>
+          </div>
+        </div>
 
       </div>
 
@@ -366,7 +389,6 @@ export default {
 <style lang="sass" scoped>
 .offer
   background: $grey-2
-
   &-slider
     height: 800px
     background: $grey-2
