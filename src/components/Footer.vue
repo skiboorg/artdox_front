@@ -10,7 +10,7 @@
         </div>
         <div class="header-logo ">
            <div class="header-logo cursor-pointer flex" @click="$router.push({name:'index'})">
-            <img src="~assets/logo-w.svg" alt="">
+            <img src="~assets/logo.png" alt="">
         </div>
 
         </div>
@@ -80,7 +80,7 @@
             ИНН 213901239901239</p>
                  <q-separator spaced="lg" color="grey-8"/>
                 <p class="text-center"> <a href="#" class="link">Политика конфиденциальности</a></p>
-                 <p class="no-margin text-white">2021 © ardbox</p>
+                 <p class="no-margin text-white">2021 © artdox</p>
         </div>
         </div>
 
