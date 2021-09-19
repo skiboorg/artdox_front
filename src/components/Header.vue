@@ -2,14 +2,15 @@
   <q-header class="bg-white header">
       <div class="container header-wrapper">
         <q-btn class="lt-md" @click="leftDrawerOpen=!leftDrawerOpen" round unelevated icon="menu" text-color="dark"/>
-        <div class="header-logo cursor-pointer flex" @click="$router.push({name:'index'})">
-            <img src="~assets/logo.png" alt="">
-        </div>
+
         <div class="gt-sm nav">
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'about'}">О нас</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'profit'}">Доход</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'gallery'}">Галерея</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'about'}">Контакты</router-link>
+        </div>
+         <div class="header-logo cursor-pointer flex" @click="$router.push({name:'index'})">
+            <img src="~assets/logo.png" alt="">
         </div>
 
         <div class="header-buttons flex items-center ">
