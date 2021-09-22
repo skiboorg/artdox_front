@@ -30,9 +30,10 @@
         <div class="row q-col-gutter-md-xl">
           <div class=" col-12 col-md-8">
             <p class="q-mb-none text-lh-200">
-              <span class="text-h6">Наши картины - как облигации на фондовом рынке: всегда приносят гарантированный доход своему владельцу.</span>
-           <br><br>
-Каждая картина, купленная у нас, имеет доходность 24% в год. Платим 6% в квартал от суммы покупки. Возврат картины и средств возможен в любое время.</p>
+              <span class="text-h6">Наши картины всегда приносят гарантированный доход своему владельцу. Каждая
+                картина, купленная у нас, имеет доходность 20% в год. <br><br>
+              Платим 5% каждый квартал от суммы покупки. Возврат картины и средств возможен в любое время.</span>
+           </p>
           </div>
           <div class="gt-sm col-4">
             <div class="row q-col-gutter-md-md">
@@ -261,6 +262,7 @@
         <h3 class="title">Новости</h3>
         <div class="news-grid">
           <div class="news-item" v-for="(item,index) in newsItems" :key="index">
+            <a target="_blank" :href="item.url">
             <div class="news-item__top flex items-center q-mb-lg">
               <p class="q-mb-none text-avenir-600 text-grey-5 text-caption">{{item.date}}</p>
               <q-separator spaced="md" vertical/>
@@ -272,6 +274,7 @@
                 {{item.text}}
               </p>
             </div>
+            </a>
           </div>
         </div>
       </div>
@@ -351,9 +354,9 @@ export default {
         {question:'Как, и когда я смогу вернуть свои потраченные на покупку картины деньги?',answer:'- Согласно Договору Управления, вы получаете от нас в течение года, каждый квартал выплаты,  потом можете продлить Договор, или вернуть нам картину и забрать потраченную на ее покупку деньги, весь раннее полученный доход остается у вас.  '},
       ],
       newsItems:[
-        {date:'Сентябрь 02, 2021', tag:'Искусствовед',title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus sollicitudin at lobortis cursus accumsan vitae nisl purus. Adipiscing et quam felis quisque eu. Justo, quis neque convallis tristique sed augue morbi etiam. Ac id mi non amet, turpis massa.'},
-        {date:'Сентябрь 02, 2021', tag:'Директор',title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus sollicitudin at lobortis cursus accumsan vitae nisl purus. Adipiscing et quam felis quisque eu. Justo, quis neque convallis tristique sed augue morbi etiam. Ac id mi non amet, turpis massa.'},
-        {date:'Сентябрь 02, 2021', tag:'Менеджер',title:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',text:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus sollicitudin at lobortis cursus accumsan vitae nisl purus. Adipiscing et quam felis quisque eu. Justo, quis neque convallis tristique sed augue morbi etiam. Ac id mi non amet, turpis massa.'},
+        {date:'17 февраля 2020', tag:'Денис Белькевич',title:'Просто о сложном: Art Investment',text:'Предметы искусства с инвестиционной точки зрения такой же материальный актив, как драгоценные металлы, недвижимость, акции и другие ценные бумаги. В середине 1980-х «язык искусства» начали переводить на понятный инвестору финансовый язык. С 2000-х годов, после появления доступных статистических баз данных и инвестиционной аналитики, искусство начали использовать в качестве осмысленного финансового инструмента.',url:'https://artinvestment.ru/invest/analytics/20200217_art_invest_2.html'},
+        {date:'22 ноября 2020', tag:'Ксения Хофманн',title:'Произведения искусства как инструмент инвестиций',text:'Произведения искусства могут расти в цене и приносить своим вкладчикам прибыль подобно акциям и другим известным нам активам. Например, картина «Спаситель мира», написанная Леонардо Да Винчи в 1499 году, сейчас стоит более $450 млн, а «Алжирские женщины» Пабло Пикассо – почти $180 млн.',url:'https://vc.ru/finance/179696-proizvedeniya-iskusstva-kak-instrument-investiciy'},
+        {date:'22 ноября 2020', tag:'Ксения Хофманн',title:'Произведения искусства как инструмент инвестиций',text:'Произведения искусства могут расти в цене и приносить своим вкладчикам прибыль подобно акциям и другим известным нам активам. Например, картина «Спаситель мира», написанная Леонардо Да Винчи в 1499 году, сейчас стоит более $450 млн, а «Алжирские женщины» Пабло Пикассо – почти $180 млн.',url:'https://vc.ru/finance/179696-proizvedeniya-iskusstva-kak-instrument-investiciy'},
       ],
       interierItems:[
         {title:'Заказ экспозиции',text:'Заказать экспозицию вы сможете после регистрации на нашем сайте в личном кабинете.'},
