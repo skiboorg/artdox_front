@@ -14,8 +14,8 @@
       swipeable
       infinite
     >
-      <q-carousel-slide :name="1" img-src="~assets/b1.jpg" />
-      <q-carousel-slide :name="2" img-src="~assets/b2.jpg" />
+      <q-carousel-slide :name="1" img-src="~assets/b2.jpg" />
+      <q-carousel-slide :name="2" img-src="~assets/b2.png" />
 
     </q-carousel>
 
@@ -23,29 +23,7 @@
 
 
     </section>
-     <section class="about">
-      <div class="container">
-        <h3 class="title q-mb-lg ">Доходное искусство</h3>
 
-        <div class="row q-col-gutter-md-xl">
-          <div class=" col-12 col-md-8">
-            <p class="q-mb-none text-lh-200">
-              <span class="text-h6">Наши картины всегда приносят гарантированный доход своему владельцу. Каждая
-                картина, купленная у нас, имеет доходность 20% в год. <br><br>
-              Платим 5% каждый квартал от суммы покупки. Возврат картины и средств возможен в любое время.</span>
-           </p>
-          </div>
-          <div class="gt-sm col-4">
-            <div class="row q-col-gutter-md-md">
-              <div class="col-12 "><img class="img" src="~assets/about2.jpg" alt=""></div>
-
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
     <section class="about">
       <div class="container">
         <h3 class="title q-mb-lg ">О нас</h3>
@@ -61,7 +39,7 @@
           </div>
           <div class="gt-sm col-6">
             <div class="row q-col-gutter-md-md">
-              <div class="col-12 "><img class="img" src="~assets/about1.jpg" alt=""></div>
+              <div class="col-12 "><img class="img" src="~assets/about2.jpg" alt=""></div>
 
 
             </div>
@@ -393,7 +371,7 @@ export default {
   background: $grey-2
 
   &-slider
-    height: 800px
+    height: 900px
     background: $grey-2
   &-slide
     background: $grey-2
