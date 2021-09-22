@@ -4,16 +4,16 @@
     <section class="offer">
       <div class=" relative-position">
        <q-carousel
-      animated
-      v-model="offer_slide"
-      arrows
-      :autoplay="5000"
-      class="offer-slider"
-      transition-prev="jump-right"
-          transition-next="jump-left"
-      swipeable
-      infinite
-    >
+        animated
+        v-model="offer_slide"
+        arrows
+        :autoplay="5000"
+        class="offer-slider"
+        transition-prev="jump-right"
+        transition-next="jump-left"
+        swipeable
+        infinite
+      >
       <q-carousel-slide :name="1" img-src="~assets/b2.jpg" />
       <q-carousel-slide :name="2" img-src="~assets/b2.png" />
 
