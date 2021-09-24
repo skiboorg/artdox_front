@@ -41,7 +41,7 @@
           </div>
           <div class="gt-sm col-6">
             <div class="row q-col-gutter-md-md ">
-              <div class="col-12 "><img class="img" style="width: 50%" src="~assets/about2.jpg" alt=""></div>
+              <div class="col-12 text-center"><img class="img" style="width: 50%" src="~assets/about2.jpg" alt=""></div>
 
 
             </div>
