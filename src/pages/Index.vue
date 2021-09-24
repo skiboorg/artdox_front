@@ -28,18 +28,20 @@
       <div class="container">
         <h3 class="title q-mb-lg ">О нас</h3>
 
-        <div class="row q-col-gutter-md-xl">
+        <div class="row q-col-gutter-md-xl items-center">
           <div class=" col-12 col-md-6">
-            <p class="q-mb-none text-lh-200">
+            <p class="q-mb-none text-lh-150 text-fs-18">
             Вся наша деятельность нацелена на то, чтобы предметы искусства приносили своему владельцу не только
               эстетическое удовольствие, но и материальную выгоду. <br><br>
-              Гораздо приятней смотреть на картину и знать, что деньги, потраченные на ее приобретение, не только возможно вернуть, но и приумножить.<br><br>
-              Не важно, что вы будете делать с картиной, повесите дома, в офисе, подарите друзьям, или оставите у нас на хранение, вы всегда будете иметь с нее доход.
+              Гораздо приятней смотреть на картину и знать, что деньги, потраченные на ее приобретение, не только
+              возможно вернуть, но и приумножить.<br><br>
+              Не важно, что вы будете делать с картиной, повесите дома, в офисе, подарите друзьям, или оставите
+              у нас на хранение, вы всегда будете иметь с нее доход.
             </p>
           </div>
           <div class="gt-sm col-6">
-            <div class="row q-col-gutter-md-md">
-              <div class="col-12 "><img class="img" src="~assets/about2.jpg" alt=""></div>
+            <div class="row q-col-gutter-md-md ">
+              <div class="col-12 "><img class="img" style="width: 50%" src="~assets/about2.jpg" alt=""></div>
 
 
             </div>
@@ -54,11 +56,13 @@
 
         <div class="row q-col-gutter-md-xl">
           <div class=" col-12 col-md-12">
-            <p class="q-mb-md q-mb-md-lg text-lh-200">
-              Наша работа позволяет сформировать доходность для каждой картины, при этом уровень ликвидности не зависит от художественной ценности и материальной стоимости актива, прибыль с картин получается при условии участия в экспозиционной и продажной деятельности на территории Китая и России.
+            <p class="q-mb-md q-mb-md-lg text-lh-150 text-fs-18">
+              Наша работа позволяет сформировать доходность для каждой картины, при этом уровень ликвидности
+              не зависит от художественной ценности и материальной стоимости актива, прибыль с картин
+              получается при условии участия в экспозиционной и продажной деятельности на территории Китая и России.
             </p>
             <div class="text-center">
-          <q-btn :to="{name:'profit'}" size="18px" class="text-montserrat q-px-xl" no-caps rounded unelevated color="dark" text-color="white" label="Подробнее"/>
+          <q-btn :to="{name:'profit'}" size="18px" class="text-montserrat q-px-xl" no-caps rounded unelevated outline color="dark"  label="Подробнее"/>
         </div>
           </div>
 
@@ -105,7 +109,7 @@
                     </div>
                   </div>
                   <p class="q-mb-sm text-left gallery-item__title text-avenir-450 text-dark">{{slide.title}}</p>
-                  <p class="text-left gallery-item__subtitle text-dark">{{slide.subtitle}}</p>
+<!--                  <p class="text-left gallery-item__subtitle text-dark">{{slide.subtitle}}</p>-->
 
                   <p class="q-mb-none text-left text-caption">Артикул № {{slide.art}}</p>
                   <p class="q-mb-md text-left text-caption">Размер {{slide.size}}</p>
@@ -129,7 +133,7 @@
       <div class="container">
         <h3 class="title">В интерьере</h3>
         <div class="interier-grid">
-          <div class="overlay-img" v-for="(i,index) in 8" :key="i">
+          <div class="overlay-img" v-for="(i,index) in 4" :key="i">
             <img class="img" :src="`${index+1}.jpg`" alt="">
             <div class="overlay-img__overlay">
               <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
