@@ -15,10 +15,11 @@
 
         <div class="header-buttons flex items-center ">
           <div class="gt-sm q-gutter-md">
-            <q-btn class="q-px-lg" :to="{name:'login'}" outline rounded unelevated no-caps text-color="dark" label="Вход"/>
-            <q-btn class="q-px-lg" :to="{name:'register'}" outline rounded unelevated no-caps text-color="dark" label="Регистрация"/>
-             <q-btn  :to="{name:'cart'}"  round unelevated outline no-caps text-color="dark" icon="shopping_basket"/>
-            <q-btn round unelevated @mouseenter="userMenu=!userMenu" color="dark" icon="person_outline"/>
+
+            <q-btn v-if="!$auth.loggedIn" class="q-px-lg" :to="{name:'login'}" outline rounded unelevated no-caps text-color="dark" label="Вход"/>
+            <q-btn v-if="!$auth.loggedIn" class="q-px-lg" :to="{name:'register'}" outline rounded unelevated no-caps text-color="dark" label="Регистрация"/>
+            <q-btn v-if="$auth.loggedIn" :to="{name:'cart'}"  round unelevated outline no-caps text-color="dark" icon="shopping_basket"/>
+            <q-btn v-if="$auth.loggedIn" round unelevated @mouseenter="userMenu=!userMenu" color="dark" icon="person_outline"/>
           </div>
 
           <div @click="$router.push({name:'cart'})" class="lt-md q-ml-md-xl header-cart flex items-center cursor-pointer">

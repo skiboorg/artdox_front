@@ -1,5 +1,6 @@
 <template>
   <q-page class="">
+
       <div class="profile-wrapper">
         <div class="lk-card">
           <div class="lk-card-title">
@@ -10,11 +11,11 @@
             <img src="https://cdn.quasar.dev/img/avatar.png" alt="">
           </q-avatar>
             <div class="">
-              <p class="q-mb-sm text-body2 text-avenir-450">Chance Passaquindici Arcand</p>
-              <p class="q-mb-sm text-caption text-grey-6">chancepassa@gmail.com</p>
+              <p class="q-mb-sm text-body2 text-avenir-450">{{$auth.user.fio}}</p>
+              <p class="q-mb-sm text-caption text-grey-6">{{$auth.user.email}}</p>
               <p class="q-mb-none text-caption text-grey-6">+7 (937) 936-05-00</p>
               <q-separator spaced="md"/>
-              <p class="q-mb-sm text-caption text-grey-6 text-avenir-450">Дата регистрации 23.08.2021</p>
+              <p class="q-mb-sm text-caption text-grey-6 text-avenir-450">Дата регистрации {{new Date($auth.user.date_joined).toLocaleDateString()}}</p>
             </div>
           </div>
         </div>
@@ -28,7 +29,7 @@
 <path d="M7.99961 16L15.5996 8.4" stroke="#6FCF97" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round"/>
 <path d="M8 8L16 8L16 16" stroke="#6FCF97" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round"/>
 </svg>
-            <p class="no-margin text-body2">Общая сумма картин: <span class="text-grey-6">123.422 Р (+ 10.000Р)</span> </p>
+            <p class="no-margin text-body2">Общая сумма картин: <span class="text-grey-6">123.422 Р </span> </p>
 
           </div>
                <p class="q-mb-lg text-body2">Прибыль: 10.000 ₽ <span class="text-grey-6">(за последний месяц)</span> </p>

@@ -1,5 +1,6 @@
 <template>
   <q-page class="page bg-grey-2">
+
   <div class="item-container">
     <div class="item-card">
       <div class="overlay-img bordered" >
@@ -13,16 +14,16 @@
           </div>
       <div class="flex column items-start justify-between">
         <div class="">
-          <h1 class="item-title">«Утро в лесу»</h1>
-        <p class="text-avenir-300 q-mb-lg-xl">Репродукция акварели музейного качества</p>
-        <p class="text-caption text-grey q-mb-none">Артикул № 001007</p>
-        <p class="text-caption text-grey q-mb-lg-xl">Размер 40х60 см</p>
-        <p class="text-warning text-fs18 q-mb-none text-avenir-450">38000 ₽</p>
+          <h1 class="item-title">«{{item.name}}»</h1>
+        <div class="text-avenir-300 q-mb-lg-xl" v-html="item.description"></div>
+        <p class="text-caption text-grey q-mb-none">Артикул № {{item.article}}</p>
+        <p class="text-caption text-grey q-mb-lg-xl">Размер {{item.size}}</p>
+        <p class="text-warning text-fs18 q-mb-none text-avenir-450">{{item.price}} ₽</p>
         </div>
-         <q-btn class="q-px-lg gt-sm" size="18px" color="dark" rounded unelevated no-caps text-color="white" label="В корзину"/>
+         <q-btn class="q-px-lg gt-sm" size="18px" @click="addToCart(item.id)" :loading="loading"  color="dark" rounded unelevated no-caps text-color="white" label="В корзину"/>
       </div>
     </div>
-     <q-btn class="q-px-lg lt-md full-width q-mb-xl"  size="18px" color="dark" rounded unelevated no-caps text-color="white" label="В корзину"/>
+     <q-btn class="q-px-lg lt-md full-width q-mb-xl" @click="addToCart(item.id)" :loading="loading" size="18px" color="dark" rounded unelevated no-caps text-color="white" label="В корзину"/>
     <p class="text-fs18 text-avenir-600">Отзывы (2)</p>
     <div class="item-feedback-grid">
       <div class="item-feedback-item">
@@ -57,7 +58,32 @@
 
   </q-page>
 </template>
+<script>
 
+
+export default {
+  data() {
+    return {
+      loading:false,
+      checkBox:false,
+       item:{},
+    }
+
+  },
+  async beforeMount() {
+    const resp = await this.$api.get(`/api/item/one?slug=${this.$route.params.slug}`)
+    this.item = resp.data
+  },
+  methods:{
+    async addToCart(id){
+      console.log('dsfd')
+      this.loading = !this.loading
+      await this.$api.post('/api/cart/add',{id})
+      this.loading = !this.loading
+    }
+  }
+}
+</script>
 
 <style lang="sass" scoped>
 .item
