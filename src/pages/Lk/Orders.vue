@@ -18,13 +18,15 @@
             </div>
 
             <div class="">
-              <p class="text-body2">Статус: <span class="text-negative text-avenir-450">Продано</span> </p>
-              <q-separator spaced="md"/>
-              <p class="text-body2">Сумма: <span class="text-warning text-avenir-450">{{item.price}} ₽</span> </p>
-              <p class="text-body2">Тариф: <span class="text-grey-6 text-avenir-450">Премиум</span> </p>
-              <q-separator spaced="md"/>
-              <p class="text-body2">Срок: <span class="text-grey-6 text-avenir-450">1 месяц</span> </p>
-              <p class="text-body2">Дата: <span class="text-grey-6 text-avenir-450">{{new Date($auth.user.orders[index].created_at).toLocaleDateString()}}</span> </p>
+
+              <p class="text-body2">Стоимость: <span class="text-positive text-avenir-450">{{item.price}} ₽</span> </p>
+              <p class="text-body2">Активная прибыль: <span class="text-grey-6 text-avenir-450">0 ₽</span> </p>
+              <q-separator spaced="lg"/>
+               <p class="text-body2">Дата покупки: <span class="text-grey-6 text-avenir-450">{{new Date($auth.user.orders[index].created_at).toLocaleDateString()}}</span> </p>
+               <p class="text-body2">Дата получения прибыли: <span class="text-grey-6 text-avenir-450">{{new Date($auth.user.orders[index].created_at).toLocaleDateString()}}</span> </p>
+              <p class="text-body2 q-mb-lg">Статус: <span class="text-positive text-avenir-450">На выставках</span> </p>
+               <q-btn unelevated rounded color="red-2"  no-caps text-color="red-6" class="q-px-md" label="Вернуть картину"/>
+
             </div>
           </div>
           <q-separator spaced="lg"/>

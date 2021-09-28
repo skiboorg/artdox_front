@@ -24,35 +24,61 @@
       </div>
     </div>
      <q-btn class="q-px-lg lt-md full-width q-mb-xl" @click="addToCart(item.id)" :loading="loading" size="18px" color="dark" rounded unelevated no-caps text-color="white" label="В корзину"/>
-    <p class="text-fs18 text-avenir-600">Отзывы (2)</p>
-    <div class="item-feedback-grid">
-      <div class="item-feedback-item">
-        <div class="text-center">
-          <q-avatar size="63px" class="q-mb-sm">
-            <img src="https://cdn.quasar.dev/img/avatar.png" alt="">
-          </q-avatar>
-          <p class="no-margin text-body2 text-avenir-450">Omar Levin</p>
-        </div>
-        <div class="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas eleifend faucibus convallis sit.<br><br>
+   <h3 class="title text-center">FAQ</h3>
+    <section class="faq">
+      <div class="container">
 
-          Scelerisque accumsan semper volutpat sed vitae lorem maecenas eget semper. Dui euismod a platea ut pretium vivamus tellus vivamus in. Tristique diam commodo integer sodales nisi suspendisse.</p>
-        </div>
-    </div>
-       <div class="item-feedback-item">
-        <div class="text-center">
-          <q-avatar size="63px" class="q-mb-sm">
-            <img src="https://cdn.quasar.dev/img/avatar.png" alt="">
-          </q-avatar>
-          <p class="no-margin text-body2 text-avenir-450">Omar Levin</p>
-        </div>
-        <div class="">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas eleifend faucibus convallis sit.<br><br>
+        <q-list separator>
+      <q-expansion-item
+        v-for="(item,index) in faqItems"
+        :key="index"
+        group="group"
+        :label="item.question"
+        :default-opened="index===0"
+        header-class="text-playfair q-py-md text-body1"
+        class="text-montserrat text-body2"
+        expand-icon="add"
+        expanded-icon="close"
+      >
+        <q-card class="bg-grey-2">
+          <q-card-section>
+            {{item.answer}}
+          </q-card-section>
+        </q-card>
+      </q-expansion-item>
 
-          Scelerisque accumsan semper volutpat sed vitae lorem maecenas eget semper. Dui euismod a platea ut pretium vivamus tellus vivamus in. Tristique diam commodo integer sodales nisi suspendisse.</p>
-        </div>
-    </div>
-    </div>
+
+    </q-list>
+      </div>
+     </section>
+<!--    <div class="item-feedback-grid">-->
+<!--      <div class="item-feedback-item">-->
+<!--        <div class="text-center">-->
+<!--          <q-avatar size="63px" class="q-mb-sm">-->
+<!--            <img src="https://cdn.quasar.dev/img/avatar.png" alt="">-->
+<!--          </q-avatar>-->
+<!--          <p class="no-margin text-body2 text-avenir-450">Omar Levin</p>-->
+<!--        </div>-->
+<!--        <div class="">-->
+<!--          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas eleifend faucibus convallis sit.<br><br>-->
+
+<!--          Scelerisque accumsan semper volutpat sed vitae lorem maecenas eget semper. Dui euismod a platea ut pretium vivamus tellus vivamus in. Tristique diam commodo integer sodales nisi suspendisse.</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--       <div class="item-feedback-item">-->
+<!--        <div class="text-center">-->
+<!--          <q-avatar size="63px" class="q-mb-sm">-->
+<!--            <img src="https://cdn.quasar.dev/img/avatar.png" alt="">-->
+<!--          </q-avatar>-->
+<!--          <p class="no-margin text-body2 text-avenir-450">Omar Levin</p>-->
+<!--        </div>-->
+<!--        <div class="">-->
+<!--          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas eleifend faucibus convallis sit.<br><br>-->
+
+<!--          Scelerisque accumsan semper volutpat sed vitae lorem maecenas eget semper. Dui euismod a platea ut pretium vivamus tellus vivamus in. Tristique diam commodo integer sodales nisi suspendisse.</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    </div>-->
   </div>
 
 
@@ -67,6 +93,11 @@ export default {
       loading:false,
       checkBox:false,
        item:{},
+        faqItems:[
+        {question:'Зачем вам платить доход каждому покупателю картин?',answer:'- Этим мы стимулируем наших клиентов  для активных действий на сайте и популяризации нашего ресурса.'},
+        {question:'Почему вы работаете через ИП, а не через ООО?',answer:'- Так гораздо меньше издержек и документооборота. Мы все равно являемся предпринимателем, со всей степенью ответственности, только расходы на содержание команды и всевозможные выплаты меньше.'},
+        {question:'Как, и когда я смогу вернуть свои потраченные на покупку картины деньги?',answer:'- Согласно Договору Управления, вы получаете от нас в течение года, каждый квартал выплаты,  потом можете продлить Договор, или вернуть нам картину и забрать потраченную на ее покупку деньги, весь раннее полученный доход остается у вас.  '},
+      ],
     }
 
   },

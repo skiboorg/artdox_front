@@ -17,7 +17,11 @@
               <q-separator spaced="md"/>
               <p class="q-mb-sm text-caption text-grey-6 text-avenir-450">Дата регистрации {{new Date($auth.user.date_joined).toLocaleDateString()}}</p>
             </div>
+
           </div>
+           <q-separator spaced="lg"/>
+            <p class="text-caption text-blue-grey-7"><a style="text-decoration: underline" href="#">Договор - оферта</a> скачать документ в PDF</p>
+            <p class="text-caption text-blue-grey-7 q-mb-none"><a style="text-decoration: underline" href="#">Договор на вывод средств</a> скачать документ в PDF</p>
         </div>
         <div class="lk-card">
           <div class="lk-card-title">
@@ -29,15 +33,21 @@
 <path d="M7.99961 16L15.5996 8.4" stroke="#6FCF97" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round"/>
 <path d="M8 8L16 8L16 16" stroke="#6FCF97" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="round"/>
 </svg>
-            <p class="no-margin text-body2">Общая сумма картин: <span class="text-grey-6">123.422 Р </span> </p>
+            <p class="no-margin text-body2">Число ваших картин: <span class="text-grey-6">{{$auth.user.orders.length>0 ? $auth.user.orders[0].items.length : '0'}} </span> </p>
 
           </div>
-               <p class="q-mb-lg text-body2">Прибыль: 10.000 ₽ <span class="text-grey-6">(за последний месяц)</span> </p>
+               <p class="text-body2">Общая сумма ваших картин: <span class="text-grey-6">0</span> </p>
+               <p class="q-mb-lg text-body2">Средства прибыли для вывода: <span class="text-positive">0</span> </p>
 
-            <p class="no-margin"><router-link class="link" :to="{name:''}">Показать историю продаж</router-link></p>
-
+ <q-separator spaced="lg"/>
+          <div class="flex items-center justify-between">
+            <q-btn to="/lk/orders"  rounded color="dark" text-color="white" no-caps class="q-px-md" label="Детали моих картин"/>
+          <q-btn  rounded outline class="q-px-md" no-caps label="Вывести средства"/>
+          </div>
 
         </div>
+
+
       </div>
 
   </q-page>
