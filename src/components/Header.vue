@@ -119,7 +119,7 @@ export default {
   &-link
     position: relative
     text-decoration: none
-    color: #6A6B70
+    color: #515151
     font-family: 'Avenir Next Cyr 400', sans-serif
     font-size: 14px
     text-align: center
@@ -142,7 +142,7 @@ export default {
         height: 1px
         width: 100%
         left: 0
-        background: #6A6B70
+        background: #515151
         transform: translateX(0)
         transition: all .2s linear
 

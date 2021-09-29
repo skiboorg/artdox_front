@@ -24,8 +24,8 @@
         <h3 class="title q-mb-lg ">О нас</h3>
 
         <div class="row q-col-gutter-md-xl items-center">
-          <div class=" col-12 col-md-6">
-            <p class="q-mb-none text-lh-150 ">
+          <div class=" col-12 ">
+            <p class="q-mb-none text-lh-150">
               Вся наша деятельность нацелена на то, чтобы предметы искусства приносили своему владельцу не только
               эстетическое удовольствие, но и материальную выгоду. <br><br>
               Гораздо приятней смотреть на картину и знать, что деньги, потраченные на ее приобретение, не только
@@ -34,13 +34,13 @@
               у нас на хранение, вы всегда будете иметь с нее доход.
             </p>
           </div>
-          <div class="gt-sm col-6">
-            <div class="row q-col-gutter-md-md ">
-              <div class="col-12 text-center"><img class="img" style="width: 60%" src="~assets/about2.jpg" alt=""></div>
+<!--          <div class="gt-sm col-6">-->
+<!--            <div class="row q-col-gutter-md-md ">-->
+<!--              <div class="col-12 text-center"><img class="img" style="width: 60%" src="~assets/about2.jpg" alt=""></div>-->
 
 
-            </div>
-          </div>
+<!--            </div>-->
+<!--          </div>-->
         </div>
 
       </div>
@@ -162,7 +162,7 @@
                 {{item.text}}
               </p>
               <p class="no-margin">
-                <router-link class="link" :to="{name:item.url}">Подробнее</router-link>
+                <router-link class="link" :to="{name:item.url}">{{item.link}}</router-link>
               </p>
 
             </div>
@@ -347,9 +347,9 @@ export default {
         {date:'22 ноября 2020', tag:'Ксения Хофманн',title:'Произведения искусства как инструмент инвестиций',text:'Произведения искусства могут расти в цене и приносить своим вкладчикам прибыль подобно акциям и другим известным нам активам. Например, картина «Спаситель мира», написанная Леонардо Да Винчи в 1499 году, сейчас стоит более $450 млн, а «Алжирские женщины» Пабло Пикассо – почти $180 млн.',url:'https://vc.ru/finance/179696-proizvedeniya-iskusstva-kak-instrument-investiciy'},
       ],
       interierItems:[
-        {title:'Заказ экспозиции',text:'Заказать экспозицию вы сможете после регистрации на нашем сайте в личном кабинете.',url:'gallery'},
-        {title:'Доставка',text:'Доставка картины до вашего адреса осуществляется за наш счет транспортными компаниями: СДЭК, Почта России',url: 'index'},
-        {title:'Возврат',text:'Возврат денежных средств осуществляется по 54-ФЗ переводом на ваш счет от нашей компании',url:'index'},
+        {title:'Заказ экспозиции',text:'Заказать экспозицию вы сможете после регистрации на нашем сайте в личном кабинете.',url:'gallery',link:'В каталог'},
+        {title:'Доставка',text:'Доставка картины до вашего адреса осуществляется за наш счет транспортными компаниями: СДЭК, Почта России',url: 'index',link:'Подробнее'},
+        {title:'Возврат',text:'Возврат денежных средств осуществляется по 54-ФЗ переводом на ваш счет от нашей компании',url:'index',link:'Подробнее'},
       ],
       teamItems:[
         {img:'team1.jpg',name:'Lindsey Rosser',work:'Директор'},

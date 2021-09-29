@@ -80,7 +80,7 @@
             ИНН 213901239901239</p>
                  <q-separator spaced="lg" color="grey-8"/>
                 <p class="text-center"> <a href="#" class="link">Политика конфиденциальности</a></p>
-                 <p class="no-margin text-white">2021 © artdox</p>
+                 <p class="no-margin text-white">2021 © ARTDOX.RU</p>
         </div>
         </div>
 
