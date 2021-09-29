@@ -19,10 +19,14 @@
         <p class="text-warning text-fs18 q-mb-none text-avenir-450">{{item.price}} ₽</p>
         </div>
 
-         <q-btn class="q-px-lg gt-sm" :disable="item.is_sell || !$auth.loggedIn" size="18px" @click="addToCart(item.id)" :loading="loading"  color="dark" rounded unelevated no-caps text-color="white" :label="item.is_sell ? 'Продана' : 'В корзину'"/>
+         <q-btn v-if="$auth.loggedIn" class="q-px-lg gt-sm" :disable="item.is_sell || !$auth.loggedIn" size="18px" @click="addToCart(item.id)"
+                :loading="loading"  color="dark" rounded unelevated no-caps text-color="white"
+                :label="item.is_sell ? 'Продана' : 'В корзину'"/>
       </div>
     </div>
-            <q-btn class="q-px-lg lt-md" :disable="item.is_sell" size="18px" @click="addToCart(item.id)" :loading="loading"  color="dark" rounded unelevated no-caps text-color="white" :label="item.is_sell ? 'Продана' : 'В корзину'"/>
+            <q-btn v-if="$auth.loggedIn" class="q-px-lg lt-md" :disable="item.is_sell || !$auth.loggedIn" size="18px" @click="addToCart(item.id)"
+                   :loading="loading"  color="dark" rounded unelevated no-caps text-color="white"
+                   :label="item.is_sell ? 'Продана' : 'В корзину'"/>
    <h3 class="title text-center">FAQ</h3>
     <section class="faq">
       <div class="container">
