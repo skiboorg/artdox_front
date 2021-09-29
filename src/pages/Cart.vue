@@ -36,12 +36,14 @@
           <q-btn class="q-px-lg " size="18px" color="dark" @click="createOrder" rounded unelevated no-caps text-color="white" label="Купить с Доходом"/>
       </div>
       <div v-else class="cart">
-        <p>Корзина пуста</p>
+        <p class="no-margin text-avenir-600 text-fs18 text-dark">Корзина пуста</p>
       </div>
     </div>
   </q-page>
 </template>
 <script>
+import {mapActions} from "vuex";
+
 export default {
   data() {
     return {
@@ -56,11 +58,21 @@ export default {
     this.cart = resp.data
   },
   methods:{
+    ... mapActions('auth',['getUser']),
     async createOrder(){
 
       this.loading = !this.loading
       await this.$api.post('/api/order/create')
       this.loading = !this.loading
+      this.$q.notify({
+          message: 'Заказ создан',
+          position: this.$q.screen.lt.sm ? 'bottom' : 'bottom-right',
+          color:'positive',
+          icon: 'announcement'
+        })
+      const resp = await this.$api.get(`/api/cart/get`)
+      this.cart = resp.data
+      await this.getUser()
     }
   }
 }

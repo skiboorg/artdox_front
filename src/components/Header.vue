@@ -88,6 +88,8 @@ export default {
 <style lang="sass" scoped>
 .header
   border-bottom: 1px solid #E5E5E5
+  &-logo
+    margin-right: 245px
   &-wrapper
     position: relative
     display: flex
@@ -123,6 +125,8 @@ export default {
 @media (max-width: 1024px)
   .header-wrapper
     padding: 10px 10px
+  .header-logo
+    margin-right: 0
   .nav-link
     font-size: 24px
     margin-bottom: 32px

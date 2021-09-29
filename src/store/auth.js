@@ -60,6 +60,7 @@ const actions = {
         Cookies.remove('auth_token')
         commit('updateUser', {})
         commit('updateUserStatus', false)
+        this.$router.push('/')
 
       })
       .catch(function (error) {

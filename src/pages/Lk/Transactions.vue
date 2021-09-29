@@ -4,6 +4,7 @@
       <div class="lk-card-title">
         <p class="no-margin text-fs18 text-avenir-600">Мои транзакции</p>
       </div>
+
       <div class="transaction-row q-mb-lg">
         <p class="no-margin text-avenir-450 text-body2 text-uppercase text-grey-6">Тип</p>
         <p class="no-margin text-avenir-450 text-body2 text-uppercase text-grey-6">Метод</p>
@@ -17,11 +18,12 @@
       :bar-style="barStyle"
       style="height: 500px; max-width: 100%"
     >
-        <div class="transaction-row item" v-for="i in 20" :key="i">
-        <p class="no-margin text-avenir-600 text-body2  ">Картины<br><span class="text-grey-6 text-avenir-450">Акварель натюрморты</span></p>
-        <img src="http://placehold.it/42x26" alt="">
-        <p class="no-margin text-body2  text-grey-6">23.08.2021</p>
-        <p class="no-margin text-body2 text-avenir-600 text-warning">84 000 ₽</p>
+        <div class="transaction-row item" v-for="item in $auth.user.transactions" :key="item.id">
+        <p class="no-margin text-avenir-600 text-body2  " :class="[item.is_buy ? 'text-warning' : 'text-positive']">{{item.is_buy ? 'Покупка' : 'Вывод'}}</p>
+        <p class="no-margin text-avenir-600 text-body2  ">{{item.type}}</p>
+
+        <p class="no-margin text-body2  text-grey-6">{{ new Date(item.created_at).toLocaleDateString() }}</p>
+        <p class="no-margin text-body2 text-avenir-600 text-warning">{{item.amount}} ₽</p>
 
       </div>
       </q-scroll-area>

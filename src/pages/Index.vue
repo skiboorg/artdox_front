@@ -57,7 +57,7 @@
               получается при условии участия в экспозиционной и продажной деятельности на территории Китая и России.
             </p>
             <div class="text-center">
-          <q-btn :to="{name:'profit'}" size="18px" class="text-montserrat q-px-xl" no-caps rounded unelevated outline color="dark"  label="Подробнее"/>
+          <q-btn :to="{name:'profit'}" size="16px" class="text-montserrat q-px-xl" no-caps rounded unelevated outline color="dark"  label="Подробнее"/>
         </div>
           </div>
 
@@ -93,9 +93,9 @@
           <q-no-ssr>
             <Carousel ref="gallery" :settings="settings" :breakpoints="breakpoints">
               <Slide v-for="(slide,index) in gallerySlides" :key="index">
-                <router-link :to="{name:'item',params:{slug:slide.name_slug}}" v-for="(slide,index) in gallerySlides" :key="index">
+
                 <div class="gallery-item">
-                  <div class="gallery-item__img q-mb-lg">
+                  <div @click="modalImg = slide.image,modal=true" class="gallery-item__img q-mb-lg">
                     <img  :src="slide.image_thumb" alt="">
                     <div class="gallery-item__img-overlay">
                       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,14 +104,17 @@
 
                     </div>
                   </div>
+                   <router-link :to="{name:'item',params:{slug:slide.name_slug}}" v-for="(slide,index) in gallerySlides" :key="index">
+                     <p v-if="slide.is_sell" class="q-mb-none text-bold text-left text-negative text-caption">Продана</p>
                   <p class="q-mb-sm text-left gallery-item__title text-avenir-450 text-dark">{{slide.name}}</p>
 <!--                  <p class="text-left gallery-item__subtitle text-dark">{{slide.subtitle}}</p>-->
 
                   <p class="q-mb-none text-left text-caption">Артикул № {{slide.article}}</p>
                   <p class="q-mb-md text-left text-caption">Размер {{slide.size}}</p>
                   <p class="q-mb-none text-left text-fs18 text-avenir-450 text-warning">{{slide.price}} ₽</p>
+                    </router-link>
                 </div>
-                </router-link>
+
               </Slide>
               <template #addons>
                 <Navigation />
@@ -130,7 +133,7 @@
       <div class="container">
         <h3 class="title">В интерьере</h3>
         <div class="interier-grid">
-          <div class="overlay-img" v-for="(i,index) in 4" :key="i">
+          <div @click="modalImg = index+1 + '.jpg',modal=true" class="overlay-img" v-for="(i,index) in 4" :key="i">
             <img class="img" :src="`${index+1}.jpg`" alt="">
             <div class="overlay-img__overlay">
               <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -277,6 +280,15 @@
       </div>
     </section>
   </q-page>
+   <q-dialog
+      v-model="modal"
+    >
+     <q-card class="relative-position" style="width: 1360px; max-width: 90vw; height: auto">
+       <q-btn color="white" :dense="$q.screen.lt.sm"  text-color="dark" style="top: 20px; right: 20px" v-close-popup class="absolute-top-right z-max" icon="close" round />
+<!--       <q-img :ratio="1" :src="modalImg"/>-->
+       <img  :src="modalImg" alt="">
+      </q-card>
+    </q-dialog>
 </template>
 
 <script>
@@ -292,6 +304,8 @@ export default {
   },
   data(){
     return{
+      modal:false,
+      modalImg:'',
       settings: {
         itemsToShow: 1,
         snapAlign: 'start',
