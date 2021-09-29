@@ -8,12 +8,12 @@
           <router-link class="nav-link" :to="{name:'gallery'}">Галерея</router-link>
           <router-link class="nav-link" :to="{name:'about'}">Контакты</router-link>
         </div>
-        <div class="header-logo ">
-           <div class="header-logo cursor-pointer flex" @click="$router.push({name:'index'})">
-            <img src="~assets/logo.png" alt="">
-        </div>
 
-        </div>
+<!--           <div class="header-logo cursor-pointer flex" @click="$router.push({name:'index'})">-->
+<!--            <img src="~assets/logo.png" alt="">-->
+<!--        </div>-->
+
+
         <div class="gt-sm ">
           <p class="text-white q-mb-lg">Мы в соц-сетях</p>
           <div class="q-gutter-md">

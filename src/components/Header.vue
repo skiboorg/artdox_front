@@ -2,16 +2,16 @@
   <q-header class="bg-white header">
       <div class="container header-wrapper">
         <q-btn class="lt-md" @click="leftDrawerOpen=!leftDrawerOpen" round unelevated icon="menu" text-color="dark"/>
-
+ <div class="header-logo cursor-pointer flex" @click="$router.push({name:'index'})">
+            <img src="~assets/logo.png" alt="">
+        </div>
         <div class="gt-sm nav">
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'about'}">О нас</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'profit'}">Доход</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'gallery'}">Галерея</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'about'}">Контакты</router-link>
         </div>
-         <div class="header-logo cursor-pointer flex" @click="$router.push({name:'index'})">
-            <img src="~assets/logo.png" alt="">
-        </div>
+
 
         <div class="header-buttons flex items-center ">
           <div class="gt-sm q-gutter-md">
@@ -88,8 +88,7 @@ export default {
 <style lang="sass" scoped>
 .header
   border-bottom: 1px solid #E5E5E5
-  &-logo
-    margin-right: 245px
+
   &-wrapper
     position: relative
     display: flex
@@ -119,14 +118,13 @@ export default {
     text-decoration: none
     color: #6A6B70
     font-family: 'Avenir Next Cyr 400', sans-serif
-    font-size: 16px
+    font-size: 14px
     &.active
       color: $dark
 @media (max-width: 1024px)
   .header-wrapper
     padding: 10px 10px
-  .header-logo
-    margin-right: 0
+
   .nav-link
     font-size: 24px
     margin-bottom: 32px

@@ -19,7 +19,7 @@
 
             <div class="">
 
-              <p class="text-body2">Стоимость: <span class="text-positive text-avenir-450">{{item.price}} ₽</span> </p>
+              <p class="text-body2">Стоимость: <span class="text-warning text-avenir-450">{{item.price}} ₽</span> </p>
               <p class="text-body2">Активная прибыль: <span class="text-grey-6 text-avenir-450">0 ₽</span> </p>
               <q-separator spaced="lg"/>
                <p class="text-body2">Дата покупки: <span class="text-grey-6 text-avenir-450">{{new Date($auth.user.orders[index].created_at).toLocaleDateString()}}</span> </p>
