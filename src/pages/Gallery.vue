@@ -40,7 +40,7 @@
       <!--      </div>-->
       <div class="gallery-grid">
         <router-link :to="{name:'item',params:{slug:slide.name_slug}}" v-for="(slide,index) in gallerySlides" :key="index">
-          <div class="gallery-item" v-for="(slide,index) in gallerySlides" :key="index">
+          <div class="gallery-item" >
             <!--              @click="modalImg = slide.image,modal=true"-->
             <div  class="gallery-item__img q-mb-lg">
               <img  :src="slide.image_thumb" alt="">

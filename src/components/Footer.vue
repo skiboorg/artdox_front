@@ -52,7 +52,7 @@
           <p><router-link class="nav-link" :to="{name:'about'}">О нас</router-link></p>
           <p><router-link class="nav-link" :to="{name:'profit'}">Доход</router-link></p>
           <p><router-link class="nav-link" :to="{name:'gallery'}">Галерея</router-link></p>
-          <p><router-link class="nav-link" :to="{name:'about'}">Контакты</router-link></p>
+          <p><router-link class="nav-link" :to="{name:'contacts'}">Контакты</router-link></p>
           <q-separator spaced="lg" color="grey-8"/>
            <div >
           <p class="text-white q-mb-lg">Мы в соц-сетях</p>
@@ -90,7 +90,7 @@
         </div>
       <div class="gt-sm flex items-center justify-between q-pt-lg q-pb-xl">
         <a href="#" class="link">Политика конфиденциальности</a>
-        <p class="no-margin text-white">2021 © ardbox</p>
+        <p class="no-margin text-white">2021 © ARTDOX.RU</p>
       </div>
     </div>
   </footer>

@@ -9,7 +9,7 @@
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'about'}">О нас</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'profit'}">Доход</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'gallery'}">Галерея</router-link>
-          <router-link exact exact-active-class="active" class="nav-link" :to="{name:'about'}">Контакты</router-link>
+          <router-link exact exact-active-class="active" class="nav-link" :to="{name:'contacts'}">Контакты</router-link>
         </div>
 
 
@@ -57,7 +57,7 @@
             <router-link exact exact-active-class="active" class="nav-link " :to="{name:'about'}">О нас</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'profit'}">Доход</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'gallery'}">Галерея</router-link>
-          <router-link exact exact-active-class="active" class="nav-link" :to="{name:'about'}">Контакты</router-link>
+          <router-link exact exact-active-class="active" class="nav-link" :to="{name:'contacts'}">Контакты</router-link>
           </div>
 
 
