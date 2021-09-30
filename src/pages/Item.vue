@@ -13,7 +13,7 @@
         <div class="flex column items-start ">
           <div class="q-mb-xl">
             <h1 class="item-title">«{{item.name}}»</h1>
-            <!--        <div class="text-avenir-300 q-mb-lg-xl" v-html="item.description"></div>-->
+            <div class="text-avenir-300 q-mb-lg-xl" v-html="item.description"></div>
             <p class="text-caption text-grey q-mb-none">Артикул № {{item.article}}</p>
             <p class="text-caption text-grey q-mb-lg-xl">Размер {{item.size}}</p>
             <p class="text-warning text-fs18 q-mb-none text-avenir-450">{{item.price}} ₽</p>
@@ -22,11 +22,13 @@
           <q-btn v-if="$auth.loggedIn" class="q-px-lg gt-sm" :disable="item.is_sell || !$auth.loggedIn" size="18px" @click="addToCart(item.id)"
                  :loading="loading"  color="dark" rounded unelevated no-caps text-color="white"
                  :label="item.is_sell ? 'Продана' : 'В корзину'"/>
+          <q-btn v-else class="q-px-lg gt-sm" to="/login" size="18px" outline label="Войдите, чтобы приобрести" no-caps rounded />
         </div>
       </div>
       <q-btn v-if="$auth.loggedIn" class="q-px-lg lt-md" :disable="item.is_sell || !$auth.loggedIn" size="18px" @click="addToCart(item.id)"
              :loading="loading"  color="dark" rounded unelevated no-caps text-color="white"
              :label="item.is_sell ? 'Продана' : 'В корзину'"/>
+      <q-btn v-else class="q-px-lg lt-md" to="/login" size="18px" outline label="Войдите, чтобы приобрести" no-caps rounded />
       <h3 class="title text-center">FAQ</h3>
       <section class="faq">
         <div class="container">
@@ -89,7 +91,7 @@
    <q-dialog
     v-model="modal"
   >
-    <q-card class="relative-position" style="width: 1360px; max-width: 90vw; height: auto">
+    <q-card class="relative-position" style="max-width: 90vw; height: auto">
       <q-btn color="white" :dense="$q.screen.lt.sm"  text-color="dark" style="top: 20px; right: 20px" v-close-popup class="absolute-top-right z-max" icon="close" round />
       <!--       <q-img :ratio="1" :src="modalImg"/>-->
       <img  :src="curImage" alt="">
