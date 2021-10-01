@@ -30,7 +30,7 @@
             </template>
           </q-input>
             <div class="flex items-center justify-between q-mt-md-lg">
-              <p class="no-margin link cursor-pointer" @click="$router.push('/register')">Нет аккаунта? Зарегистрироваться</p>
+              <p class=" link cursor-pointer q-mb-none q-mb-xs-md" @click="$router.push('/register')">Нет аккаунта? Зарегистрироваться</p>
               <q-btn outline unelevated rounded no-caps color="dark" type="submit" class="q-py-sm q-px-lg" label="Войти"/>
             </div>
           </q-form>
