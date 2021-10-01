@@ -93,7 +93,7 @@ export default {
 
   },
   async beforeMount() {
-    const resp = await this.$api.get('/api/item/get?type=index')
+    const resp = await this.$api.get('/api/item/get?type=all')
     this.gallerySlides = resp.data
   },
 }
