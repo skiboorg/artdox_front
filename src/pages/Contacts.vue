@@ -62,11 +62,11 @@
         <div class="row  items-center">
           <div class="col-12 col-md-6">
             <p>Тема</p>
-            <q-input class="q-mb-lg" v-model="subject" borderless bg-color="grey-3" />
+            <q-input class="q-mb-lg " v-model="subject" borderless  bg-color="grey-3" />
             <p>Сообщение</p>
             <q-input class="q-mb-lg"  v-model="text" type="textarea" borderless bg-color="grey-3" />
             <div class="q-gutter-lg">
-              <q-btn color="dark" label="Отправить" no-caps rounded size="18px" class="q-px-xl"/>
+              <q-btn color="dark" label="Отправить" @click="send" no-caps rounded size="18px" class="q-px-xl"/>
               <q-btn color="white" text-color="dark" label="Прикрепить файл" outline no-caps rounded size="18px" class="q-px-xl"/>
             </div>
           </div>
@@ -112,10 +112,16 @@ export default {
 
   data(){
     return{
-
       subject:'',
       text:''
-
+    }
+  },
+  methods:{
+    async send(){
+      await this.$api.post('/api/data/c_form',{
+        subject:this.subject,
+        text:this.text,
+      })
     }
   }
 

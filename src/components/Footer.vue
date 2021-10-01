@@ -39,8 +39,8 @@
       </div>
       <div class="footer-row flex items-center justify-between">
         <div class="q-gutter-md">
-          <q-btn label="Художники" unelevated color="white" text-color="dark" class="text-body-2 q-py-md q-px-xl" no-caps rounded />
-          <q-btn label="Меценаты" unelevated outline text-color="white" class="text-body-2 q-py-md q-px-xl" no-caps rounded />
+          <q-btn label="Художники" :to="{name:'contacts'}" unelevated color="white" text-color="dark" class="text-body-2 q-py-md q-px-xl" no-caps rounded />
+          <q-btn label="Меценаты" :to="{name:'contacts'}" unelevated outline text-color="white" class="text-body-2 q-py-md q-px-xl" no-caps rounded />
         </div>
         <div class="gt-sm">
           <p class="q-mb-none text-grey-7 text-right">ИП Иванов Иван<br>
