@@ -12,8 +12,9 @@
         Все наши картины - это репродукции с оцифрованных в качестве 300 dpi оригиналов. Оцифровка, и последующая печать, выполнена на самом современном оборудовании. Все работы напечатаны на бельгийской и немецкой эко бумаге, доведены вручную, и покрыты лаком для лучшей защиты и восприятия, их не обязательно ставить под стекло. Картины продаются полностью оформленные, в паспарту, задник и раму без стекла.
       </p>
 
-      <p class="text-dark text-fs18 q-mb-sm">Оригиналы – <span class="text-grey-7">от 150 000 ₽</span></p>
-      <p class="text-dark text-fs18 q-mb-xl">Репродукция – <span class="text-grey-7">от 50 000 ₽ до 140 000 ₽</span></p>
+<!--      <p class="text-dark text-fs18 q-mb-sm">Оригиналы – <span class="text-grey-7">от 150 000 ₽</span></p>-->
+<!--      <p class="text-dark text-fs18 q-mb-xl">Репродукция – <span class="text-grey-7">от 50 000 ₽ до 140 000 ₽</span></p>-->
+      <p class="text-dark text-fs18 q-mb-xl">Бразильская коллекция</p>
       <!--      <div class="q-gutter-lg-xl q-mb-lg-xl">-->
       <!--        <q-btn-dropdown dropdown-icon="expand_more" color="dark" text-color="white" no-caps unelevated class="rounded-borders" label="Сортировать по новинкам">-->
       <!--      <q-list>-->
