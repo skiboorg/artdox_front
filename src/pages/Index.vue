@@ -175,7 +175,7 @@
     </section>
     <section class="docs">
       <div class="container">
-        <h3 class="title">Документы и реквизиты</h3>
+        <h3 class="title">Документы</h3>
         <div class="row q-gutter-md-xl">
           <div class="col-12 col-md-7 docs-grid q-mb-lg q-mb-lg-none">
 
@@ -224,7 +224,7 @@
     </section>
     <section class="faq">
       <div class="container">
-        <h3 class="title text-center">FAQ</h3>
+        <h3 class="title ">FAQ</h3>
         <q-list separator>
           <q-expansion-item
             v-for="(item,index) in faqItems"

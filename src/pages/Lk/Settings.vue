@@ -1,8 +1,10 @@
 <template>
   <q-page >
-    <section>
-         <p class="title">Настройки</p>
-      <div class="row q-col-gutter-md">
+     <div class="lk-card">
+        <div class="lk-card-title">
+          <p class="no-margin text-fs18 text-avenir-600">Настройки</p>
+        </div>
+       <div class="row q-col-gutter-md q-mb-lg">
         <div class="col-12 col-md-6">
           <p>ФИО</p>
           <q-input class="q-mb-lg" v-model="userData.fio" borderless bg-color="grey-3"/>
@@ -18,10 +20,10 @@
           <q-input v-model="userData.email" borderless bg-color="grey-3"/>
         </div>
       </div>
-    </section>
-  <section>
-         <p class="title">Безопасность</p>
-      <div class="row q-col-gutter-md">
+       <div class="lk-card-title">
+          <p class="no-margin text-fs18 text-avenir-600">Безопасность</p>
+        </div>
+        <div class="row q-col-gutter-md">
         <div class="col-12 col-md-6">
           <p>Новый пароль</p>
           <q-input class="q-mb-lg" v-model="userData.password" borderless bg-color="grey-3"/>
@@ -36,7 +38,10 @@
           <q-input v-model="userData.password1" borderless bg-color="grey-3"/>
         </div>
       </div>
-    </section>
+
+     </div>
+
+
 
 
   </q-page>
