@@ -8,7 +8,7 @@
         </div>
         <div class="flex items-center">
           <q-avatar size="125px" class="q-mr-lg">
-            <img src="https://cdn.quasar.dev/img/avatar.png" alt="">
+            <img :src="$auth.user.avatar" alt="">
           </q-avatar>
           <div class="">
             <p class="q-mb-sm text-body2 text-avenir-450">{{$auth.user.fio}}</p>
