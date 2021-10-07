@@ -3,7 +3,7 @@
 
     <div class="item-container">
       <div class="item-card">
-        <div class="">
+        <div class="item-preview">
           <img class="img cursor-pointer" :class="{'not-selected':curImage !== item.image}" @click="curImage = item.image" :src="item.image_thumb" alt="">
           <img v-if="item.image_alt" class="img cursor-pointer" :class="{'not-selected':curImage !== item.image_alt}" @click="curImage = item.image_alt" :src="item.image_alt_thumb" alt="">
         </div>
@@ -25,10 +25,10 @@
           <q-btn v-else class="q-px-lg gt-sm" to="/login" size="18px" outline label="Войдите, чтобы приобрести" no-caps rounded />
         </div>
       </div>
-      <q-btn v-if="$auth.loggedIn" class="q-px-lg lt-md" :disable="item.is_sell || !$auth.loggedIn" size="18px" @click="addToCart(item.id)"
+      <q-btn v-if="$auth.loggedIn" class="q-px-lg lt-md q-mb-lg" :disable="item.is_sell || !$auth.loggedIn" size="18px" @click="addToCart(item.id)"
              :loading="loading"  color="dark" rounded unelevated no-caps text-color="white"
              :label="item.is_sell ? 'Продана' : 'В корзину'"/>
-      <q-btn v-else class="q-px-lg lt-md" to="/login" size="18px" outline label="Войдите, чтобы приобрести" no-caps rounded />
+      <q-btn v-else class="q-px-lg lt-md q-mb-lg" to="/login" size="18px" outline label="Войдите, чтобы приобрести" no-caps rounded />
       <h3 class="title text-center">FAQ</h3>
       <section class="faq">
         <div class="container">
@@ -190,5 +190,17 @@ export default {
   .item
     &-card
       grid-template-columns: 1fr
-      margin-bottom: 30px
+      margin-bottom: 0px
+@media (max-width: 768px)
+  .item-preview
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    img
+      max-width: 100px
+      height: auto
+      object-fit: contain
+      margin-right: 15px
+  .img-magnifier-container
+    text-align: center
 </style>

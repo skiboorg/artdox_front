@@ -9,7 +9,7 @@
       <q-breadcrumbs-el :label="$route.meta.title" />
     </q-breadcrumbs>
            <div class="lk-wrapper">
-        <div  class="user-menu-wrapper">
+        <div  class="gt-sm user-menu-wrapper">
            <UserMenu/>
         </div>
 
@@ -45,6 +45,9 @@ export default {
   display: grid
   grid-template-columns: 1fr 4fr
   grid-gap: 20px
+@media (max-width: 1024px)
+  .lk-wrapper
+    grid-template-columns: 1fr
 .user-menu-wrapper
   height: fit-content
   padding: 10px 0

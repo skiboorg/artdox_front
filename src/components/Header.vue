@@ -26,7 +26,7 @@
             <q-btn v-if="!$auth.loggedIn"  :to="{name:'login'}"  round dense unelevated no-caps text-color="dark" icon="login"/>
             <q-btn v-if="!$auth.loggedIn"  :to="{name:'register'}"  round dense unelevated no-caps text-color="dark" icon="person_add"/>
             <q-btn v-if="$auth.loggedIn" :to="{name:'cart'}"  round unelevated dense outline no-caps text-color="dark" icon="shopping_basket"/>
-            <q-btn v-if="$auth.loggedIn" round unelevated dense @mouseenter="userMenu=!userMenu" color="dark" icon="person_outline"/>
+            <q-btn v-if="$auth.loggedIn" round unelevated dense @mouseenter="userMenu=!userMenu" @click="userMenu=!userMenu" color="dark" icon="person_outline"/>
           </div>
 
 

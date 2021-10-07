@@ -100,4 +100,7 @@ export default {
     display: grid
     grid-template-columns: 1fr 2fr
     grid-gap: 30px
+@media (max-width: 768px)
+  .cart
+    padding: 10px
 </style>

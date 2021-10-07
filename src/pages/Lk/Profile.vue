@@ -43,8 +43,8 @@
 
 
         <q-separator spaced="lg"/>
-        <div class="flex items-center justify-around">
-          <q-btn to="/lk/orders"  rounded color="dark" text-color="white" no-caps class="q-px-md" label="Детали моих картин"/>
+        <div class="flex items-center justify-around profile-buttons">
+          <q-btn to="/lk/orders"  rounded color="dark" text-color="white" no-caps class="q-px-md q-mb-md q-mb-md-none" label="Детали моих картин"/>
           <q-btn  rounded outline class="q-px-md" no-caps label="Вывести средства"/>
         </div>
 
@@ -76,5 +76,11 @@ export default {
 .grid
   display: grid
   grid-template-columns: 2fr 1fr
+@media (max-width: 768px)
+  .profile-wrapper
+    grid-template-columns: 1fr
+  .profile-buttons
+    & .q-btn
+      width: 100%
 
 </style>
