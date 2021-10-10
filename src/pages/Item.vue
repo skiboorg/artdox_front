@@ -19,16 +19,45 @@
             <p class="text-warning text-fs18 q-mb-none text-avenir-450">{{item.price}} ₽</p>
           </div>
 
-          <q-btn v-if="$auth.loggedIn" class="q-px-lg gt-sm" :disable="item.is_sell || !$auth.loggedIn" size="18px" @click="addToCart(item.id)"
-                 :loading="loading"  color="dark" rounded unelevated no-caps text-color="white"
-                 :label="item.is_sell ? 'Продана' : 'В корзину'"/>
-          <q-btn v-else class="q-px-lg gt-sm" to="/login" size="18px" outline label="Войдите, чтобы приобрести" no-caps rounded />
+
+          <div v-if="$auth.loggedIn" class="gt-sm">
+            <div class="" v-if="!item.is_ordered" >
+              <q-btn class="q-px-lg q-mr-none q-mr-md-md" glossy :disable="item.is_sell || !$auth.loggedIn" size="18px" @click="addToCart(item.id)"
+                   :loading="loading"  color="dark" rounded unelevated no-caps text-color="white"
+                   :label="item.is_sell ? 'Продана' : 'В корзину'"/>
+            <q-btn-group rounded>
+              <q-btn size="18px" color="dark" @click="amount>1 ? amount-=1 : amount=1" rounded glossy icon="remove" />
+              <q-btn size="18px"  rounded  disable :label="amount" />
+              <q-btn size="18px" color="dark" @click="amount+=1" rounded glossy icon-right="add"  />
+            </q-btn-group>
+            </div>
+
+            <p v-else class="text-bold text-left text-positive text-caption">Картина заказана и находится в пути. Как только картина будет у нас - статус "Заказана" будет убран и вы сможете ее купить. Сроки уточняйте в нашем Whatsapp.</p>
+          </div>
+          <div v-else>
+            <q-btn  class="q-px-lg gt-sm" to="/login" size="18px" outline label="Войдите, чтобы приобрести" no-caps rounded />
+          </div>
+
+
+
+
         </div>
       </div>
-      <q-btn v-if="$auth.loggedIn" class="q-px-lg lt-md q-mb-lg" :disable="item.is_sell || !$auth.loggedIn" size="18px" @click="addToCart(item.id)"
-             :loading="loading"  color="dark" rounded unelevated no-caps text-color="white"
-             :label="item.is_sell ? 'Продана' : 'В корзину'"/>
-      <q-btn v-else class="q-px-lg lt-md q-mb-lg" to="/login" size="18px" outline label="Войдите, чтобы приобрести" no-caps rounded />
+      <div v-if="$auth.loggedIn" class="lt-md q-mb-lg text-center">
+        <q-btn-group rounded class="q-mb-md">
+              <q-btn size="18px" color="dark" @click="amount>1 ? amount-=1 : amount=1" rounded  icon="remove" />
+              <q-btn size="18px"  rounded  disable :label="amount" />
+              <q-btn size="18px" color="dark" @click="amount+=1" rounded  icon-right="add"  />
+            </q-btn-group>
+        <q-btn v-if="!item.is_ordered" class="q-px-lg full-width" :disable="item.is_sell || !$auth.loggedIn" size="18px" @click="addToCart(item.id)"
+               :loading="loading"  color="dark" rounded unelevated no-caps text-color="white"
+               :label="item.is_sell ? 'Продана' : 'В корзину'"/>
+        <p v-else class="text-bold text-left text-positive text-caption">Картина заказана и находится в пути. Как только картина будет у нас - статус "Заказана" будет убран и вы сможете ее купить. Сроки уточняйте в нашем Whatsapp.</p>
+      </div>
+      <div v-else class="q-mb-lg">
+        <q-btn  class="q-px-lg gt-sm" to="/login" size="18px" outline label="Войдите, чтобы приобрести" no-caps rounded />
+      </div>
+
       <h3 class="title text-center">FAQ</h3>
       <section class="faq">
         <div class="container">
@@ -88,7 +117,7 @@
 
 
   </q-page>
-   <q-dialog
+  <q-dialog
     v-model="modal"
   >
     <q-card class="relative-position" style="max-width: 90vw; height: auto">
@@ -105,7 +134,7 @@ export default {
   data() {
     return {
       modal:false,
-
+      amount:1,
       curImage:'',
       loading:false,
       agree:false,
@@ -130,7 +159,10 @@ export default {
     async addToCart(id){
       console.log('dsfd')
       this.loading = !this.loading
-      await this.$api.post('/api/cart/add',{id})
+      await this.$api.post('/api/cart/add',{
+        id,
+        amount:this.amount
+      })
       this.loading = !this.loading
       this.$q.notify({
         message: 'Добавлено в корзину',

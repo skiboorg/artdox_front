@@ -14,33 +14,10 @@
 
 <!--      <p class="text-dark text-fs18 q-mb-sm">Оригиналы – <span class="text-grey-7">от 150 000 ₽</span></p>-->
 <!--      <p class="text-dark text-fs18 q-mb-xl">Репродукция – <span class="text-grey-7">от 50 000 ₽ до 140 000 ₽</span></p>-->
-      <p class="text-dark text-fs18 q-mb-xl">Бразильская коллекция</p>
-      <!--      <div class="q-gutter-lg-xl q-mb-lg-xl">-->
-      <!--        <q-btn-dropdown dropdown-icon="expand_more" color="dark" text-color="white" no-caps unelevated class="rounded-borders" label="Сортировать по новинкам">-->
-      <!--      <q-list>-->
-      <!--        <q-item clickable v-close-popup >-->
-      <!--          <q-item-section>-->
-      <!--            <q-item-label>Сортировать по дате</q-item-label>-->
-      <!--          </q-item-section>-->
-      <!--        </q-item>-->
-
-      <!--        <q-item clickable v-close-popup >-->
-      <!--          <q-item-section>-->
-      <!--            <q-item-label>Сортировать по</q-item-label>-->
-      <!--          </q-item-section>-->
-      <!--        </q-item>-->
-
-      <!--        <q-item clickable v-close-popup >-->
-      <!--          <q-item-section>-->
-      <!--            <q-item-label>Сортировать по</q-item-label>-->
-      <!--          </q-item-section>-->
-      <!--        </q-item>-->
-      <!--      </q-list>-->
-      <!--    </q-btn-dropdown>-->
-      <!--          <q-checkbox class="rounded-borders" v-model="checkBox" label="Показывать проданные" />-->
-      <!--      </div>-->
+      <div class="q-mb-lg" v-for="collection in collections" :key="collection.id">
+         <p class="text-dark text-fs18 q-mb-xl">{{collection.name}}</p>
       <div class="gallery-grid">
-        <router-link :to="{name:'item',params:{slug:slide.name_slug}}" v-for="(slide,index) in gallerySlides" :key="index">
+        <router-link :to="{name:'item',params:{slug:slide.name_slug}}" v-for="(slide,index) in collection.items" :key="index">
           <div class="gallery-item" >
             <!--              @click="modalImg = slide.image,modal=true"-->
             <div  class="gallery-item__img q-mb-lg">
@@ -54,6 +31,7 @@
             </div>
 
             <p v-if="slide.is_sell" class="q-mb-none text-bold text-left text-negative text-caption">Продана</p>
+            <p v-if="slide.is_ordered" class="q-mb-none text-bold text-left text-positive text-caption">Заказана</p>
             <p class="q-mb-sm text-left gallery-item__title text-avenir-450 text-dark">{{slide.name}}</p>
             <!--                  <p class="text-left gallery-item__subtitle text-dark">{{slide.subtitle}}</p>-->
 
@@ -66,6 +44,8 @@
         </router-link>
 
       </div>
+      </div>
+
     </div>
 
 
@@ -89,13 +69,13 @@ export default {
       modal:false,
       modalImg:'',
       checkBox:false,
-      gallerySlides:[],
+      collections:[],
     }
 
   },
   async beforeMount() {
-    const resp = await this.$api.get('/api/item/get?type=all')
-    this.gallerySlides = resp.data
+    const resp = await this.$api.get('/api/item/collections')
+    this.collections = resp.data
   },
 }
 </script>
