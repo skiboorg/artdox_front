@@ -8,7 +8,7 @@
     </div>
 
     <div class="cart-wrapper">
-      {{cart}}
+
       <div v-if="cart.items.length>0" class="cart">
         <p class="text-avenir-600 text-fs18 text-dark">Моя корзина</p>
         <div class="cart-item" v-for="item in cart.items" :key="item.id">
@@ -47,7 +47,7 @@
   </q-page>
 </template>
 <script>
-import {mapActions} from "vuex";
+import {mapActions, mapGetters} from "vuex";
 
 export default {
   data() {
@@ -55,18 +55,14 @@ export default {
       loading:false,
           agree:false,
       agree1:false,
-      cart:{
 
-        items:[]
-      },
     }
   },
-  async beforeMount() {
-    const resp = await this.$api.get(`/api/cart/get`)
-    this.cart = resp.data
-  },
+
   methods:{
-    ... mapActions('auth',['getUser']),
+
+    ... mapActions('data',['fetchOrders','fetchCart']),
+
     async createOrder(){
 
       this.loading = !this.loading
@@ -78,10 +74,12 @@ export default {
           color:'positive',
           icon: 'announcement'
         })
-      const resp = await this.$api.get(`/api/cart/get`)
-      this.cart = resp.data
-      await this.getUser()
+      await this.fetchCart()
+      await this.fetchOrders()
     }
+  },
+  computed:{
+    ...mapGetters('data',['cart'])
   }
 }
 </script>

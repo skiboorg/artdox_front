@@ -48,7 +48,8 @@ const actions = {
     console.log('getUser', response.data)
     commit('updateUser', response.data)
     commit('updateUserStatus', true)
-
+    await dispatch('data/fetchCart',{},{root:true})
+    await dispatch('data/fetchOrders',{},{root:true})
     redirect ? await this.$router.push('/') : null
   },
 

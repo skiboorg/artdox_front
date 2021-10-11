@@ -5,21 +5,24 @@
       <div class="lk-card-title">
         <p class="no-margin text-fs18 text-avenir-600">Мои заказы</p>
       </div>
-      <div v-if="$auth.user.orders.length>0" class="orders">
-        <div class="" v-for="order in $auth.user.orders">
-          <div  class="order" v-for="item in order.items">
+
+      <div v-if="orders.length>0" class="orders">
+        <div class="" v-for="order in orders">
+          <div  class="order" v-for="item in order.order_items">
           <div class="flex items-start q-mb-lg">
             <div class="q-mr-md-lg">
               <div class="overlay-img bordered q-mb-md">
-              <img :src="item.image_thumb" alt="">
+              <img  :src="item.item.image_thumb" alt="">
 
             </div>
-              <p class="no-margin text-avenir-450 text-dark text-body2">{{item.name}}</p>
+              <p class="no-margin text-avenir-450 text-dark text-body2">{{item.item.name}}</p>
             </div>
 
             <div class="">
 
-              <p class="text-body2">Стоимость: <span class="text-warning text-avenir-450">{{item.price}} ₽</span> </p>
+              <p class="text-body2">Стоимость: <span class="text-warning text-avenir-450">{{item.item.price}} ₽</span> </p>
+              <p class="text-body2">Количество: <span class="text-warning text-avenir-450">{{item.amount}} шт</span> </p>
+              <p class="text-body2">Итого: <span class="text-warning text-avenir-450">{{item.price}} ₽</span> </p>
               <p class="text-body2">Активная прибыль: <span class="text-grey-6 text-avenir-450">0 ₽</span> </p>
               <q-separator spaced="lg"/>
                <p class="text-body2">Дата покупки: <span class="text-grey-6 text-avenir-450">{{new Date(order.created_at).toLocaleDateString()}}</span> </p>
@@ -48,12 +51,17 @@
 
 <script>
 
+import {mapGetters} from "vuex";
+
 export default {
 
   data(){
     return{
 
     }
+  },
+  computed:{
+    ...mapGetters('data',['orders'])
   }
 }
 </script>

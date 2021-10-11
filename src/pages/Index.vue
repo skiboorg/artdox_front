@@ -45,12 +45,12 @@
 
       </div>
     </section>
-    <section class="about">
+    <section style="background: #f9f9f9" class="about q-pt-xl">
       <div class="container">
         <h3 class="title q-mb-lg ">Доход</h3>
 
         <div class="row q-col-gutter-md-xl ">
-          <div class=" col-12 col-md-6">
+          <div class=" col-12 col-md-9">
             <p class="q-mb-lg q-mb-md-xl text-lh-150 ">
               Наша работа позволяет сформировать доходность для каждой картины, при этом уровень ликвидности
               не зависит от художественной ценности и материальной стоимости актива, прибыль с картин
@@ -61,8 +61,8 @@
                <router-link class="link" :to="{name:'profit'}">Узнать больше</router-link>
             </div>
           </div>
-          <div class="col-6 gt-sm text-center">
-            <img class="img" src="~assets/index-profit.png" alt="">
+          <div class="col-12 ">
+            <img class="img" src="~assets/ppp.png" alt="">
           </div>
         </div>
 

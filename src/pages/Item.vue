@@ -130,6 +130,8 @@
 <script>
 
 
+import {mapActions} from "vuex";
+
 export default {
   data() {
     return {
@@ -155,7 +157,7 @@ export default {
     this.curImage = this.item.image
   },
   methods:{
-
+    ... mapActions('data',['fetchCart']),
     async addToCart(id){
       console.log('dsfd')
       this.loading = !this.loading
@@ -170,6 +172,7 @@ export default {
         color:'positive',
         icon: 'announcement'
       })
+      await this.fetchCart()
     }
   }
 }

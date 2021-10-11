@@ -30,7 +30,7 @@
 
         <div class="grid items-center q-mb-sm">
           <p class="no-margin text-body2">Число ваших картин:</p>
-          <p class="no-margin text-body2"><span class="text-grey-6">{{$auth.user.orders.length>0 ? $auth.user.orders[0].items.length : '0'}} </span> </p>
+          <p class="no-margin text-body2"><span class="text-grey-6">0 </span> </p>
         </div>
         <div class="grid items-center q-mb-sm">
           <p class="no-margin text-body2">Общая сумма ваших картин: </p>
