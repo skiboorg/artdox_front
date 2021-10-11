@@ -13,7 +13,7 @@
         <p class="text-avenir-600 text-fs18 text-dark">Моя корзина</p>
         <div class="cart-item" v-for="item in cart.items" :key="item.id">
           <div class="item-card q-mb-lg">
-            <div class="overlay-img bordered" >
+            <div class=" " >
               <img class="img" :src="item.item.image_thumb" alt="">
               <div class="overlay-img__overlay">
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -3,7 +3,7 @@
       <div class="container header-wrapper">
         <q-btn class="lt-md" @click="leftDrawerOpen=!leftDrawerOpen" round unelevated icon="menu" text-color="dark"/>
  <div class="header-logo cursor-pointer flex" @click="$router.push({name:'index'})">
-            <img class="img" style="height: 83px" src="~assets/logo1.png" alt="">
+            <img class="img"  src="~assets/logo1.png" alt="">
         </div>
         <div class="gt-sm nav">
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'about'}">О нас</router-link>

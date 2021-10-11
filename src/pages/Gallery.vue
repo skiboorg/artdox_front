@@ -14,7 +14,7 @@
 
 <!--      <p class="text-dark text-fs18 q-mb-sm">Оригиналы – <span class="text-grey-7">от 150 000 ₽</span></p>-->
 <!--      <p class="text-dark text-fs18 q-mb-xl">Репродукция – <span class="text-grey-7">от 50 000 ₽ до 140 000 ₽</span></p>-->
-      <div class="q-mb-lg" v-for="collection in collections" :key="collection.id">
+      <div class="q-mb-lg q-pt-lg" v-for="collection in collections" :key="collection.id">
          <p class="text-dark text-fs18 q-mb-xl">{{collection.name}}</p>
       <div class="gallery-grid">
         <router-link :to="{name:'item',params:{slug:slide.name_slug}}" v-for="(slide,index) in collection.items" :key="index">
