@@ -61,6 +61,7 @@ export default {
 
   methods:{
 
+    ... mapActions('auth',['getUser']),
     ... mapActions('data',['fetchOrders','fetchCart']),
 
     async createOrder(){
@@ -76,6 +77,7 @@ export default {
         })
       await this.fetchCart()
       await this.fetchOrders()
+      await this.getUser()
     }
   },
   computed:{

@@ -179,8 +179,8 @@
         <h3 class="title">Документы</h3>
         <div class="row q-gutter-md-xl">
           <div class="col-12 col-md-7 docs-grid q-mb-lg q-mb-lg-none">
-
-            <div class="overlay-img " @click="modalImg = `/doc.jpg`,modal=true">
+            <div >
+               <div class="overlay-img " @click="modalImg = `/doc.jpg`,modal=true">
               <img class="img" src="/doc.jpg" alt="">
               <div class="overlay-img__overlay">
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,8 +189,10 @@
 
               </div>
             </div>
-
-           <div class="overlay-img " @click="modalImg = `/doc.jpg`,modal=true">
+            <p class="no-margin text-caption">qwe</p>
+            </div>
+              <div >
+               <div class="overlay-img " @click="modalImg = `/doc.jpg`,modal=true">
               <img class="img" src="/doc.jpg" alt="">
               <div class="overlay-img__overlay">
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -199,8 +201,10 @@
 
               </div>
             </div>
-
-           <div class="overlay-img " @click="modalImg = `/doc.jpg` ,modal=true">
+            <p class="no-margin text-caption">qwe</p>
+            </div>
+              <div >
+               <div class="overlay-img " @click="modalImg = `/doc.jpg`,modal=true">
               <img class="img" src="/doc.jpg" alt="">
               <div class="overlay-img__overlay">
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -209,6 +213,11 @@
 
               </div>
             </div>
+            <p class="no-margin text-caption">qwe</p>
+            </div>
+
+
+
 
           </div>
           <div class="col-12 col-md-4 offer-1 flex column items-start justify-between">
@@ -218,7 +227,7 @@
               <p class="text-avenir-300 q-mb-none text-lh-200 text-body2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam aut earum fuga, necessitatibus nulla quibusdam reprehenderit tenetur?</p>
 
             </div>
-            <p class="no-margin gt-sm"><a href="" class="link">Скачать документы PDF</a></p>
+            <p class="no-margin gt-sm"><a href="ARTDOX.docx" class="link">Договор Оферта ARTDOX</a></p>
           </div>
         </div>
       </div>

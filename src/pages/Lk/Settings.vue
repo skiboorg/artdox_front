@@ -78,6 +78,12 @@ export default {
       })
       console.log(response.data)
       await this.getUser(false)
+       this.$q.notify({
+          message: 'Данные изменены',
+          position: this.$q.screen.lt.sm ? 'bottom' : 'bottom-right',
+          color:'positive',
+          icon: 'announcement'
+        })
     },
   }
 }

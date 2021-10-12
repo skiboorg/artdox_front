@@ -13,7 +13,7 @@
           <div class="">
             <p class="q-mb-sm text-body2 text-avenir-450">{{$auth.user.fio}}</p>
             <p class="q-mb-sm text-caption text-grey-6">{{$auth.user.email}}</p>
-            <p class="q-mb-none text-caption text-grey-6">+7 (937) 936-05-00</p>
+            <p class="q-mb-none text-caption text-grey-6">{{$auth.user.phone}}</p>
             <q-separator spaced="md"/>
             <p class="q-mb-sm text-caption text-grey-6 text-avenir-450">Дата регистрации {{new Date($auth.user.date_joined).toLocaleDateString()}}</p>
           </div>
@@ -30,15 +30,23 @@
 
         <div class="grid items-center q-mb-sm">
           <p class="no-margin text-body2">Число ваших картин:</p>
-          <p class="no-margin text-body2"><span class="text-grey-6">0 </span> </p>
+          <p class="no-margin text-body2"><span class="text-grey-6">{{$auth.user.total_amount}}</span> </p>
         </div>
         <div class="grid items-center q-mb-sm">
           <p class="no-margin text-body2">Общая сумма ваших картин: </p>
-          <p class="no-margin text-body2"><span class="text-grey-6">0 </span> </p>
+          <p class="no-margin text-body2"><span class="text-grey-6">{{$auth.user.total_summ}} </span> </p>
         </div>
         <div class="grid items-center q-mb-sm">
           <p class="no-margin text-body2">Средства прибыли для вывода:</p>
           <p class="no-margin text-body2"><span class="text-grey-6">0 </span> </p>
+        </div>
+         <div class="grid items-center q-mb-sm">
+          <p class="no-margin text-body2">Ближайшая дата выплат:</p>
+          <p class="no-margin text-body2"><span class="text-grey-6">-</span> </p>
+        </div>
+         <div class="grid items-center q-mb-sm">
+          <p class="no-margin text-body2">Сумма ближайшей выплаты:</p>
+          <p class="no-margin text-body2"><span class="text-grey-6">-</span> </p>
         </div>
 
 
@@ -59,12 +67,18 @@
 
 <script>
 
+import {mapGetters} from "vuex";
+
 export default {
 
   data(){
     return{
 
     }
+  },
+  computed:{
+    ...mapGetters('data',['orders']),
+
   }
 }
 </script>
