@@ -22,7 +22,7 @@
 
           <div v-if="$auth.loggedIn" class="full-width">
             <div class="flex items-center justify-between justify-md-start q-mb-lg" v-if="!item.is_ordered" >
-              <q-btn v-if="item.left>=1" class="q-px-lg q-mr-none q-mr-md-md"  :disable="item.is_sell || !$auth.loggedIn" size="16px" @click="addToCart(item.id)"
+              <q-btn v-if="item.left>=1" class="q-px-lg q-mr-none q-mr-md-md"  :disable="item.is_sell || !$auth.loggedIn"  @click="addToCart(item.id)"
                    :loading="loading"  color="dark" rounded unelevated no-caps text-color="white"
                    :label="item.is_sell ? 'Продана' : 'В корзину'"/>
               <div v-else class="">
@@ -32,9 +32,9 @@
 
 
               <q-btn-group v-if="item.left>=1 "  rounded>
-              <q-btn size="16px" color="dark" @click="amount>1 ? amount-=1 : amount=1" rounded  icon="remove" />
-              <q-btn size="16px"  rounded  disable :label="amount" />
-              <q-btn size="16px" color="dark" @click="amount===item.left ? amount=item.left : amount+=1" rounded  icon-right="add"  />
+              <q-btn color="dark" @click="amount>1 ? amount-=1 : amount=1" rounded  icon="remove" />
+              <q-btn  rounded  disable :label="amount" />
+              <q-btn  color="dark" @click="amount===item.left ? amount=item.left : amount+=1" rounded  icon-right="add"  />
             </q-btn-group>
             </div>
 

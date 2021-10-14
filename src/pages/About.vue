@@ -20,7 +20,8 @@
               Не важно, что вы будете делать с картиной, повесите дома, в офисе, подарите друзьям, или оставите у нас на хранение, вы всегда будете получать с нее доход.
             </p>
           </div>
-          <img  class="img lt-md" src="~assets/a_bg_1920.png" alt="">
+<!--          <img  class="img lt-sm" src="~assets/a_bg_mob.png" alt="">-->
+          <img  class="img lt-md q-mt-lg" src="~assets/a_bg_med.png" alt="">
         </div>
       </div>
     </section>
@@ -159,7 +160,7 @@ export default {
 <style lang="sass" scoped>
 .about-wrapper
   background: url(~assets/a_bg_1920.png) no-repeat left top
-  height: 998px
+  height: 930px
   background-size: contain
   z-index: -1
   margin-top: -40px
@@ -182,6 +183,7 @@ export default {
 @media (max-width: 1024px)
   .about-wrapper
     background: unset
+    height: unset
   .about-top
     margin-bottom: 0
   .team-grid
