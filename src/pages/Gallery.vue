@@ -9,8 +9,8 @@
 
       <h1 class="title q-mb-lg q-mb-lg-xl">Галерея</h1>
       <p class="text-fs18 text-avenir-450 q-mb-xl">
-        Все наши картины - это репродукции с оцифрованных в качестве 300 dpi оригиналов. Оцифровка, и последующая печать, выполнена на самом современном оборудовании. Все работы напечатаны на бельгийской и немецкой эко бумаге, доведены вручную, и покрыты лаком для лучшей защиты и восприятия, их не обязательно ставить под стекло. Картины продаются полностью оформленные, в паспарту, задник и раму без стекла.
-      </p>
+      Все наши картины - это репродукции с оцифрованных в качестве 600 - 1200 dpi оригиналов. Оцифровка, и последующая печать, выполнена на самом современном оборудовании. Все работы напечатаны на британской и немецкой хлопковой бумаге, доработаны и покрыты лаком для лучшей защиты и восприятия, их не обязательно ставить под стекло. Картины продаются в нашей фирменной коробке, с сертификатом от автора.
+       </p>
 
 <!--      <p class="text-dark text-fs18 q-mb-sm">Оригиналы – <span class="text-grey-7">от 150 000 ₽</span></p>-->
 <!--      <p class="text-dark text-fs18 q-mb-xl">Репродукция – <span class="text-grey-7">от 50 000 ₽ до 140 000 ₽</span></p>-->
@@ -30,7 +30,7 @@
               </div>
             </div>
 
-            <p v-if="slide.is_sell" class="q-mb-none text-bold text-left text-negative text-caption">Продана</p>
+            <p v-if="slide.left===0" class="q-mb-none text-bold text-left text-negative text-caption">Нет в наличии</p>
             <p v-if="slide.is_ordered" class="q-mb-none text-bold text-left text-positive text-caption">Заказана</p>
             <p class="q-mb-sm text-left gallery-item__title text-avenir-450 text-dark">{{slide.name}}</p>
             <!--                  <p class="text-left gallery-item__subtitle text-dark">{{slide.subtitle}}</p>-->

@@ -22,15 +22,19 @@
 
           <div v-if="$auth.loggedIn" class="full-width">
             <div class="flex items-center justify-between justify-md-start q-mb-lg" v-if="!item.is_ordered" >
-              <q-btn v-if="item.left>1" class="q-px-lg q-mr-none q-mr-md-md" glossy :disable="item.is_sell || !$auth.loggedIn" size="18px" @click="addToCart(item.id)"
+              <q-btn v-if="item.left>=1" class="q-px-lg q-mr-none q-mr-md-md"  :disable="item.is_sell || !$auth.loggedIn" size="16px" @click="addToCart(item.id)"
                    :loading="loading"  color="dark" rounded unelevated no-caps text-color="white"
                    :label="item.is_sell ? 'Продана' : 'В корзину'"/>
-              <p v-else>Нет в наличии</p>
+              <div v-else class="">
+                 <p >Нет в наличии</p>
+                 <q-btn  class="q-px-lg"  size="16px" @click="orderBtn" outline label="Заказать" no-caps rounded />
+              </div>
 
-              <q-btn-group v-if="item.left>1" rounded>
-              <q-btn size="18px" color="dark" @click="amount>1 ? amount-=1 : amount=1" rounded glossy icon="remove" />
-              <q-btn size="18px"  rounded  disable :label="amount" />
-              <q-btn size="18px" color="dark" @click="amount===item.left ? amount=item.left : amount+=1" rounded glossy icon-right="add"  />
+
+              <q-btn-group v-if="item.left>=1 "  rounded>
+              <q-btn size="16px" color="dark" @click="amount>1 ? amount-=1 : amount=1" rounded  icon="remove" />
+              <q-btn size="16px"  rounded  disable :label="amount" />
+              <q-btn size="16px" color="dark" @click="amount===item.left ? amount=item.left : amount+=1" rounded  icon-right="add"  />
             </q-btn-group>
             </div>
 
@@ -147,6 +151,15 @@ export default {
     async getItem(){
       const resp = await this.$api.get(`/api/item/one?slug=${this.$route.params.slug}`)
       this.item = resp.data
+    },
+    orderBtn(){
+      this.$q.notify({
+        message: `Заявка на заказ создана!<br><br> Мы с вами свяжемся в течении 12 часов для<br>уточнения тиража и оформления заказа.`,
+        position: this.$q.screen.lt.sm ? 'bottom' : 'bottom-right',
+        color:'positive',
+         html: true,
+
+      })
     },
     async addToCart(id){
       console.log('dsfd')
