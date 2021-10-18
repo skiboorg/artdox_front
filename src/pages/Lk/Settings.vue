@@ -31,7 +31,7 @@
           <q-input class="q-mb-lg" v-model="password" borderless bg-color="grey-3"/>
 
           <div class="q-gutter-md">
-            <q-btn label="Применить" color="dark" rounded no-caps/>
+            <q-btn @click="updateUser" :disable="password!==password1" label="Применить" color="dark" rounded no-caps/>
 
           </div>
         </div>
@@ -68,6 +68,10 @@ export default {
       if (this.avatar){
         formData.set('avatar',this.avatar)
       }
+      if (this.password1){
+        formData.set('password',JSON.stringify(this.password1))
+      }
+      console.log(formData)
       const response = await this.$api({
         method: 'post',
         headers:{

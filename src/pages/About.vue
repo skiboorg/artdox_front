@@ -21,7 +21,9 @@
             </p>
           </div>
 <!--          <img  class="img lt-sm" src="~assets/a_bg_mob.png" alt="">-->
-          <img  class="img lt-md q-mt-lg" src="~assets/a_bg_med.png" alt="">
+          <img  class="img about-img-med q-mt-lg" src="~assets/a_bg_med.png" alt="">
+
+          <img  class="img about-img-mob q-mt-lg" src="~assets/a_bg_mob.png" alt="">
         </div>
       </div>
     </section>
@@ -158,6 +160,10 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+.about-img-med
+  display: none
+.about-img-mob
+  display: none
 .about-wrapper
   background: url(~assets/a_bg_1920.png) no-repeat left top
   height: 930px
@@ -181,6 +187,8 @@ export default {
     &:nth-child(even)
       margin-top: 50px
 @media (max-width: 1024px)
+  .about-img-med
+    display: block
   .about-wrapper
     background: unset
     height: unset
@@ -207,4 +215,9 @@ export default {
     grid-template-columns: repeat(1, 1fr)
     grid-column-gap: 4px
     grid-row-gap: 0px
+@media (max-width: 768px)
+  .about-img-med
+    display: none
+  .about-img-mob
+    display: block
 </style>
