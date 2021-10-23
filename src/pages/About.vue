@@ -10,7 +10,7 @@
 
         <h1 class="title q-mb-lg q-mb-lg-xl">О нас</h1>
         <div class="row q-col-gutter-md-xl">
-          <div class=" col-12 col-md-7">
+          <div class=" col-12 col-md-9 col-lg-7">
             <p class="q-mb-none text-lh-200">
               Наша Команда специалистов в области искусства, менеджмента и маркетинга, в партнерстве с китайской компанией ArtBooklet LTD.<br>( <a target="_blank" class="link text-bold" href="doc1.jpg">лицензия</a> ), предлагает Вам абсолютно новый подход к продажам предметов искусства.  <br><br>
 
@@ -90,7 +90,7 @@
           <div class=" col-12 col-md-9">
             <p class="q-mb-lg q-mb-md-xl text-lh-200 ">
 
-Каждая картина, купленная у нас на сайте, имеет доходность 32% в год для своего владельца, каждый квартал вы получите 8% от суммы, потраченной на покупку. Договор можно пролонгировать каждый год, в течение 5-ти лет. Возврат картины возможен в любое время.
+Каждая картина, купленная у нас на сайте, имеет доходность 30% в год для своего владельца, каждый месяц вы получите 2,5% от суммы, потраченной на покупку. Договор можно пролонгировать каждый год, в течение 5-ти лет. Возврат картины возможен в любое время.
 
 
             </p>
@@ -146,9 +146,9 @@ export default {
       modal:false,
       modalImg:'',
       teamItems:[
-        {img:'team1.jpg',name:'Lindsey Rosser',work:'Искусствовед'},
-        {img:'team2.jpg',name:'Jordyn Vetrovs',work:'Юрист'},
-        {img:'team3.jpg',name:'Hannah Herwitz',work:'Менеджер'},
+        {img:'t1.png',name:'Ангелина Коптеева',work:'Искусствовед'},
+        {img:'t2.png',name:'Хинг Ван Су',work:'Юрист'},
+        {img:'t3.png',name:'Антон Сергеев',work:'Менеджер'},
 
 
       ]
@@ -189,9 +189,7 @@ export default {
 @media (max-width: 1024px)
   .about-img-med
     display: block
-  .about-wrapper
-    background: unset
-    height: unset
+
   .about-top
     margin-bottom: 0
   .team-grid
@@ -220,4 +218,9 @@ export default {
     display: none
   .about-img-mob
     display: block
+@media (max-width: 1365px)
+  .about-wrapper
+    background: unset
+    height: unset
+
 </style>

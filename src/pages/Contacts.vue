@@ -19,7 +19,7 @@
               <circle cx="25" cy="25" r="24.5" stroke="#393939"/>
             </svg>
             <div class="">
-              <p class="no-margin text-dark">+7 900 122 33 44</p>
+              <p class="no-margin text-dark">+7 925 509 40 90</p>
               <q-separator/>
               <p class="no-margin text-body1 text-grey-15">с 10 до 18 пн-пт</p>
             </div>
@@ -38,7 +38,7 @@
             </svg>
 
             <div class="">
-              <p class="no-margin text-dark">+7 900 122 33 44</p>
+              <p class="no-margin text-dark">+7 925 509 40 90</p>
               <q-separator/>
               <p class="no-margin text-body1 text-grey-15">с 10 до 18 пн-пт</p>
             </div>
@@ -60,7 +60,7 @@
       <section>
         <h3 class="title q-mb-lg q-mb-lg-xl">Написать нам</h3>
         <div class="row  items-center">
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 q-mb-xl q-mb-md-none">
             <p>Тема</p>
             <q-input class="q-mb-lg " v-model="subject" borderless  bg-color="grey-3" />
             <p>Сообщение</p>
@@ -71,7 +71,7 @@
             </div>
           </div>
           <div class="col-12 col-md-4 offset-0 offset-md-2" >
-            <p>Если вы художник -отправиьте нам ваши работы, мы оценим их стоимость и вышлем вам предложенеи!<br><br>
+            <p>Если вы художник - отправьте нам ваши работы, мы оценим их стоимость и вышлем вам предложенеи!<br><br>
 
               Если вы меценат - то мы с вами свяжемся.</p>
           </div>
@@ -84,7 +84,7 @@
         <div class="row  ">
           <div class="col-12 col-md-4">
             <p class="no-margin">
-              ИП Иванов Иван Иванович<br>
+
               ОГРН 20112030921039<br>
               ИНН 93219844
             </p>
