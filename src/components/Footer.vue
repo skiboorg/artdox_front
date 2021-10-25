@@ -43,7 +43,8 @@
           <q-btn label="Меценаты" :to="{name:'contacts'}" unelevated outline text-color="white" class="text-body-2 q-py-md q-px-xl" no-caps rounded />
         </div>
         <div class="gt-sm">
-          <p class="q-mb-none text-grey-7 text-right">ИП Иванов Иван<br>
+          <p class="q-mb-none text-grey-7 text-right">
+<!--            ИП Иванов Иван<br>-->
             ОГРН 092130990213<br>
             ИНН 213901239901239</p>
         </div>
@@ -75,12 +76,13 @@
           </div>
               <div class="text-center">
                  <q-separator spaced="lg" color="grey-8"/>
-          <p class="q-mb-none text-grey-4">ИП Иванов Иван<br>
-            ОГРН 092130990213<br>
-            ИНН 213901239901239</p>
-                 <q-separator spaced="lg" color="grey-8"/>
+          <p class="q-mb-none text-grey-4">
+<!--            ИП Иванов Иван<br>-->
+                ОГРН 092130990213<br>
+                ИНН 213901239901239</p>
+                <q-separator spaced="lg" color="grey-8"/>
                 <p class="text-center"> <a href="#" class="link">Политика конфиденциальности</a></p>
-                 <p class="no-margin text-white">2021 © ARTDOX.RU</p>
+                <p class="no-margin text-white">2021 © ARTDOX.RU</p>
         </div>
         </div>
 
