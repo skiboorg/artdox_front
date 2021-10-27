@@ -96,8 +96,9 @@
             </p>
 
           </div>
-          <div class="col-12 ">
-            <img class="img" src="~assets/a_img.png" alt="">
+          <div class="col-12 text-center">
+            <img class="img gt-sm" src="~assets/a_img.png" alt="">
+            <img class="img lt-md" src="~assets/a_img_mob.png" alt="">
           </div>
         </div>
 
