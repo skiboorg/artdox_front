@@ -114,12 +114,7 @@
             <p class="text-montserrat text-grey-6 q-mb-none text-body2">{{item.work}}</p>
           </div>
         </div>
-        <div class="text-right">
 
-          <q-btn  icon="chat_bubble_outline" round unelevated color="dark"  class="q-mr-sm" text-color="white"  />
-          <q-btn  icon="phone" round unelevated color="dark" text-color="white"  />
-
-        </div>
       </div>
     </section>
 

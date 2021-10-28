@@ -115,6 +115,8 @@ export default {
       opacity: 1
       pointer-events: all
       top: 97px
+  &-logo
+    width: 60px
 .nav
   display: grid
   grid-template-columns: repeat(4, 1fr)
