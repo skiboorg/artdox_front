@@ -3,8 +3,8 @@
     <div class="container">
       <div class=" header-wrapper">
         <div class="gt-sm nav">
-          <router-link class="nav-link" :to="{name:'about'}">О нас</router-link>
-          <router-link class="nav-link" :to="{name:'profit'}">Доход</router-link>
+<!--          <router-link class="nav-link" :to="{name:'about'}">О нас</router-link>-->
+<!--          <router-link class="nav-link" :to="{name:'profit'}">Доход</router-link>-->
           <router-link class="nav-link" :to="{name:'gallery'}">Галерея</router-link>
           <router-link class="nav-link" :to="{name:'about'}">Контакты</router-link>
         </div>
@@ -50,8 +50,8 @@
         </div>
       </div>
       <div class="lt-md ">
-          <p><router-link class="nav-link" :to="{name:'about'}">О нас</router-link></p>
-          <p><router-link class="nav-link" :to="{name:'profit'}">Доход</router-link></p>
+<!--          <p><router-link class="nav-link" :to="{name:'about'}">О нас</router-link></p>-->
+<!--          <p><router-link class="nav-link" :to="{name:'profit'}">Доход</router-link></p>-->
           <p><router-link class="nav-link" :to="{name:'gallery'}">Галерея</router-link></p>
           <p><router-link class="nav-link" :to="{name:'contacts'}">Контакты</router-link></p>
           <q-separator spaced="lg" color="grey-8"/>

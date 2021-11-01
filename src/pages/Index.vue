@@ -45,28 +45,28 @@
 
       </div>
     </section>
-    <section style="background: #f9f9f9" class="about q-pt-xl">
-      <div class="container">
-        <h3 class="title q-mb-lg ">Доход</h3>
+<!--    <section style="background: #f9f9f9" class="about q-pt-xl">-->
+<!--      <div class="container">-->
+<!--        <h3 class="title q-mb-lg ">Доход</h3>-->
 
-        <div class="row q-col-gutter-md-xl ">
-          <div class=" col-12 col-md-9">
-            <p class="q-mb-lg q-mb-md-xl text-lh-150 ">
-              Наша работа позволяет сформировать доходность для каждой картины, при этом уровень ликвидности не зависит от художественной ценности и материальной стоимости актива, прибыль с картин получается при условии участия в экспозиционной и продажной деятельности на территории Китая и России.
-            </p>
-            <div class="text-left">
-<!--              <q-btn :to="{name:'profit'}" size="16px" class="text-montserrat q-px-xl" no-caps rounded unelevated outline color="dark"  label="Подробнее"/>-->
-               <router-link class="link" :to="{name:'profit'}">Подробнее</router-link>
-            </div>
-          </div>
-          <div class="col-12 ">
-            <img class="img gt-sm" src="~assets/ppp.png" alt="">
-            <img class="img lt-md q-mt-lg" src="~assets/ppp1.png" alt="">
-          </div>
-        </div>
+<!--        <div class="row q-col-gutter-md-xl ">-->
+<!--          <div class=" col-12 col-md-9">-->
+<!--            <p class="q-mb-lg q-mb-md-xl text-lh-150 ">-->
+<!--              Наша работа позволяет сформировать доходность для каждой картины, при этом уровень ликвидности не зависит от художественной ценности и материальной стоимости актива, прибыль с картин получается при условии участия в экспозиционной и продажной деятельности на территории Китая и России.-->
+<!--            </p>-->
+<!--            <div class="text-left">-->
+<!--&lt;!&ndash;              <q-btn :to="{name:'profit'}" size="16px" class="text-montserrat q-px-xl" no-caps rounded unelevated outline color="dark"  label="Подробнее"/>&ndash;&gt;-->
+<!--               <router-link class="link" :to="{name:'profit'}">Подробнее</router-link>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-12 ">-->
+<!--            <img class="img gt-sm" src="~assets/ppp.png" alt="">-->
+<!--            <img class="img lt-md q-mt-lg" src="~assets/ppp1.png" alt="">-->
+<!--          </div>-->
+<!--        </div>-->
 
-      </div>
-    </section>
+<!--      </div>-->
+<!--    </section>-->
     <section class="gallery">
       <div class="container">
         <div class="gallery-title">
@@ -239,32 +239,32 @@
         </div>
       </div>
     </section>
-    <section class="faq">
-      <div class="container">
-        <h3 class="title ">FAQ</h3>
-        <q-list separator>
-          <q-expansion-item
-            v-for="(item,index) in faqItems"
-            :key="index"
-            group="group"
-            :label="item.question"
-            :default-opened="index===0"
-            header-class="text-playfair q-py-md text-body1"
-            class="text-montserrat text-body2"
-            expand-icon="add"
-            expanded-icon="close"
-          >
-            <q-card>
-              <q-card-section>
-                {{item.answer}}
-              </q-card-section>
-            </q-card>
-          </q-expansion-item>
+<!--    <section class="faq">-->
+<!--      <div class="container">-->
+<!--        <h3 class="title ">FAQ</h3>-->
+<!--        <q-list separator>-->
+<!--          <q-expansion-item-->
+<!--            v-for="(item,index) in faqItems"-->
+<!--            :key="index"-->
+<!--            group="group"-->
+<!--            :label="item.question"-->
+<!--            :default-opened="index===0"-->
+<!--            header-class="text-playfair q-py-md text-body1"-->
+<!--            class="text-montserrat text-body2"-->
+<!--            expand-icon="add"-->
+<!--            expanded-icon="close"-->
+<!--          >-->
+<!--            <q-card>-->
+<!--              <q-card-section>-->
+<!--                {{item.answer}}-->
+<!--              </q-card-section>-->
+<!--            </q-card>-->
+<!--          </q-expansion-item>-->
 
 
-        </q-list>
-      </div>
-    </section>
+<!--        </q-list>-->
+<!--      </div>-->
+<!--    </section>-->
     <section class="news">
       <div class="container">
         <h3 class="title">Новости</h3>

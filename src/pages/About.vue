@@ -143,7 +143,7 @@ export default {
       modalImg:'',
       teamItems:[
         {img:'t1.png',name:'Ангелина Коптеева',work:'Искусствовед'},
-        {img:'t2.png',name:'Хинг Ван Су',work:'Юрист'},
+        {img:'t2.png',name:'Петр Пономарев',work:'Юрист, директор фирмы'},
         {img:'t3.png',name:'Антон Сергеев',work:'Менеджер'},
 
 

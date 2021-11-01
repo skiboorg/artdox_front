@@ -34,12 +34,58 @@
 
         </div>
         <p class="text-avenir-600 text-fs18 text-dark">  Итого : {{cart.price}} ₽</p>
+ <div class="cart-bottom">
+          <p class="text-avenir-600 text-fs18 text-dark">Доставка</p>
+          <q-list dense class="q-mb-md">
 
-        <q-separator spaced="md"/>
+      <q-item  tag="label" v-ripple>
+        <q-item-section avatar>
+          <q-radio dense v-model="delivery" val="courier" color="dark" />
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>Курьером</q-item-label>
+           <q-item-label caption>Доставляем по Москве и МО своим курьером в любое удобное вам время!</q-item-label>
+        </q-item-section>
+      </q-item>
+
+      <q-item tag="label" v-ripple>
+        <q-item-section avatar>
+          <q-radio dense v-model="delivery" val="sdek" color="dark" />
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>СДЭК до двери</q-item-label>
+        </q-item-section>
+      </q-item>
+      <q-item tag="label" v-ripple>
+        <q-item-section avatar>
+          <q-radio dense v-model="delivery" val="post" color="dark" />
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>Почта России (до отделения)</q-item-label>
+        </q-item-section>
+      </q-item>
+
+    </q-list>
+          <p class="text-caption">Введите ваш адрес, а так же комментарии к доставке</p>
+          <q-input
+            filled
+            :dense="!$q.screen.gt.md"
+            type="textarea"
+            v-model="address"
+
+            lazy-rules
+            :rules="[ val => val && val.length > 0 || 'Это обязательное поле']"
+          />
+
+      </div>
+        <q-separator spaced="xl"/>
           <q-checkbox  dense class="rounded-borders q-mb-sm" v-model="agree" label="Согласен с пользовательским соглашением" />
         <q-checkbox style="line-height: 100%" dense class=" q-mb-lg" v-model="agree1" label="Согласен с договором передачи картины в управление" />
           <q-btn class="q-px-lg " :disable="!agree || !agree1" size="18px" color="dark" @click="createOrder" rounded unelevated no-caps text-color="white" label="Купить с Доходом"/>
+
+
       </div>
+
       <div v-else class="cart">
         <p class="no-margin text-avenir-600 text-fs18 text-dark">Корзина пуста</p>
       </div>
@@ -55,6 +101,8 @@ export default {
       loading:false,
           agree:false,
       agree1:false,
+      delivery:'courier',
+      address:null
 
     }
   },
@@ -67,7 +115,7 @@ export default {
     async createOrder(){
 
       this.loading = !this.loading
-      await this.$api.post('/api/order/create')
+      await this.$api.post('/api/order/create',{delivery:this.delivery,address:this.address})
       this.loading = !this.loading
       this.$q.notify({
           message: 'Заказ создан',
@@ -96,7 +144,7 @@ export default {
   &-item
     padding-bottom: 40px
     border-bottom: 1px solid #E5E5E5
-    margin-bottom: 40px
+    margin-bottom: 20px
     &:last-child
       border-bottom: none
 .item
@@ -107,4 +155,7 @@ export default {
 @media (max-width: 768px)
   .cart
     padding: 10px
+  .item
+    &-card
+      grid-template-columns: 1fr
 </style>
