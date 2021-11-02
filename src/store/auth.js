@@ -57,7 +57,6 @@ const actions = {
     api.post( '/auth/token/logout/')
       .then(response=>{
         console.log('logoutUser', response)
-        api.defaults.headers.common['Authorization'] = null
         Cookies.remove('auth_token')
         commit('updateUser', {})
         commit('updateUserStatus', false)

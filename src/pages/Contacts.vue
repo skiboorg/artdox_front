@@ -84,14 +84,15 @@
         <div class="row  ">
           <div class="col-12 col-md-4">
             <p class="no-margin">
-
-              ОГРН 20112030921039<br>
-              ИНН 93219844
+ИП Пономарев Петр Олегович<br>
+                ИНН 772642720112<br>
+                Банк АО "Тинькофф банк"<br>
+            Р/С 40802810000002728312
             </p>
           </div>
           <div class="col-12 col-md-4 offset-0 offset-md-4">
             <p class="no-margin text-lh-200">
-              <a class="link " href="#" target="_blank">Договор Оферты</a><br>
+<!--              <a class="link " href="#" target="_blank">Договор Оферты</a><br>-->
               <a class="link " href="#" target="_blank">Пользовательское соглашение</a><br>
               <a class="link " href="#" target="_blank">Пользовательское соглашение</a>
             </p>

@@ -19,9 +19,9 @@
           </div>
 
         </div>
-        <q-separator spaced="lg"/>
-        <p class="text-caption text-blue-grey-7"><a style="text-decoration: underline" href="#">Договор - оферта</a> скачать документ в PDF</p>
-        <p class="text-caption text-blue-grey-7 q-mb-none"><a style="text-decoration: underline" href="#">Договор на вывод средств</a> скачать документ в PDF</p>
+<!--        <q-separator spaced="lg"/>-->
+<!--        <p class="text-caption text-blue-grey-7"><a style="text-decoration: underline" href="#">Договор - оферта</a> скачать документ в PDF</p>-->
+<!--        <p class="text-caption text-blue-grey-7 q-mb-none"><a style="text-decoration: underline" href="#">Договор на вывод средств</a> скачать документ в PDF</p>-->
       </div>
       <div class="lk-card">
         <div class="lk-card-title">
