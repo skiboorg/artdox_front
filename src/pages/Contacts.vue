@@ -93,8 +93,9 @@
           <div class="col-12 col-md-4 offset-0 offset-md-4">
             <p class="no-margin text-lh-200">
 <!--              <a class="link " href="#" target="_blank">Договор Оферты</a><br>-->
-              <a class="link " href="#" target="_blank">Пользовательское соглашение</a><br>
-              <a class="link " href="#" target="_blank">Пользовательское соглашение</a>
+              <a href="/rules.docx" target="_blank" class="link">Пользовательское соглашение</a>
+
+              <a href="/policy.docx" target="_blank" class="link">Политика конфидициальности</a>
             </p>
           </div>
         </div>

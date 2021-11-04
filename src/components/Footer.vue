@@ -85,7 +85,7 @@
                 Р/С 40802810000002728312
           </p>
                 <q-separator spaced="lg" color="grey-8"/>
-                <p class="text-center"> <a href="#" class="link">Политика конфиденциальности</a></p>
+                <p class="text-center"><a href="/policy.docx" target="_blank" class="link">Политика конфидициальности</a></p>
                 <p class="no-margin text-white">2021 © ARTDOX.RU</p>
         </div>
         </div>
@@ -95,7 +95,7 @@
 
         </div>
       <div class="gt-sm flex items-center justify-between q-pt-lg q-pb-xl">
-        <a href="#" class="link">Политика конфиденциальности</a>
+        <a href="/policy.docx" target="_blank" class="link">Политика конфидициальности</a>
         <p class="no-margin text-white">2021 © ARTDOX.RU</p>
       </div>
     </div>

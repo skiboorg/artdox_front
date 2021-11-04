@@ -79,9 +79,9 @@
 
       </div>
         <q-separator spaced="xl"/>
-          <q-checkbox  dense class="rounded-borders q-mb-sm" v-model="agree" label="Согласен с пользовательским соглашением" />
-        <q-checkbox style="line-height: 100%" dense class=" q-mb-lg" v-model="agree1" label="Согласен с договором передачи картины в управление" />
-          <q-btn class="q-px-lg " :disable="!agree || !agree1" size="18px" color="dark" @click="createOrder" rounded unelevated no-caps text-color="white" label="Купить с Доходом"/>
+<!--          <q-checkbox  dense class="rounded-borders q-mb-sm" v-model="agree" label="Согласен с пользовательским соглашением" />-->
+<!--        <q-checkbox style="line-height: 100%" dense class=" q-mb-lg" v-model="agree1" label="Согласен с договором передачи картины в управление" />-->
+          <q-btn class="q-px-lg " :disable="!agree || !agree1" size="18px" color="dark" @click="createOrder" rounded unelevated no-caps text-color="white" label="Купить"/>
 
 
       </div>

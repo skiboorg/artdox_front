@@ -57,8 +57,18 @@
               />
             </template>
           </q-input>
+            <div class="flex items-center q-mb-sm">
+                <q-checkbox  dense color="dark" class="rounded-borders q-mr-sm" v-model="agree" label="Согласен с " />
+            <p class="q-mb-none"><a href="/rules.docx" target="_blank" class="link">пользовательским соглашением</a></p>
+            </div>
+             <div class="flex items-center">
+                <q-checkbox  dense color="dark" class="rounded-borders q-mr-sm" v-model="agree1" label="Согласен с " />
+            <p class="q-mb-none"><a href="/policy.docx" target="_blank" class="link">политикой конфидициальности</a></p>
+            </div>
+
+
             <div class="text-right q-mt-md-lg">
-              <q-btn outline unelevated rounded no-caps color="dark" type="submit" class="q-py-sm q-px-lg" label="Зарегистрироваться "/>
+              <q-btn outline unelevated rounded no-caps color="dark" :disable="!agree || !agree1" type="submit" class="q-py-sm q-px-lg" label="Зарегистрироваться "/>
             </div>
           </q-form>
         </div>
@@ -81,6 +91,7 @@ export default {
         is_loading:false,
         isPwd:true,
         agree:false,
+        agree1:false,
       userRegister:{
         fio:null,
         email:null,
