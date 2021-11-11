@@ -81,7 +81,8 @@
         <q-separator spaced="xl"/>
 <!--          <q-checkbox  dense class="rounded-borders q-mb-sm" v-model="agree" label="Согласен с пользовательским соглашением" />-->
 <!--        <q-checkbox style="line-height: 100%" dense class=" q-mb-lg" v-model="agree1" label="Согласен с договором передачи картины в управление" />-->
-          <q-btn class="q-px-lg " :disable="!agree || !agree1" size="18px" color="dark" @click="createOrder" rounded unelevated no-caps text-color="white" label="Купить"/>
+<!--        :disable="!agree || !agree1"-->
+          <q-btn class="q-px-lg "  size="18px" color="dark" @click="createOrder" rounded unelevated no-caps text-color="white" label="Купить"/>
 
 
       </div>
@@ -115,17 +116,31 @@ export default {
     async createOrder(){
 
       this.loading = !this.loading
-      await this.$api.post('/api/order/create',{delivery:this.delivery,address:this.address})
-      this.loading = !this.loading
-      this.$q.notify({
+      const result = await this.$api.post('/api/order/create',{delivery:this.delivery,address:this.address})
+      console.log(result)
+      if(result.data.success){
+        console.log(result.data.payment_url)
+        this.$q.notify({
           message: 'Заказ создан',
           position: this.$q.screen.lt.sm ? 'bottom' : 'bottom-right',
           color:'positive',
           icon: 'announcement'
         })
+        window.open(result.data.payment_url, '_blank').focus();
+      }else{
+        this.$q.notify({
+          message: 'Заказ создан, но произошла<br> ошбка формирования платежа',
+          position: this.$q.screen.lt.sm ? 'bottom' : 'bottom-right',
+          color:'negative',
+          html:true,
+          icon: 'announcement'
+        })
+      }
+      this.loading = !this.loading
       await this.fetchCart()
       await this.fetchOrders()
       await this.getUser()
+
     }
   },
   computed:{
