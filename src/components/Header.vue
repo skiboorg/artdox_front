@@ -6,8 +6,8 @@
             <img class="img"  src="~assets/logo.svg" alt="">
         </div>
         <div class="gt-sm nav">
-<!--          <router-link exact exact-active-class="active" class="nav-link" :to="{name:'about'}">О нас</router-link>-->
-<!--          <router-link exact exact-active-class="active" class="nav-link" :to="{name:'profit'}">Доход</router-link>-->
+          <router-link exact exact-active-class="active" class="nav-link" :to="{name:'about'}">О нас</router-link>
+          <router-link exact exact-active-class="active" class="nav-link" :to="{name:'profit'}">Доход</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'gallery'}">Галерея</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'contacts'}">Контакты</router-link>
         </div>
@@ -58,8 +58,8 @@
              <q-btn class="q-px-lg" :to="{name:'register'}" color="dark" rounded unelevated no-caps text-color="white" label="Регистрация"/>
            </div>
           <div class="flex column items-start">
-<!--            <router-link exact exact-active-class="active" class="nav-link " :to="{name:'about'}">О нас</router-link>-->
-<!--          <router-link exact exact-active-class="active" class="nav-link" :to="{name:'profit'}">Доход</router-link>-->
+            <router-link exact exact-active-class="active" class="nav-link " :to="{name:'about'}">О нас</router-link>
+          <router-link exact exact-active-class="active" class="nav-link" :to="{name:'profit'}">Доход</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'gallery'}">Галерея</router-link>
           <router-link exact exact-active-class="active" class="nav-link" :to="{name:'contacts'}">Контакты</router-link>
           </div>

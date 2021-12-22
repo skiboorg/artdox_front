@@ -8,7 +8,7 @@
         </div>
         <div class="flex items-center">
           <q-avatar size="125px" class="q-mr-lg">
-            <img :src="$auth.user.avatar" alt="">
+            <img style="object-fit: cover" :src="$auth.user.avatar" alt="">
           </q-avatar>
           <div class="">
             <p class="q-mb-sm text-body2 text-avenir-450">{{$auth.user.fio}}</p>

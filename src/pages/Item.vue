@@ -22,8 +22,8 @@
 
           <div v-if="$auth.loggedIn" class="full-width">
             <div class="flex items-center justify-between justify-md-start q-mb-lg" v-if="!item.is_ordered" >
-              <q-btn v-if="item.left>=1" class="q-px-lg q-mr-none q-mr-md-md"  :disable="item.is_sell || !$auth.loggedIn"  @click="addToCart(item.id)"
-                   :loading="loading"  color="dark" rounded unelevated no-caps text-color="white"
+              <q-btn style="padding-top: 12px; padding-bottom: 12px" v-if="item.left>=1" size="16px" class="text-montserrat q-px-xl q-mr-none q-mr-md-md" no-caps rounded unelevated  :disable="item.is_sell || !$auth.loggedIn"  @click="addToCart(item.id)"
+                   :loading="loading"  color="dark" text-color="white"
                    :label="item.is_sell ? 'Продана' : 'В корзину'"/>
               <div v-else class="">
                  <p >Нет в наличии</p>
@@ -31,10 +31,10 @@
               </div>
 
 
-              <q-btn-group v-if="item.left>=1 "  rounded>
-              <q-btn color="dark" @click="amount>1 ? amount-=1 : amount=1" rounded  icon="remove" />
-              <q-btn  rounded  disable :label="amount" />
-              <q-btn  color="dark" @click="amount===item.left ? amount=item.left : amount+=1" rounded  icon-right="add"  />
+              <q-btn-group  unelevated  outline v-if="item.left>=1 "  rounded>
+              <q-btn style="padding-top: 14px; padding-bottom: 14px; padding-left: 10px; padding-right: 10px" outline  class="text-montserrat " dense unelevated color="dark" @click="amount>1 ? amount-=1 : amount=1" rounded  icon="remove" />
+              <q-btn outline  class="text-montserrat text-bold " dense unelevated rounded   :label="amount" />
+              <q-btn style="padding-left: 10px; padding-right: 10px" outline  class="text-montserrat " dense unelevated color="dark" @click="amount===item.left ? amount=item.left : amount+=1" rounded  icon-right="add"  />
             </q-btn-group>
             </div>
 
