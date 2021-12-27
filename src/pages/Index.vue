@@ -28,10 +28,7 @@
               Вся наша деятельность нацелена на то, чтобы предметы искусства приносили своему владельцу не только
               эстетическое удовольствие, но и материальную выгоду. <br><br>
               Гораздо приятней смотреть на картину и знать, что деньги, потраченные на ее приобретение, не только
-              возможно вернуть, но и приумножить.<br><br>
-              Не важно, что вы будете делать с картиной, повесите дома, в офисе, подарите друзьям, или оставите
-              у нас на хранение, вы всегда будете иметь с нее доход.
-              Мы продаем качественные репродукции именитых художников. В будущем мы будем расширять нашу коллекцию до классических и новаторских художников.
+              возможно вернуть, но и приумножить.
             </p>
             <router-link class="link" :to="{name:'about'}">Узнать больше</router-link>
           </div>
@@ -56,7 +53,7 @@
               Наша работа позволяет сформировать доходность для каждой картины, при этом уровень ликвидности не зависит от художественной ценности и материальной стоимости актива, прибыль с картин получается при условии участия в экспозиционной и продажной деятельности на территории Китая и России.
             </p>
             <div class="text-left">
-              <q-btn :to="{name:'profit'}" size="16px" class="text-montserrat q-px-xl" no-caps rounded unelevated outline color="dark"  label="Подробнее"/>
+<!--              <q-btn :to="{name:'profit'}" size="16px" class="text-montserrat q-px-xl" no-caps rounded unelevated outline color="dark"  label="Подробнее"/>-->
                <router-link class="link" :to="{name:'profit'}">Подробнее</router-link>
             </div>
           </div>
@@ -160,7 +157,20 @@
 
         <div class="news-grid">
           <div class="news-item" v-for="(item,index) in interierItems" :key="index">
+            <p class="text-playfair text-h5 text-dark">{{item.title}}</p>
+            <div class="news-item__text flex column items-start justify-between full-height">
+              <p class="no-margin text-montserrat text-body2 text-lh-150 text-grey-7">
+                {{item.text}}
+              </p>
+              <p class="">
+                <router-link class="link" :to="{name:item.url}">{{item.link}}</router-link>
+              </p>
 
+            </div>
+          </div>
+        </div>
+          <div class="news-grid no-tb">
+          <div class="news-item" v-for="(item,index) in interierItems1" :key="index">
             <p class="text-playfair text-h5 text-dark">{{item.title}}</p>
             <div class="news-item__text flex column items-start justify-between full-height">
               <p class="no-margin text-montserrat text-body2 text-lh-150 text-grey-7">
@@ -222,17 +232,22 @@
 
           </div>
           <div class="col-12 col-md-4 offer-1 flex column items-start justify-start">
-            <p class="q-mb-sm lt-md"><a href="ARTDOX.docx" target="_blank" class="link text-caption">Договор оферта купли-продажи картины</a></p>
-            <p class="q-mb-sm lt-md"><a href="ARTDOX.docx" target="_blank" class="link text-caption">Пользовательское Соглашение</a></p>
+            <p class="q-mb-sm lt-md"><a href="ARTDOX.docx" target="_blank" class="link text-caption">Договор Оферты</a></p>
+            <p class="q-mb-sm lt-md"><a href="ARTDOX.docx" target="_blank" class="link text-caption">Договор Заклада</a></p>
+            <p class="q-mb-sm lt-md"><a href="ARTDOX.docx" target="_blank" class="link text-caption">Договор Хранения</a></p>
+            <p class="q-mb-sm lt-md"><a href="ARTDOX.docx" target="_blank" class="link text-caption">Пользовательское соглашение</a></p>
             <p class="q-mb-lg lt-md"><a href="ARTDOX.docx" target="_blank" class="link text-caption">Политика Конфиденциальности</a></p>
+
             <div class="">
               <p class="text-avenir-300 text-lh-200 text-body2">
                 Полный список документов, а так же контакты нашей фирмы находятся в разделе Контакты нашего сайта.
               </p>
             </div>
             <div class="q-mt-xl">
-              <p class="q-mb-sm gt-sm"><a href="ARTDOX.docx" class="link text-body1">Договор оферта купли-продажи картины</a></p>
-            <p class="q-mb-sm  gt-sm"><a href="ARTDOX.docx" class="link text-body1">Пользовательское Соглашение</a></p>
+              <p class="q-mb-sm gt-sm"><a href="ARTDOX.docx" class="link text-body1">Договор Оферты</a></p>
+            <p class="q-mb-sm  gt-sm"><a href="ARTDOX.docx" class="link text-body1">Договор Заклада</a></p>
+            <p class="q-mb-sm gt-sm"><a href="ARTDOX.docx" class="link text-body1">Договор Хранения</a></p>
+            <p class="q-mb-sm gt-sm"><a href="ARTDOX.docx" class="link text-body1">Пользовательское соглашение</a></p>
             <p class="no-margin gt-sm"><a href="ARTDOX.docx" class="link text-body1">Политика Конфиденциальности</a></p>
             </div>
 
@@ -361,7 +376,18 @@ export default {
         // {title:'Доставка',text:'Доставка только по Москве и московской области. Курьер – бесплатно.',url: 'index',link:'Подробнее'},
         {title:'Доставка',text:'Мы можем доставить вам приобретенный товар СДЭКом, Почтой России или нашим курьером! Стоимость доставки и страхование товара полностью за наш счет.',url: 'index',link:'Подробнее'},
         {title:'Возврат',text:'Возврат товара происходит согласно ст.24 и ст.25 закона о защите прав потребителей 07.02.1992 N 2300-1',url:'index',link:'Подробнее'},
-        //{title:'Возврат',text:'Возврат картин и средств за нее возможен в любое время у нас в офисе.',url:'index',link:'Подробнее'},
+        //{title:'Возврат',text:'Возврат картин и средств за нее возможен в любое время у нас в офисе.',url:'index',link:'Подробнее'}, {title:'Заказ экспозиции',text:'Если вы не успели купить картину из нашей Галереи, вы можете ее заказать.',url:'gallery',link:'В каталог'},
+        // {title:'Доставка',text:'Доставка только по Москве и московской области. Курьер – бесплатно.',url: 'index',link:'Подробнее'},
+
+      ],
+      interierItems1:[
+        {title:'Заклад',text:'Если вы не успели купить картину из нашей Галереи, вы можете ее заказать.',url:'gallery',link:'В каталог'},
+        // {title:'Доставка',text:'Доставка только по Москве и московской области. Курьер – бесплатно.',url: 'index',link:'Подробнее'},
+        {title:'Хранение',text:'Мы можем доставить вам приобретенный товар СДЭКом, Почтой России или нашим курьером! Стоимость доставки и страхование товара полностью за наш счет.',url: 'index',link:'Подробнее'},
+        {title:'NFT',text:'Возврат товара происходит согласно ст.24 и ст.25 закона о защите прав потребителей 07.02.1992 N 2300-1',url:'index',link:'Подробнее'},
+        //{title:'Возврат',text:'Возврат картин и средств за нее возможен в любое время у нас в офисе.',url:'index',link:'Подробнее'}, {title:'Заказ экспозиции',text:'Если вы не успели купить картину из нашей Галереи, вы можете ее заказать.',url:'gallery',link:'В каталог'},
+        // {title:'Доставка',text:'Доставка только по Москве и московской области. Курьер – бесплатно.',url: 'index',link:'Подробнее'},
+
       ],
       teamItems:[
         {img:'team1.jpg',name:'Lindsey Rosser',work:'Директор'},
@@ -503,6 +529,9 @@ export default {
   grid-template-columns: repeat(3,1fr)
   border: 1px solid #E5E5E5
   box-sizing: border-box
+  &.no-tb
+    border-top: none !important
+
 .news-item
   padding: 65px
   border-right: 1px solid #E5E5E5

@@ -492,6 +492,12 @@ export default {
   grid-template-columns: repeat(3,1fr)
   border: 1px solid #E5E5E5
   box-sizing: border-box
+  &.no-tb
+    border-top: none !important
+    border-left: 1px solid #E5E5E5
+    border-right: 1px solid #E5E5E5
+    border-bottom: 1px solid #E5E5E5
+
 .news-item
   padding: 65px
   border-right: 1px solid #E5E5E5
