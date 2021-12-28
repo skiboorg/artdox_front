@@ -144,7 +144,7 @@ export default {
       teamItems:[
         {img:'t1.png',name:'Ангелина Коптеева',work:'Искусствовед'},
         {img:'t2.png',name:'Петр Пономарев',work:'Юрист, директор фирмы'},
-        {img:'t3.png',name:'Антон Сергеев',work:'Менеджер'},
+        {img:'t3.png',name:'Синь Пи Ляо',work:'Менеджер'},
 
 
       ]
