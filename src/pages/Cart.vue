@@ -7,9 +7,10 @@
       </q-breadcrumbs>
     </div>
 
-    <div class="cart-wrapper">
-
-      <div v-if="cart.items.length>0" class="cart">
+    <div class="container">
+      <div class="row q-col-gutter-none q-col-gutter-md-md">
+        <div class="col-12 col-md-8  ">
+           <div v-if="cart.items.length>0" class="cart">
         <p class="text-avenir-600 text-fs18 text-dark">Моя корзина</p>
         <div class="cart-item" v-for="item in cart.items" :key="item.id">
           <div class="item-card q-mb-lg">
@@ -34,7 +35,27 @@
           </div>
 
         </div>
-        <p class="text-avenir-600 text-fs18 text-dark">  Итого : {{cart.price}} ₽</p>
+
+      </div>
+
+      <div v-else class="cart">
+        <p v-if="!order_id" class="no-margin text-avenir-600 text-fs18 text-dark">Корзина пуста</p>
+        <div v-if="order_id" class="">
+          <p class="text-fs18 text-bold">Ваш заказ №{{order_id}} успешно сформирован!</p>
+          <q-separator class="q-mb-md"/>
+          <p class="q-mb-lg">После подтверждения оплаты от банка вам на почту придет письмо с деталями вашего заказа и чек вашего заказа.</p>
+          <p class="q-mb-lg">Мы с вами свяжемся в ближайшее время по указанной вами почте для уточнения сроков и адреса доставки!</p>
+          <p class="q-mb-xl">Статус и содержание заказа вы можете отслеживать в своем личном кабинете в разделе “Мои заказы”.</p>
+          <div class="text-center">
+             <q-btn class="q-px-lg "    size="18px" color="dark" to="/" rounded unelevated no-caps text-color="white" label="Вернуться в магазин"/>
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="col-12 col-md-4  ">
+          <div class="bg-white q-pa-lg cart-total">
+                              <p class="text-avenir-600 text-fs18 text-dark">  Итого : {{cart.price}} ₽</p>
  <div class="cart-bottom">
           <p class="text-avenir-600 text-fs18 text-dark">Доставка</p>
           <q-list dense class="q-mb-md">
@@ -86,22 +107,11 @@
           <q-btn class="q-px-lg "  :loading="loading"  size="18px" color="dark" @click="createOrder" rounded unelevated no-caps text-color="white" label="Купить"/>
 
 
-      </div>
-
-      <div v-else class="cart">
-        <p v-if="!order_id" class="no-margin text-avenir-600 text-fs18 text-dark">Корзина пуста</p>
-        <div v-if="order_id" class="">
-          <p class="text-fs18 text-bold">Ваш заказ №{{order_id}} успешно сформирован!</p>
-          <q-separator class="q-mb-md"/>
-          <p class="q-mb-lg">После подтверждения оплаты от банка вам на почту придет письмо с деталями вашего заказа и чек вашего заказа.</p>
-          <p class="q-mb-lg">Мы с вами свяжемся в ближайшее время по указанной вами почте для уточнения сроков и адреса доставки!</p>
-          <p class="q-mb-xl">Статус и содержание заказа вы можете отслеживать в своем личном кабинете в разделе “Мои заказы”.</p>
-          <div class="text-center">
-             <q-btn class="q-px-lg "    size="18px" color="dark" to="/" rounded unelevated no-caps text-color="white" label="Вернуться в магазин"/>
-
           </div>
+
         </div>
       </div>
+
     </div>
   </q-page>
 </template>
@@ -190,4 +200,7 @@ export default {
   .item
     &-card
       grid-template-columns: 1fr
+.cart-total
+  position: sticky
+  top: 100px
 </style>
