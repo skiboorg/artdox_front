@@ -136,7 +136,7 @@
       <div class="container">
         <h3 class="title">В интерьере</h3>
         <div class="interier-grid">
-          <div @click="modalImg = index+1 + '.jpg',modal=true" class="overlay-img" v-for="(i,index) in 8" :key="i">
+          <div @click="modalImg = index+1 + '.jpg',modal=true" class="overlay-img" v-for="(i,index) in 6" :key="i">
             <img class="img" :src="`${index+1}.jpg`" alt="">
 
             <div class="overlay-img__overlay">
@@ -547,13 +547,13 @@ export default {
 .interier
   &-grid
     display: grid
-    grid-template-columns: repeat(4,1fr)
+    grid-template-columns: repeat(3,1fr)
     grid-column-gap: 20px
     grid-row-gap: 14px
     margin-bottom: 70px
 @media (max-width: 1024px)
   .interier-grid
-    grid-template-columns: repeat(2, 1fr)
+    grid-template-columns: repeat(3, 1fr)
     grid-column-gap: 4px
     grid-row-gap: 0px
 .docs-grid
