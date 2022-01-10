@@ -11,8 +11,8 @@
           <p>Телефон</p>
           <q-input class="q-mb-lg" v-model="userData.phone" borderless bg-color="grey-3"/>
           <div class="q-gutter-md">
-            <q-btn label="Сохранить" @click="updateUser" color="dark" rounded no-caps/>
-            <q-btn class="relative-position" label="Сменить аватар"  outline rounded no-caps>
+            <q-btn unelevated label="Сохранить" @click="updateUser" color="dark" rounded no-caps/>
+            <q-btn unelevated class="relative-position" label="Сменить аватар"  outline rounded no-caps>
               <q-file style="position: absolute;opacity: 0" v-model="avatar"/>
             </q-btn>
           </div>
@@ -31,7 +31,7 @@
           <q-input class="q-mb-lg" v-model="password" borderless bg-color="grey-3"/>
 
           <div class="q-gutter-md">
-            <q-btn @click="updateUser" :disable="password!==password1" label="Применить" color="dark" rounded no-caps/>
+            <q-btn unelevated @click="updateUser" :disable="password!==password1" label="Применить" color="dark" rounded no-caps/>
 
           </div>
         </div>

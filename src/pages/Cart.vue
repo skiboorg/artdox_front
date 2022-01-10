@@ -9,7 +9,7 @@
 
     <div class="container">
       <div class="row q-col-gutter-none q-col-gutter-md-md">
-        <div class="col-12 col-md-8  ">
+        <div :class="[cart.items.length>0 ? 'col-12 col-md-8' : 'col-12']">
            <div v-if="cart.items.length>0" class="cart">
         <p class="text-avenir-600 text-fs18 text-dark">Моя корзина</p>
         <div class="cart-item" v-for="item in cart.items" :key="item.id">
@@ -53,7 +53,7 @@
         </div>
       </div>
         </div>
-        <div class="col-12 col-md-4  ">
+        <div  v-if="cart.items.length>0" class="col-12 col-md-4  ">
           <div class="bg-white q-pa-lg cart-total">
                               <p class="text-avenir-600 text-fs18 text-dark">  Итого : {{cart.price}} ₽</p>
  <div class="cart-bottom">

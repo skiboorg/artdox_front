@@ -66,8 +66,8 @@
             <p>Сообщение</p>
             <q-input class="q-mb-lg"  v-model="text" type="textarea" borderless bg-color="grey-3" />
             <div class="q-gutter-lg">
-              <q-btn color="dark" label="Отправить" @click="send" no-caps rounded size="18px" class="q-px-xl"/>
-              <q-btn color="white" text-color="dark" label="Прикрепить файл" outline no-caps rounded size="18px" class="q-px-xl"/>
+              <q-btn unelevated color="dark" label="Отправить" @click="send" no-caps rounded size="18px" class="q-px-xl"/>
+              <q-btn unelevated color="white" text-color="dark" label="Прикрепить файл" outline no-caps rounded size="18px" class="q-px-xl"/>
             </div>
           </div>
           <div class="col-12 col-md-4 offset-0 offset-md-2" >

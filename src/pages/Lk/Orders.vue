@@ -11,10 +11,10 @@
           <div  class="order" v-for="item in order.order_items">
           <div class="flex items-start q-mb-lg">
             <div class="q-mr-md-lg">
-              <div class="overlay-img bordered q-mb-md">
-              <img  :src="item.item.image_thumb" alt="">
 
-            </div>
+              <img class="img img-order" :src="item.item.image_thumb" alt="">
+
+
               <p class="no-margin text-avenir-450 text-dark text-body2">{{item.item.name}}</p>
             </div>
 
