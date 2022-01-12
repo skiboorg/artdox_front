@@ -91,11 +91,12 @@
             </p>
           </div>
           <div class="col-12 col-md-4 offset-0 offset-md-4">
-            <p class="no-margin text-lh-200">
-<!--              <a class="link " href="#" target="_blank">Договор Оферты</a><br>-->
-              <a href="/rules.docx" target="_blank" class="link">Пользовательское соглашение</a>
-
-              <a href="/policy.docx" target="_blank" class="link">Политика конфидициальности</a>
+            <p class="no-margin text-lh-200 ">
+<a href="/d-of-ARTDOX.pdf" target="_blank" class="link ">Договор Оферты</a><br>
+            <a href="/d-z.pdf" target="_blank" class="link ">Договор Заклада</a><br>
+            <a href="/d-o-i-u.pdf" target="_blank" class="link ">Договор Хранения</a><br>
+            <a href="/ARTDOX-p-s.pdf" target="_blank" class="link ">Пользовательское соглашение</a><br>
+            <a href="/ARTDOX-conf.pdf" target="_blank" class="link ">Политика Конфиденциальности</a>
             </p>
           </div>
         </div>

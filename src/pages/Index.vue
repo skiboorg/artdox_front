@@ -43,57 +43,7 @@
 
       </div>
     </section>
-    <section class="about">
-      <div class="container">
-        <h3 class="title q-mb-lg ">NFT в искусстве</h3>
 
-        <div class="row q-col-gutter-md-xl items-start">
-          <div class=" col-12 col-md-6 q-mb-lg q-mb-md-none row-text">
-            <p class="text-lh-150">
-              ARTDOX.RU - первая компания, которая сделала NFT искусство Доходным.
-              <br><br>
-              Наша цель - заявить о себе на торговых площадках NFT. Для этого мы предлагаем Покупателю наших картин 2,5% каждый месяц от уплаченной суммы, в той криптовалюте, за которую была приобретена наша картина. Списания происходят автоматически с нашего криптокошелька.
-              <br><br>
-              Условия сделки прописаны в смарт контракте в личном кабинете и контролируются в блокчейне. Выплаты по смарт контракту каждый месяц. Пролонгировать смарт контракт можно каждый год, через личный кабинет на нашем сайте.
-              <br><br>
-              Каждому покупателю наших NFT картин мы отправляем  оригинал произведения по тому адресу, который он укажет при заказе картины.
-            </p>
-
-          </div>
-          <div class="col-12 col-md-6 row-img q-mb-lg q-mb-md-none">
-
-              <div class="col-12 text-center"><img class="img" style="width: 60%" src="~assets/nft-img.png" alt=""></div>
-
-
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <section class="about">
-      <div class="container">
-        <h3 class="title q-mb-lg ">Наши партнеры</h3>
- <p class="text-lh-150 q-mb-xl">
-         На представленных ниже маркетплейсах представлены все наши<br class="gt-sm"> коллекции и история ее продаж. Кликните на логотип платформы и вы<br class="gt-sm"> сразу перейдете на страницу с нашим верифицированным магазином</p>
-        <div class="row q-col-gutter-md-xl items-start">
-          <div class=" col-12 col-md-4 q-mb-md q-mb-md-none text-center">
-            <img class="img" src="~assets/p1.jpg" alt="">
-
-          </div>
-          <div class=" col-12 col-md-4 q-mb-md q-mb-md-none text-center">
- <img class="img" src="~assets/p2.jpg" alt="">
-          </div>
-          <div class=" col-12 col-md-4   text-center">
- <img class="img" src="~assets/p3.jpg" alt="">
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
     <section style="background: #f9f9f9" class="about q-pt-xl">
       <div class="container">
         <h3 class="title q-mb-lg ">Доход</h3>
@@ -258,6 +208,57 @@
         </div>
       </div>
     </section>
+    <section  class="about bg-grey-2 q-mb-none q-pt-xl">
+      <div class="container">
+        <h3 class="title q-mb-lg ">NFT в искусстве</h3>
+
+        <div class="row q-col-gutter-md-xl items-start">
+          <div class=" col-12 col-md-6 q-mb-lg q-mb-md-none row-text">
+            <p class="text-lh-150">
+              ARTDOX.RU - первая компания, которая сделала NFT искусство Доходным.
+ Наша цель - заявить о себе на торговых площадках NFT и обеспечить нашим Клиентам достойный заработок.
+<br><br>
+Мы предлагаем Покупателю наших картин 2,5% каждый месяц от уплаченной суммы, в той криптовалюте, за которую была приобретена наша картина. Условия сделки прописаны в смарт-контракте, и размещены в блокчейне. Пролонгировать смарт- контракт можно каждый год, через личный кабинет на нашем сайте.
+<br><br>
+Каждому покупателю наших NFT картин мы отправляем  оригинал произведения по тому адресу, который он укажет при заказе картины.
+Основной заработок на NFT-площадках происходит в момент перепродажи картин. Мы уверены, что с функцией ДОХОДА на каждую картину, стоимость возрастет многократно, если этого не случится, готовы будем выкупить сами, за первоначальную стоимость.
+              </p>
+
+          </div>
+          <div class="col-12 col-md-6 row-img q-mb-lg q-mb-md-none">
+
+            <div class="col-12 text-center"><img class="img" style="width: 60%" src="~assets/nft-img.png" alt=""></div>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="about bg-grey-2 q-py-xl">
+      <div class="container">
+        <h3 class="title q-mb-lg ">Маркетплейсы, где мы<br class="gt-sm">представлены</h3>
+        <p class="text-lh-150 q-mb-xl">
+          Кликните на логотип платформы, чтобы сразу перейти на страницу с<br class="gt-sm"> нашим верифицированным магазином </p>
+        <div class="row q-col-gutter-md-xl items-start">
+          <div class=" col-12 col-md-4 q-mb-md q-mb-md-none text-center">
+            <img class="img" src="~assets/p1.jpg" alt="">
+
+          </div>
+          <div class=" col-12 col-md-4 q-mb-md q-mb-md-none text-center">
+            <img class="img" src="~assets/p2.jpg" alt="">
+          </div>
+          <div class=" col-12 col-md-4   text-center">
+            <img class="img" src="~assets/p3.jpg" alt="">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
     <section class="docs">
       <div class="container">
         <h3 class="title">Документы</h3>
@@ -305,11 +306,11 @@
 
           </div>
           <div class="col-12 col-md-4 offer-1 flex column items-start justify-start">
-            <p class="q-mb-sm lt-md"><a href="ARTDOX.docx" target="_blank" class="link text-caption">Договор Оферты</a></p>
-            <p class="q-mb-sm lt-md"><a href="ARTDOX.docx" target="_blank" class="link text-caption">Договор Заклада</a></p>
-            <p class="q-mb-sm lt-md"><a href="ARTDOX.docx" target="_blank" class="link text-caption">Договор Хранения</a></p>
-            <p class="q-mb-sm lt-md"><a href="ARTDOX.docx" target="_blank" class="link text-caption">Пользовательское соглашение</a></p>
-            <p class="q-mb-lg lt-md"><a href="ARTDOX.docx" target="_blank" class="link text-caption">Политика Конфиденциальности</a></p>
+            <p class="q-mb-sm lt-md"><a href="/d-of-ARTDOX.pdf" target="_blank" class="link text-caption">Договор Оферты</a></p>
+            <p class="q-mb-sm lt-md"><a href="/d-z.pdf" target="_blank" class="link text-caption">Договор Заклада</a></p>
+            <p class="q-mb-sm lt-md"><a href="/d-o-i-u.pdf" target="_blank" class="link text-caption">Договор Хранения</a></p>
+            <p class="q-mb-sm lt-md"><a href="/ARTDOX-p-s.pdf" target="_blank" class="link text-caption">Пользовательское соглашение</a></p>
+            <p class="q-mb-lg lt-md"><a href="/ARTDOX-conf.pdf" target="_blank" class="link text-caption">Политика Конфиденциальности</a></p>
 
             <div class="">
               <p class="text-avenir-300 text-lh-200 text-body2">
@@ -317,11 +318,11 @@
               </p>
             </div>
             <div class="q-mt-xl">
-              <p class="q-mb-sm gt-sm"><a href="ARTDOX.docx" class="link text-body1">Договор Оферты</a></p>
-              <p class="q-mb-sm  gt-sm"><a href="ARTDOX.docx" class="link text-body1">Договор Заклада</a></p>
-              <p class="q-mb-sm gt-sm"><a href="ARTDOX.docx" class="link text-body1">Договор Хранения</a></p>
-              <p class="q-mb-sm gt-sm"><a href="ARTDOX.docx" class="link text-body1">Пользовательское соглашение</a></p>
-              <p class="no-margin gt-sm"><a href="ARTDOX.docx" class="link text-body1">Политика Конфиденциальности</a></p>
+              <p class="q-mb-sm gt-sm"><a href="/d-of-ARTDOX.pdf" class="link text-body1">Договор Оферты</a></p>
+              <p class="q-mb-sm  gt-sm"><a href="/d-z.pdf" class="link text-body1">Договор Заклада</a></p>
+              <p class="q-mb-sm gt-sm"><a href="/d-o-i-u.pdf" class="link text-body1">Договор Хранения</a></p>
+              <p class="q-mb-sm gt-sm"><a href="/ARTDOX-p-s.pdf" class="link text-body1">Пользовательское соглашение</a></p>
+              <p class="no-margin gt-sm"><a href="/ARTDOX-conf.pdf" class="link text-body1">Политика Конфиденциальности</a></p>
             </div>
 
           </div>
