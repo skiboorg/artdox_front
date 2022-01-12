@@ -66,8 +66,13 @@
             <p>Сообщение</p>
             <q-input class="q-mb-lg"  v-model="text" type="textarea" borderless bg-color="grey-3" />
             <div class="q-gutter-lg">
-              <q-btn unelevated color="dark" label="Отправить" @click="send" no-caps rounded size="18px" class="q-px-xl"/>
-              <q-btn unelevated color="white" text-color="dark" label="Прикрепить файл" outline no-caps rounded size="18px" class="q-px-xl"/>
+              <q-btn :loading="is_loading" unelevated color="dark"
+                     :disable="!text || !subject"
+                     label="Отправить" @click="send" no-caps rounded size="18px" class="q-px-xl"/>
+
+              <q-btn :loading="is_loading" unelevated :color="file? 'positive' :  'white'" :text-color="file? 'positive' :  'dark'" label="Прикрепить файл" outline no-caps rounded size="18px" class="q-px-xl">
+                 <q-file style="width: 100%;position: absolute;opacity: 0" class="q-mb-md " rounded outlined   v-model="file" label="Прикрепить файл" />
+              </q-btn>
             </div>
           </div>
           <div class="col-12 col-md-4 offset-0 offset-md-2" >
@@ -115,16 +120,39 @@ export default {
 
   data(){
     return{
+      is_loading:false,
       subject:'',
-      text:''
+      text:'',
+      file:null
     }
   },
   methods:{
     async send(){
-      await this.$api.post('/api/data/c_form',{
-        subject:this.subject,
-        text:this.text,
+      this.is_loading = !this.is_loading
+      let formData = new FormData()
+      formData.set('subject',this.subject)
+      formData.set('text',this.text)
+      if(this.file){
+        formData.set('file',this.file)
+      }
+      await this.$api({
+        method: 'post',
+        headers:{
+          'content-type': 'multipart/form-data'
+        },
+        url: '/api/data/c_form',
+        data: formData
       })
+      this.$q.notify({
+        message: 'Сообщение отправлено',
+        position: this.$q.screen.lt.sm ? 'bottom' : 'bottom-right',
+        color:'positive',
+        icon: 'announcement'
+      })
+      this.subject=''
+      this.text=''
+      this.file=null
+      this.is_loading = !this.is_loading
     }
   }
 
