@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf">
     <Header/>
     <q-page-container class="bg-grey-2">
-      <div class="container">
+      <div class="container-lk">
         <q-breadcrumbs class="breadcrumbs lk">
       <q-breadcrumbs-el class="text-grey-6" :to="{name:'index'}" label="Главная" />
 
@@ -43,7 +43,7 @@ export default {
 <style lang="sass" scoped>
 .lk-wrapper
   display: grid
-  grid-template-columns: 1fr 4fr
+  grid-template-columns: 2fr 9fr
   grid-gap: 20px
 @media (max-width: 1024px)
   .lk-wrapper

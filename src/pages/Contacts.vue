@@ -63,6 +63,8 @@
           <div class="col-12 col-md-6 q-mb-xl q-mb-md-none">
             <p>Тема</p>
             <q-input class="q-mb-lg " v-model="subject" borderless  bg-color="grey-3" />
+            <p>E-Mail для ответа</p>
+            <q-input class="q-mb-lg " v-model="email" borderless  bg-color="grey-3" />
             <p>Сообщение</p>
             <q-input class="q-mb-lg"  v-model="text" type="textarea" borderless bg-color="grey-3" />
             <div class="q-gutter-lg">
@@ -77,7 +79,6 @@
           </div>
           <div class="col-12 col-md-4 offset-0 offset-md-2" >
             <p>Если вы художник - отправьте нам ваши работы, мы оценим их стоимость и вышлем вам предложенеи!<br><br>
-
               Если вы меценат - то мы с вами свяжемся.</p>
           </div>
         </div>
@@ -97,7 +98,7 @@
           </div>
           <div class="col-12 col-md-4 offset-0 offset-md-4">
             <p class="no-margin text-lh-200 ">
-<a href="/d-of-ARTDOX.pdf" target="_blank" class="link ">Договор Оферты</a><br>
+            <a href="/d-of-ARTDOX.pdf" target="_blank" class="link ">Договор Оферты</a><br>
             <a href="/d-z.pdf" target="_blank" class="link ">Договор Заклада</a><br>
             <a href="/d-o-i-u.pdf" target="_blank" class="link ">Договор Хранения</a><br>
             <a href="/ARTDOX-p-s.pdf" target="_blank" class="link ">Пользовательское соглашение</a><br>
@@ -123,6 +124,7 @@ export default {
       is_loading:false,
       subject:'',
       text:'',
+      email:'',
       file:null
     }
   },
@@ -132,6 +134,7 @@ export default {
       let formData = new FormData()
       formData.set('subject',this.subject)
       formData.set('text',this.text)
+      formData.set('email',this.email)
       if(this.file){
         formData.set('file',this.file)
       }

@@ -28,7 +28,7 @@
                 <p class="no-margin text-playfair text-h5 text-dark">«{{item.item.name}}»</p>
                 <p class="no-margin text-warning text-fs18 q-mb-none text-avenir-450">{{item.item.price}} ₽ x {{item.amount}} шт. = {{item.price}} ₽</p>
               </div>
-              <div class="text-avenir-300 q-mb-lg-xl" v-html="item.item.description"></div>
+<!--              <div class="text-avenir-300 q-mb-lg-xl" v-html="item.item.description"></div>-->
               <p class="text-caption text-grey q-mb-none">Артикул № {{item.item.article}}</p>
               <p class="text-caption text-grey q-mb-lg-xl">Размер {{item.item.size}}</p>
             </div>
@@ -57,6 +57,31 @@
           <div class="bg-white q-pa-lg cart-total">
                               <p class="text-avenir-600 text-fs18 text-dark">  Итого : {{cart.price}} ₽</p>
  <div class="cart-bottom">
+    <p class="text-avenir-600 text-fs18 text-dark">Тип покупки</p>
+          <q-list dense class="q-mb-md">
+
+      <q-item  tag="label" v-ripple>
+        <q-item-section avatar>
+          <q-radio dense v-model="store" val="delivery" color="dark" />
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>С доставкой</q-item-label>
+
+        </q-item-section>
+      </q-item>
+
+      <q-item tag="label" v-ripple>
+        <q-item-section avatar>
+          <q-radio dense v-model="store" val="store" color="dark" />
+        </q-item-section>
+        <q-item-section>
+          <q-item-label>С хранением</q-item-label>
+        </q-item-section>
+      </q-item>
+
+
+    </q-list>
+
           <p class="text-avenir-600 text-fs18 text-dark">Доставка</p>
           <q-list dense class="q-mb-md">
 
@@ -88,6 +113,7 @@
       </q-item>
 
     </q-list>
+
           <p class="text-caption">Введите ваш адрес, а так же комментарии к доставке</p>
           <q-input
             filled
@@ -126,6 +152,7 @@ export default {
           agree:false,
       agree1:false,
       delivery:'courier',
+      store:'delivery',
       address:null
 
     }
