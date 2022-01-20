@@ -20,7 +20,7 @@
             <q-btn v-if="!$auth.loggedIn" class="q-px-lg" :to="{name:'login'}" outline rounded unelevated no-caps text-color="dark" label="Вход"/>
             <q-btn v-if="!$auth.loggedIn" class="q-px-lg" :to="{name:'register'}" outline rounded unelevated no-caps text-color="dark" label="Регистрация"/>
             <q-btn v-if="$auth.loggedIn" :to="{name:'cart'}"  round unelevated outline no-caps text-color="dark" icon="shopping_basket">
-              <q-badge rounded v-if="cart.items.length>0" color="red" floating>{{cart.items.length}}</q-badge>
+              <q-badge  rounded v-if="cart.items.length>0" color="red" floating>{{cart.items.length}}</q-badge>
             </q-btn>
             <q-btn v-if="$auth.loggedIn" round unelevated @mouseenter="userMenu=!userMenu" color="dark" icon="person_outline"/>
           </div>

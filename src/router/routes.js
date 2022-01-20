@@ -14,6 +14,8 @@ const routes = [
       { path: 'login',name:'login', component: () => import('pages/Login.vue') },
       { path: 'register',name:'register', component: () => import('pages/Register.vue') },
        { path: 'cart',name:'cart',meta:{title:'Корзина'}, component: () => import('pages/Cart.vue') },
+        { path: 'return/:item_id',name:'return', component: () => import('pages/ReturnItem.vue') },
+        { path: 'store/:item_id',name:'store', component: () => import('pages/Store.vue') },
     ]
   },
   {
@@ -25,6 +27,7 @@ const routes = [
       { path: 'orders',name:'lk-orders',meta:{title:'Заказы'}, component: () => import('pages/Lk/Orders.vue') },
       { path: 'settings',name:'lk-settings',meta:{title:'Настройки'}, component: () => import('pages/Lk/Settings.vue') },
       { path: 'transactions',name:'lk-transactions',meta:{title:'Транзакции'}, component: () => import('pages/Lk/Transactions.vue') },
+
 
     ]
   },

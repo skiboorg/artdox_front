@@ -1,7 +1,7 @@
 import { api } from 'boot/axios'
 
 const state = () => ({
-  cart:[],
+  cart:{items:[]},
   orders:[],
 
 

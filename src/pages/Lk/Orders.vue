@@ -29,8 +29,8 @@
                <p class="text-body2">Дата получения прибыли: <span class="text-grey-6 text-avenir-450">{{new Date(order.created_at).toLocaleDateString()}}</span> </p>
               <p class="text-body2 q-mb-lg">Статус: <span class="text-positive text-avenir-450">На выставках</span> </p>
               <div class="q-gutter-sm">
-                 <q-btn unelevated rounded color="red-2"  no-caps text-color="red-6" class="q-px-md" label="Вернуть картину"/>
-                 <q-btn unelevated rounded color="warning"  no-caps text-color="white" class="q-px-md" label="Заложить картину"/>
+                 <q-btn unelevated :to="{name:'return',params:{item_id:item.id}}" rounded color="red-2"  no-caps text-color="red-6" class="q-px-md" label="Вернуть картину"/>
+                 <q-btn unelevated :to="{name:'store',params:{item_id:item.id}}" rounded color="warning"  no-caps text-color="white" class="q-px-md" label="Заложить картину"/>
               </div>
 
 

@@ -61,8 +61,8 @@ export default {
   },
   methods:{
     ... mapActions('auth',['loginUser']),
-    userLoginAction() {
-      this.loginUser(this.userLogin)
+    async userLoginAction() {
+      await this.loginUser(this.userLogin)
 
     },
   }
