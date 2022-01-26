@@ -44,84 +44,125 @@
         <div class="lk-card-title">
           <p class="no-margin text-fs18 text-avenir-600">Доходность</p>
         </div>
-        <div class="row q-col-gutter-sm q-mb-lg">
+        <div class="row q-col-gutter-sm q-mb-sm">
           <div class="col-12 col-md-4 ">
             <div class="bg-grey-2 q-pa-md">
-              <div class="flex  q-mb-md">
-                <svg class="q-mr-md" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="18" cy="18" r="18" fill="#2A2B33"/>
-                  <path d="M22.6667 12H13.3333C12.597 12 12 12.597 12 13.3333V22.6667C12 23.403 12.597 24 13.3333 24H22.6667C23.403 24 24 23.403 24 22.6667V13.3333C24 12.597 23.403 12 22.6667 12Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M15.666 16.667C16.2183 16.667 16.666 16.2193 16.666 15.667C16.666 15.1147 16.2183 14.667 15.666 14.667C15.1137 14.667 14.666 15.1147 14.666 15.667C14.666 16.2193 15.1137 16.667 15.666 16.667Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M24.0007 20.0003L20.6673 16.667L13.334 24.0003" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <p  class="no-margin text-caption text-avenir-400 ">Общее число картин</p>
+              <div class="flex items-center">
+                <svg class="q-mr-sm" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.6667 2H3.33333C2.59695 2 2 2.59695 2 3.33333V12.6667C2 13.403 2.59695 14 3.33333 14H12.6667C13.403 14 14 13.403 14 12.6667V3.33333C14 2.59695 13.403 2 12.6667 2Z" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M5.66602 6.66602C6.2183 6.66602 6.66602 6.2183 6.66602 5.66602C6.66602 5.11373 6.2183 4.66602 5.66602 4.66602C5.11373 4.66602 4.66602 5.11373 4.66602 5.66602C4.66602 6.2183 5.11373 6.66602 5.66602 6.66602Z" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14.0007 9.99935L10.6673 6.66602L3.33398 13.9993" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <p style="line-height: 100%" class="no-margin text-body2 text-avenir-450 ">Общее число<br>картин</p>
+
+                <p class="no-margin text-body2 text-avenir-450">{{$auth.user.total_amount}}</p>
               </div>
-              <p class="no-margin text-center text-h5 text-avenir-600">{{$auth.user.total_amount}}</p>
+
 
             </div>
 
           </div>
           <div class="col-12 col-md-4">
             <div class="bg-grey-2 q-pa-md">
-              <div class="flex  q-mb-md">
-                <svg class="q-mr-md" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="18" cy="18" r="18" fill="#2A2B33"/>
-                  <path d="M18.0007 11.333L11.334 14.6663L18.0007 17.9997L24.6673 14.6663L18.0007 11.333Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M11.334 21.333L18.0007 24.6663L24.6673 21.333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M11.334 18L18.0007 21.3333L24.6673 18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <p  class="no-margin text-caption text-avenir-400 ">Картины на хранении</p>
+              <div class="flex items-center">
+                <svg class="q-mr-sm" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.00065 1.33398L1.33398 4.66732L8.00065 8.00065L14.6673 4.66732L8.00065 1.33398Z" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1.33398 11.334L8.00065 14.6673L14.6673 11.334" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1.33398 8L8.00065 11.3333L14.6673 8" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
 
-                <p style="line-height: 100%" class="no-margin text-body2 text-avenir-450 ">Картины<br>на хранении:</p>
+
+                <p class="no-margin text-body2 text-avenir-450">{{$auth.user.total_amount}}</p>
               </div>
-              <p class="no-margin text-center text-h5 text-avenir-600 text-grey-5">{{$auth.user.total_amount}}</p>
+
 
             </div>
           </div>
           <div class="col-12 col-md-4">
             <div class="bg-grey-2 q-pa-md">
-              <div class="flex  q-mb-md">
-                <svg class="q-mr-md" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="18" cy="18" r="18" fill="#2A2B33"/>
+              <p  class="no-margin text-caption text-avenir-400 ">Картины на закладе</p>
+              <div class="flex items-center">
+                <svg class="q-mr-sm" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-                  <path d="M18 10.667V25.3337" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M21.3333 13.333H16.3333C15.7145 13.333 15.121 13.5788 14.6834 14.0164C14.2458 14.454 14 15.0475 14 15.6663C14 16.2852 14.2458 16.8787 14.6834 17.3163C15.121 17.7538 15.7145 17.9997 16.3333 17.9997H19.6667C20.2855 17.9997 20.879 18.2455 21.3166 18.6831C21.7542 19.1207 22 19.7142 22 20.333C22 20.9518 21.7542 21.5453 21.3166 21.9829C20.879 22.4205 20.2855 22.6663 19.6667 22.6663H14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8 0.666016V15.3327" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M11.3333 3.33398H6.33333C5.71449 3.33398 5.121 3.57982 4.68342 4.0174C4.24583 4.45499 4 5.04848 4 5.66732C4 6.28616 4.24583 6.87965 4.68342 7.31723C5.121 7.75482 5.71449 8.00065 6.33333 8.00065H9.66667C10.2855 8.00065 10.879 8.24648 11.3166 8.68407C11.7542 9.12165 12 9.71515 12 10.334C12 10.9528 11.7542 11.5463 11.3166 11.9839C10.879 12.4215 10.2855 12.6673 9.66667 12.6673H4" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 
 
                 </svg>
 
-                <p style="line-height: 100%" class="no-margin text-body2 text-avenir-450 ">Картины на<br>закладе:</p>
+
+                <p class="no-margin text-body2 text-avenir-450">{{$auth.user.total_amount}}</p>
               </div>
-              <p class="no-margin text-center text-h5 text-avenir-600 text-red-3">{{$auth.user.total_amount}}</p>
+
 
             </div>
           </div>
         </div>
 
-
-        <div class="grid items-center q-mb-sm">
-          <p class="no-margin text-body2">Общая сумма ваших картин: </p>
-          <p class="no-margin text-body2"><span class="text-grey-6">{{$auth.user.total_summ}} </span> </p>
-        </div>
-        <div class="grid items-center q-mb-sm">
-          <p class="no-margin text-body2">Средства прибыли для вывода:</p>
-          <p class="no-margin text-body2"><span class="text-grey-6">0 </span> </p>
-        </div>
-        <div class="grid items-center q-mb-sm">
-          <p class="no-margin text-body2">Ближайшая дата выплат:</p>
-          <p class="no-margin text-body2"><span class="text-grey-6">-</span> </p>
-        </div>
-        <div class="grid items-center q-mb-sm">
-          <p class="no-margin text-body2">Сумма ближайшей выплаты:</p>
-          <p class="no-margin text-body2"><span class="text-grey-6">-</span> </p>
-        </div>
+        <div class="row q-col-gutter-sm q-mb-lg">
+          <div class="col-12 col-md-6 ">
+            <div class="bg-grey-2 q-pa-md">
+              <p  class="no-margin text-caption text-avenir-400 ">Картины на хранении</p>
+              <div class="flex items-center">
+                <svg class="q-mr-sm" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 11L11 5" stroke="#00C6C1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M6 4L12 4L12 10" stroke="#00C6C1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+</svg>
 
 
-        <q-separator spaced="lg"/>
-        <router-link class="link text-body2 text-avenir-450" to="/lk/orders" >Показать историю продаж</router-link>
-<!--        <div class="flex items-center justify-around profile-buttons">-->
-<!--          <q-btn unelevated to="/lk/orders"  rounded color="dark" text-color="white" no-caps class="q-px-md q-mb-md q-mb-md-none" label="Детали моих картин"/>-->
-<!--          <q-btn unelevated rounded outline class="q-px-md" no-caps label="Вывести средства"/>-->
+
+                <p class="no-margin text-body2 text-avenir-450">{{$auth.user.total_summ}} <span class="text-positive">+ 10000</span></p>
+              </div>
+
+
+            </div>
+
+          </div>
+          <div class="col-12 col-md-6">
+             <div class="bg-grey-2 q-pa-md">
+              <p  class="no-margin text-caption text-avenir-400 ">Прибыль за этот месяц</p>
+              <div class="flex items-center">
+                <svg class="q-mr-sm" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.3008 9.33398H11.3674" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.66667 5.33268H14V12.666C14 12.8428 13.9298 13.0124 13.8047 13.1374C13.6797 13.2624 13.5101 13.3327 13.3333 13.3327H2.66667C2.48986 13.3327 2.32029 13.2624 2.19526 13.1374C2.07024 13.0124 2 12.8428 2 12.666V3.99935C2 3.64573 2.14048 3.30659 2.39052 3.05654C2.64057 2.80649 2.97971 2.66602 3.33333 2.66602H12.6667V5.33268" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+
+
+                <p class="no-margin text-body2 text-avenir-450">{{$auth.user.total_amount}}</p>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+<!--        <div class="grid items-center q-mb-sm">-->
+<!--          <p class="no-margin text-body2">Общая сумма ваших картин: </p>-->
+<!--          <p class="no-margin text-body2"><span class="text-grey-6">{{$auth.user.total_summ}} </span> </p>-->
 <!--        </div>-->
+<!--        <div class="grid items-center q-mb-sm">-->
+<!--          <p class="no-margin text-body2">Средства прибыли для вывода:</p>-->
+<!--          <p class="no-margin text-body2"><span class="text-grey-6">0 </span> </p>-->
+<!--        </div>-->
+<!--        <div class="grid items-center q-mb-sm">-->
+<!--          <p class="no-margin text-body2">Ближайшая дата выплат:</p>-->
+<!--          <p class="no-margin text-body2"><span class="text-grey-6">-</span> </p>-->
+<!--        </div>-->
+<!--        <div class="grid items-center q-mb-sm">-->
+<!--          <p class="no-margin text-body2">Сумма ближайшей выплаты:</p>-->
+<!--          <p class="no-margin text-body2"><span class="text-grey-6">-</span> </p>-->
+<!--        </div>-->
+
+
+<!--        <q-separator spaced="lg"/>-->
+        <router-link class="link text-body2 text-avenir-450" to="/lk/orders" >Показать историю продаж</router-link>
+        <!--        <div class="flex items-center justify-around profile-buttons">-->
+        <!--          <q-btn unelevated to="/lk/orders"  rounded color="dark" text-color="white" no-caps class="q-px-md q-mb-md q-mb-md-none" label="Детали моих картин"/>-->
+        <!--          <q-btn unelevated rounded outline class="q-px-md" no-caps label="Вывести средства"/>-->
+        <!--        </div>-->
 
       </div>
 

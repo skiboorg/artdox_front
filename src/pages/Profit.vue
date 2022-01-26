@@ -9,7 +9,14 @@
       <h1 class="title q-mb-lg q-mb-lg-xl">Доход</h1>
       <!--      <p class="text-fs18 text-avenir-600 q-mb-xl">Мы, отработали систему, которая приносит доход от каждой картины.</p>-->
       <p class="text-fs18 text-avenir-300 q-mb-xl">Мы, отработали систему, которая приносит доход от каждой картины.</p>
-      <h3 class="text-center sub-title">Как <span>мы работаем?</span></h3>
+       <div class="row q-mb-xl">
+        <div class="col-12 col-md-6">
+          <q-img src="~assets/pp1-1.png"/>
+        </div>
+        <div class="col-12 col-md-6">
+          <q-img src="~assets/pp1-2.png"/>
+        </div>
+      </div>
       <div class="steps">
         <div class="step flex items-center justify-between" v-for="(step,index) in steps" :key="index">
           <div class="">
@@ -67,19 +74,14 @@
         </div>
       </div>
 
-      <div class="row q-mb-xl">
-        <div class="col-12 col-md-6">
-          <q-img src="~assets/pp1-1.png"/>
-        </div>
-        <div class="col-12 col-md-6">
-          <q-img src="~assets/pp1-2.png"/>
-        </div>
-      </div>
+
 
 
     </div>
+
     <section  class="about bg-grey-2 q-mb-none q-pt-xl">
       <div class="container">
+         <q-img class="q-mb-xl" src="~assets/pp2-1.png"/>
         <h3 class="title q-mb-lg ">NFT в искусстве</h3>
 
         <div class="row q-col-gutter-md-xl items-start">
@@ -129,12 +131,7 @@
       </div>
 
     </section>
-    <section class="bg-grey-2 q-py-xl no-margin">
-        <div class="container">
-       <q-img src="~assets/pp2-1.png"/>
-    </div>
 
-    </section>
 
   </q-page>
 </template>
