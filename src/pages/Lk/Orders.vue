@@ -17,7 +17,9 @@
                 <q-img fit="contain" :ratio="1" :src="item.item.image_thumb"/>
               </div>
               <div class="col-6 col-md-8">
-                <p class="q-mb-lg text-avenir-450  text-body2">{{item.item.name}}</p>
+
+                <p v-if="item.is_in_store" class="q-mb-md text-negative text-avenir-300  text-caption">ЗАЛОЖЕННЫЙ</p>
+                <p class="q-mb-lg text-avenir-600  text-fs18">{{item.item.name}}</p>
                 <div class="flex items-center justify-between q-mb-sm">
                   <p class="no-margin text-body2 text-grey-7 text-avenir-400" >Статус</p>
                   <p class="no-margin text-body2 text-positive text-avenir-450">На выставках</p>
@@ -27,70 +29,63 @@
                   <p class="no-margin text-body2  text-avenir-450">{{new Date(item.created_at).toLocaleDateString()}}</p>
                 </div>
 
-                <div class="flex items-center justify-between q-mb-sm">
-                  <p class="no-margin text-body2 text-grey-7 text-avenir-400">Дата получения прибыли</p>
-                  <p class="no-margin text-body2 text-avenir-450">{{new Date(item.created_at).toLocaleDateString()}}</p>
+                 <div class="flex items-center justify-between q-mb-sm">
+                  <p class="no-margin text-body2 text-grey-7 text-avenir-400">Общая сумма</p>
+                  <p class="no-margin text-body2 text-avenir-450">{{item.price}} ₽</p>
                 </div>
 
                 <div class="flex items-center justify-between q-mb-sm">
                   <p class="no-margin text-body2 text-grey-7 text-avenir-400">Общее количество</p>
                   <p class="no-margin text-body2 text-avenir-450">{{item.amount}} шт</p>
                 </div>
-
-                <div class="flex items-center justify-between">
-                  <p class="no-margin text-body2 text-grey-7 text-avenir-400">Общая сумма</p>
-                  <p class="no-margin text-body2 text-avenir-450">{{item.price}} ₽</p>
-                </div>
-
-
-
-
               </div>
             </div>
 
             <div class="row q-mb-lg q-col-gutter-md">
                 <div class="col-6 col-md-4">
                   <div class="order-box">
-                    <p class="q-mb-none text-caption order-box--title">Ваша прибыль</p>
+                    <p class="q-mb-none text-caption order-box--title">Ваша прибыль:</p>
                     <div class="flex items-center">
                       <svg class="q-mr-sm" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.66667 4.33268H13V11.666C13 11.8428 12.9298 12.0124 12.8047 12.1374C12.6797 12.2624 12.5101 12.3327 12.3333 12.3327H1.66667C1.48986 12.3327 1.32029 12.2624 1.19526 12.1374C1.07024 12.0124 1 11.8428 1 11.666V2.99935C1 2.64573 1.14048 2.30659 1.39052 2.05654C1.64057 1.80649 1.97971 1.66602 2.33333 1.66602H11.6667V4.33268"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
-                      <p class="no-margin text-body2 order-box--text">100.00 ₽</p>
+                      <p class="no-margin text-body2 order-box--text text-positive">{{item.your_profit}} ₽</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-6 col-md-4">
                    <div class="order-box">
-                    <p class="q-mb-none text-caption order-box--title">Общая прибыль</p>
+                    <p class="q-mb-none text-caption order-box--title">Общая прибыль:</p>
                     <div class="flex items-center">
                      <svg class="q-mr-sm" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.3008 10H11.3674"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M14 6.66667V13.3333C14 13.5101 13.9298 13.6797 13.8047 13.8047C13.6797 13.9298 13.5101 14 13.3333 14H2.66667C2.48986 14 2.32029 13.9298 2.19526 13.8047C2.07024 13.6797 2 13.5101 2 13.3333V6.66667C2 6.48986 2.07024 6.32029 2.19526 6.19526C2.32029 6.07024 2.48986 6 2.66667 6H13.3333C13.5101 6 13.6797 6.07024 13.8047 6.19526C13.9298 6.32029 14 6.48986 14 6.66667ZM11.4733 6L12.6667 4.29333L9.39333 2L6.58667 6H11.4733ZM6.06 2L3.25333 6H6.58667L8.29333 3.56667L6.06 2Z"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
-                      <p class="no-margin text-body2 order-box--text">100.00 ₽</p>
+                      <p class="no-margin text-body2 order-box--text">{{item.total_profit}} ₽</p>
                     </div>
                   </div>
                 </div>
                 <div class="col-12 col-md-4">
                    <div class="order-box">
-                    <p class="q-mb-none text-caption order-box--title">Дата следующей выпаты</p>
+                    <p class="q-mb-none text-caption order-box--title">Дата выпаты:</p>
                     <div class="flex items-center">
                       <svg class="q-mr-sm" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.33333 2V4.66667M13.3333 14H2.66667C2.48986 14 2.32029 13.9298 2.19526 13.8047C2.07024 13.6797 2 13.5101 2 13.3333V6.66667H14V13.3333C14 13.5101 13.9298 13.6797 13.8047 13.8047C13.6797 13.9298 13.5101 14 13.3333 14ZM14 4C14 3.82319 13.9298 3.65362 13.8047 3.5286C13.6797 3.40357 13.5101 3.33333 13.3333 3.33333H2.66667C2.48986 3.33333 2.32029 3.40357 2.19526 3.5286C2.07024 3.65362 2 3.82319 2 4V6.66667H14V4ZM10.6667 2V4.66667V2Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 
-                      <p class="no-margin text-body2 order-box--text">100.00 ₽</p>
+                      <p class="no-margin text-body2 order-box--text">{{new Date(item.pay_date).toLocaleDateString()}}</p>
                     </div>
                   </div>
                 </div>
             </div>
               <div v-if="!item.item.is_nft" class="q-gutter-sm">
-                 <q-btn unelevated :to="{name:'return',params:{item_id:item.id}}"
+                 <q-btn v-if="!item.is_in_store" unelevated :to="{name:'return',params:{item_id:item.id}}"
                         rounded color="dark" size="16px"  no-caps  class="q-px-lg" label="Вернуть картину"/>
-                 <q-btn unelevated :to="{name:'store',params:{item_id:item.id}}"
+                 <q-btn v-if="!item.is_in_store" unelevated :to="{name:'store',params:{item_id:item.id}}"
                         rounded outline size="16px"  no-caps  class="q-px-lg" label="Заложить картину"/>
+                 <q-btn v-else unelevated :to="{name:'store',params:{item_id:item.id}}"
+                        rounded color="dark" size="16px"  no-caps  class="q-px-lg" :label="`Выкупить за ${item.price} ₽`"/>
               </div>
               <div v-else class="">
                  <q-btn unelevated :to="{name:'return',params:{item_id:item.id}}"

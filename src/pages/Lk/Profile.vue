@@ -40,7 +40,8 @@
         </div>
 
       </div>
-      <div class="lk-card">
+
+           <div class="lk-card q-mb-md">
         <div class="lk-card-title">
           <p class="no-margin text-fs18 text-avenir-600">Доходность</p>
         </div>
@@ -73,7 +74,7 @@
                 </svg>
 
 
-                <p class="no-margin text-body2 text-avenir-450">{{$auth.user.total_amount}}</p>
+                <p class="no-margin text-body2 text-avenir-450">{{$auth.user.total_in_localstore}}</p>
               </div>
 
 
@@ -92,7 +93,7 @@
                 </svg>
 
 
-                <p class="no-margin text-body2 text-avenir-450">{{$auth.user.total_amount}}</p>
+                <p class="no-margin text-body2 text-avenir-450">{{$auth.user.total_in_store}}</p>
               </div>
 
 
@@ -103,7 +104,7 @@
         <div class="row q-col-gutter-sm q-mb-lg">
           <div class="col-12 col-md-6 ">
             <div class="bg-grey-2 q-pa-md">
-              <p  class="no-margin text-caption text-avenir-400 ">Картины на хранении</p>
+              <p  class="no-margin text-caption text-avenir-400 ">Общая сумма картин</p>
               <div class="flex items-center">
                 <svg class="q-mr-sm" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5 11L11 5" stroke="#00C6C1" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
@@ -112,25 +113,23 @@
 
 
 
-                <p class="no-margin text-body2 text-avenir-450">{{$auth.user.total_summ}} <span class="text-positive">+ 10000</span></p>
+                <p class="no-margin text-body2 text-avenir-450">{{$auth.user.total_summ}} ₽</p>
               </div>
-
-
             </div>
 
           </div>
           <div class="col-12 col-md-6">
              <div class="bg-grey-2 q-pa-md">
-              <p  class="no-margin text-caption text-avenir-400 ">Прибыль за этот месяц</p>
+              <p  class="no-margin text-caption text-avenir-400 ">Доступная прибыль для снятия</p>
               <div class="flex items-center">
                 <svg class="q-mr-sm" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11.3008 9.33398H11.3674" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.66667 5.33268H14V12.666C14 12.8428 13.9298 13.0124 13.8047 13.1374C13.6797 13.2624 13.5101 13.3327 13.3333 13.3327H2.66667C2.48986 13.3327 2.32029 13.2624 2.19526 13.1374C2.07024 13.0124 2 12.8428 2 12.666V3.99935C2 3.64573 2.14048 3.30659 2.39052 3.05654C2.64057 2.80649 2.97971 2.66602 3.33333 2.66602H12.6667V5.33268" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+                  <path d="M11.3008 9.33398H11.3674" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4.66667 5.33268H14V12.666C14 12.8428 13.9298 13.0124 13.8047 13.1374C13.6797 13.2624 13.5101 13.3327 13.3333 13.3327H2.66667C2.48986 13.3327 2.32029 13.2624 2.19526 13.1374C2.07024 13.0124 2 12.8428 2 12.666V3.99935C2 3.64573 2.14048 3.30659 2.39052 3.05654C2.64057 2.80649 2.97971 2.66602 3.33333 2.66602H12.6667V5.33268" stroke="#2A2B33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
 
 
 
-                <p class="no-margin text-body2 text-avenir-450">{{$auth.user.total_amount}}</p>
+                <p class="no-margin text-body2 text-positive text-avenir-450">{{$auth.user.pay_summ}} ₽</p>
               </div>
 
 
@@ -158,13 +157,23 @@
 
 
 <!--        <q-separator spaced="lg"/>-->
-        <router-link class="link text-body2 text-avenir-450" to="/lk/orders" >Показать историю продаж</router-link>
+             <div class="flex items-center justify-between">
+                  <router-link class="link text-body2 text-avenir-450" to="/lk/orders" >Показать историю продаж</router-link>
+                <q-btn unelevated
+                 @click="withdrawal_request"
+                        rounded outline size="16px"  no-caps  class="q-px-lg" label="Вывести прибыль"/>
+             </div>
+
         <!--        <div class="flex items-center justify-around profile-buttons">-->
         <!--          <q-btn unelevated to="/lk/orders"  rounded color="dark" text-color="white" no-caps class="q-px-md q-mb-md q-mb-md-none" label="Детали моих картин"/>-->
         <!--          <q-btn unelevated rounded outline class="q-px-md" no-caps label="Вывести средства"/>-->
         <!--        </div>-->
 
       </div>
+
+
+
+
 
 
     </div>
@@ -187,6 +196,17 @@ export default {
   computed:{
     ...mapGetters('data',['orders']),
 
+  },
+  methods:{
+    async withdrawal_request(){
+      await  this.$api.post('/api/user/withdrawal_request')
+      this.$q.notify({
+          message: 'Запрос на вывод отправлен',
+          position: this.$q.screen.lt.sm ? 'bottom' : 'bottom-right',
+          color:'positive',
+          icon: 'announcement'
+        })
+    }
   }
 }
 </script>

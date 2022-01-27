@@ -82,7 +82,8 @@
 
     </q-list>
 
-          <p class="text-avenir-600 text-fs18 text-dark">Доставка</p>
+   <div v-if="store==='delivery'">
+        <p class="text-avenir-600 text-fs18 text-dark">Доставка</p>
           <q-list dense class="q-mb-md">
 
       <q-item  tag="label" v-ripple>
@@ -124,6 +125,8 @@
             lazy-rules
             :rules="[ val => val && val.length > 0 || 'Это обязательное поле']"
           />
+
+   </div>
 
       </div>
         <q-separator spaced="xl"/>
@@ -169,7 +172,11 @@ export default {
     async createOrder(){
 
       this.loading = !this.loading
-      const result = await this.$api.post('/api/order/create',{delivery:this.delivery,address:this.address})
+      const result = await this.$api.post('/api/order/create',{
+        delivery:this.delivery,
+        address:this.address,
+        store:this.store
+      })
       console.log(result)
       if(result.data.success){
         console.log(result.data.payment_url)
