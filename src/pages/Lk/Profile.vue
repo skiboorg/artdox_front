@@ -160,7 +160,7 @@
              <div class="flex items-center justify-between">
                   <router-link class="link text-body2 text-avenir-450" to="/lk/orders" >Показать историю продаж</router-link>
                 <q-btn unelevated
-                 @click="withdrawal_request"
+                 :to="{name:'withdrawal'}"
                         rounded outline size="16px"  no-caps  class="q-px-lg" label="Вывести прибыль"/>
              </div>
 
@@ -198,15 +198,7 @@ export default {
 
   },
   methods:{
-    async withdrawal_request(){
-      await  this.$api.post('/api/user/withdrawal_request')
-      this.$q.notify({
-          message: 'Запрос на вывод отправлен',
-          position: this.$q.screen.lt.sm ? 'bottom' : 'bottom-right',
-          color:'positive',
-          icon: 'announcement'
-        })
-    }
+
   }
 }
 </script>

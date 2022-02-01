@@ -8,7 +8,8 @@
       </q-breadcrumbs>
       <h1 class="title q-mb-lg q-mb-lg-xl">Доход</h1>
       <!--      <p class="text-fs18 text-avenir-600 q-mb-xl">Мы, отработали систему, которая приносит доход от каждой картины.</p>-->
-      <p class="text-fs18 text-avenir-300 q-mb-xl">Мы, отработали систему, которая приносит доход от каждой картины.</p>
+      <p class="text-fs18 text-avenir-300 q-mb-xl">
+Мы отработали систему, которая приносит доход от каждой картины. Для развития нашей компании мы представляем два разных тарифа по двум направлениям: классический тариф “Рантье” для получения разового дохода или же “NFT” тариф для разового получения высокой прибыли.</p>
        <div class="row q-mb-xl">
         <div class="col-12 col-md-6">
           <q-img src="~assets/pp1-1.png"/>
@@ -17,19 +18,20 @@
           <q-img src="~assets/pp1-2.png"/>
         </div>
       </div>
-      <div class="steps">
-        <div class="step flex items-center justify-between" v-for="(step,index) in steps" :key="index">
-          <div class="">
-            <img :src="step.img" alt="">
-          </div>
-          <div style="flex-basis: 65%" class="">
-            <p class="text-h5 text-avenir-600 q-mb-sm">Шаг {{index+1}}</p>
-            <p class="no-margin text-avenir-300">{{step.text}}</p>
-          </div>
-        </div>
-      </div>
+<!--      <div class="steps">-->
+<!--        <div class="step flex items-center justify-between" v-for="(step,index) in steps" :key="index">-->
+<!--          <div class="">-->
+<!--            <img :src="step.img" alt="">-->
+<!--          </div>-->
+<!--          <div style="flex-basis: 65%" class="">-->
+<!--            <p class="text-h5 text-avenir-600 q-mb-sm">Шаг {{index+1}}</p>-->
+<!--            <p class="no-margin text-avenir-300">{{step.text}}</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
       <div class="row">
-        <div class="col-12 col-md-8 ">
+        <div class="col-12 col-md-8 text-b">
+           <h3 class="title q-mb-lg fs-36">Заработок на экспозиции картин</h3>
           <p class="no-margin text-avenir-300">
             Для Китая формируем коллекции из 30 авторских репродукций, и через партнера ArtBooklet Ltd., размещаем их на экспозициях в провинциальных городах, с образовательной и просветительской целью.
             <br><br>
@@ -40,16 +42,17 @@
             В России сдаем в аренду авторские репродукции музейного качества по 30 рублей в сутки за каждую картину, в общеобразовательные, культурные и административные учреждения, меценаты активно участвуют в этом процессе.
           </p>
         </div>
-        <div class="col-12 col-md-3 offset-0 offset-1">
+        <div class="col-12 col-md-3 offset-0 offset-md-1 text-center img-b">
           <img src="/p1.png" alt="">
         </div>
       </div>
       <q-separator spaced="xl"/>
       <div class="row">
-        <div class="col-12 col-md-3 ">
+        <div class="col-12 col-md-3 text-center">
           <img src="/p3.png" alt="">
         </div>
-        <div class="col-12 col-md-7 offset-0 offset-2">
+        <div class="col-12 col-md-7 offset-0 offset-md-2">
+          <h3 class="title q-mb-lg fs-36 ">Только проверенные авторы</h3>
           <p class="no-margin text-avenir-300">
             Все наши картины анонимные, мы заведомо не указываем авторов, чтобы авторитетом и перечнем заслуг не завышать цены на них. С каждым художником мы имеем соглашение на покупку оцифрованной картины, на общий тираж произведения (30 штук с каждого оригинала), печать, подпись и сертификат от художника подтверждает это.
             <br><br>
@@ -60,7 +63,8 @@
       </div>
       <q-separator spaced="xl"/>
       <div class="row q-mb-xl">
-        <div class="col-12 col-md-7 ">
+        <div class="col-12 col-md-7 text-b">
+          <h3 class="title q-mb-lg fs-36">Качество работы для нас превыше всего</h3>
           <p class="no-margin text-avenir-300">
             Мы работаем только с акварельной живописью в Digi Gravure – цифровая гравюра. DIGI – оцифровка оригинала. GRAVURE – оттиск на бумаге. Оборудование – CANON PRO – 6000 (12 – цветный принтер с минеральными пигментами высокой четкости музейного качества.
             <br><br>
@@ -69,7 +73,7 @@
             Современная, цифровая, типографская техника с поразительной точностью копирует и переносит на бумагу не только цвет, но и фактуру красок, бумаги, холста.
           </p>
         </div>
-        <div class="col-12 col-md-3 offset-0 offset-1">
+        <div class="col-12 col-md-3 offset-0 offset-md-1 text-center img-b">
           <img src="/p4.png" alt="">
         </div>
       </div>
@@ -81,20 +85,30 @@
 
     <section  class="about bg-grey-2 q-mb-none q-pt-xl">
       <div class="container">
-         <q-img class="q-mb-xl" src="~assets/pp2-1.png"/>
+         <div class="row q-mb-xl">
+        <div class="col-12 col-md-6">
+          <q-img src="~assets/pp2-1.png"/>
+        </div>
+        <div class="col-12 col-md-6">
+          <q-img src="~assets/pp2-2.png"/>
+        </div>
+      </div>
         <h3 class="title q-mb-lg ">NFT в искусстве</h3>
 
         <div class="row q-col-gutter-md-xl items-start">
           <div class=" col-12 col-md-6 q-mb-lg q-mb-md-none row-text">
             <p class="text-lh-150">
-              ARTDOX.RU - первая компания, которая сделала NFT искусство Доходным.
+        ARTDOX.RU - первая компания, которая сделала NFT искусство Доходным.
  Наша цель - заявить о себе на торговых площадках NFT и обеспечить нашим Клиентам достойный заработок.
 <br><br>
-Мы предлагаем Покупателю наших картин 2,5% каждый месяц от уплаченной суммы, в той криптовалюте, за которую была приобретена наша картина. Условия сделки прописаны в смарт-контракте, и размещены в блокчейне. Пролонгировать смарт- контракт можно каждый год, через личный кабинет на нашем сайте.
-<br><br>
 Каждому покупателю наших NFT картин мы отправляем  оригинал произведения по тому адресу, который он укажет при заказе картины.
-Основной заработок на NFT-площадках происходит в момент перепродажи картин. Мы уверены, что с функцией ДОХОДА на каждую картину, стоимость возрастет многократно, если этого не случится, готовы будем выкупить сами, за первоначальную стоимость.
-              </p>
+Основной заработок на NFT-площадках происходит в момент перепродажи картин после проведения рекламной кампании.
+<br><br>
+Ваш доход зависит от длительности проведения рекламной кампании и  привязан к курсу криптовалюты ETH (Эфир).
+<br><br>
+Мы гарантируем прибыль от 18 до 34% прибыли в случае проведения “короткой” рекламной кампании и от 65 до 85% прибыли в случае проведения полноценной подготовки аудитории к нашим произведениям искусства.
+<br><br>
+Все картины выкладываются на ресурс и продвигаются нашей компанией в две волны за каждый период времени, параллельно друг с другом.</p>
 
           </div>
           <div class="col-12 col-md-6 row-img q-mb-lg q-mb-md-none">
@@ -110,7 +124,7 @@
     </section>
       <section  class="about bg-grey-2 q-py-xl no-margin">
       <div class="container">
-        <h3 class="title q-mb-lg ">Маркетплейсы, где мы<br class="gt-sm">представлены</h3>
+        <h3 class="title q-mb-lg fs-36">Маркетплейсы, где мы<br class="gt-sm">представлены</h3>
         <p class="text-lh-150 q-mb-xl">
           Кликните на логотип платформы, чтобы сразу перейти на страницу с<br class="gt-sm"> нашим верифицированным магазином </p>
         <div class="row q-col-gutter-md-xl items-start">
@@ -201,6 +215,11 @@ NFT предоставляют мощный инструмент для уста
     &-wrapper
       margin: 0 -10px
       padding: 0 10px
+
+  .text-b
+    order: 2
+  .img-b
+    order: 1
 
 .steps
   display: grid

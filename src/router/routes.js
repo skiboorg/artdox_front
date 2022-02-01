@@ -16,6 +16,7 @@ const routes = [
        { path: 'cart',name:'cart',meta:{title:'Корзина'}, component: () => import('pages/Cart.vue') },
         { path: 'return/:item_id',name:'return', component: () => import('pages/ReturnItem.vue') },
         { path: 'store/:item_id',name:'store', component: () => import('pages/Store.vue') },
+        { path: 'withdrawal',name:'withdrawal', component: () => import('pages/Withdrawal.vue') },
     ]
   },
   {
