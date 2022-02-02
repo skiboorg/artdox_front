@@ -124,7 +124,7 @@
                   </svg>
 
 
-                  <p class="no-margin text-body2 text-avenir-450 text-positive">Безопасно блабла (текст не менять)</p>
+                  <p class="no-margin text-body2 text-avenir-450">Надежный постоянный доход</p>
                 </div>
 <!--                <q-btn class="q-px-xl"   size="18px" color="dark" rounded unelevated no-caps text-color="white" label="Узнать больше"/>-->
               </div>
@@ -152,7 +152,7 @@
 
 
 
-                  <p class="no-margin text-body2 text-avenir-450 text-negative">Небезопасно блабла (текст не менять)</p>
+                  <p class="no-margin text-body2 text-avenir-450">Более рисковый доход, есть привязка к курсу криптовалюты</p>
                 </div>
 <!--                <q-btn class="q-px-xl"   size="18px" color="dark" rounded unelevated no-caps text-color="white" label="Узнать больше"/>-->
               </div>
