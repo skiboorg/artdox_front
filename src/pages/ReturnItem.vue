@@ -73,7 +73,7 @@ export default {
   methods:{
     async request(){
       this.loading = !this.loading
-      const resp = await this.$api.post('/api/data/r_form',{id:this.item.id,text:this.message})
+      const resp = await this.$api.post('/api/user/r_form',{id:this.item.id,text:this.message})
       this.order_id = resp.data.id
       this.is_send = true
       this.$q.notify({

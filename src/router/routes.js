@@ -28,6 +28,7 @@ const routes = [
       { path: 'orders',name:'lk-orders',meta:{title:'Заказы'}, component: () => import('pages/Lk/Orders.vue') },
       { path: 'settings',name:'lk-settings',meta:{title:'Настройки'}, component: () => import('pages/Lk/Settings.vue') },
       { path: 'transactions',name:'lk-transactions',meta:{title:'Транзакции'}, component: () => import('pages/Lk/Transactions.vue') },
+      { path: 'requests',name:'lk-requests',meta:{title:'Обратная связь'}, component: () => import('pages/Lk/Requests.vue') },
 
 
     ]

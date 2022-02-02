@@ -143,7 +143,7 @@ export default {
         headers:{
           'content-type': 'multipart/form-data'
         },
-        url: '/api/data/c_form',
+        url: '/api/user/c_form',
         data: formData
       })
       this.$q.notify({

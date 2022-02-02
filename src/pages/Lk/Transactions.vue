@@ -19,7 +19,7 @@
       style="height: 500px; max-width: 100%"
     >
         <div class="transaction-row item" v-for="item in $auth.user.transactions" :key="item.id">
-        <p class="no-margin text-avenir-600 text-body2  " :class="[item.is_buy ? 'text-warning' : 'text-positive']">{{item.is_buy ? 'Покупка' : 'Вывод'}}</p>
+        <p class="no-margin text-avenir-600 text-body2  " :class="[item.is_buy ? 'text-warning' : 'text-positive']">{{item.is_buy ? 'Покупка' : 'Возврат'}}</p>
         <p class="no-margin text-avenir-600 text-body2  ">{{item.type}}</p>
 
         <p class="no-margin text-body2  text-grey-6">{{ new Date(item.created_at).toLocaleDateString() }}</p>
