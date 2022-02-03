@@ -13,7 +13,20 @@
           swipeable
           infinite
         >
-          <q-carousel-slide :name="index+1" :img-src="$q.screen.lt.sm ? slide.image_mob : slide.image" v-for="(slide,index) in offerSlides" :key="index" />
+          <q-carousel-slide :name="index+1" :img-src="$q.screen.lt.sm ? slide.image_mob : slide.image" v-for="(slide,index) in offerSlides" :key="index" >
+            <div class="container full-height">
+              <div class="flex column justify-center full-height">
+                <p class="text-white text-h3 text-avenir-600">{{slide.title}}</p>
+                <p class="text-white text-h6 text-weight-bold" v-html="slide.text"></p>
+                <div v-if="slide.button_url" class="q-mt-xl">
+                  <q-btn class="q-py-sm q-px-lg" rounded color="white" text-color="dark"
+                         size="18px" no-caps unelevated :label="slide.button_text" :to="slide.button_url"/>
+                </div>
+
+              </div>
+           </div>
+          </q-carousel-slide>
+
         </q-carousel>
       </div>
     </section>
@@ -523,7 +536,8 @@ export default {
   background: $grey-2
 
   &-slider
-    height: 900px
+    max-height: 700px
+    height: 700px
     background: $grey-2
   &-slide
     background: $grey-2
