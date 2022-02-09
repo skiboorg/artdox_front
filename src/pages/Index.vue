@@ -16,8 +16,8 @@
           <q-carousel-slide :name="index+1" :img-src="$q.screen.lt.sm ? slide.image_mob : slide.image" v-for="(slide,index) in offerSlides" :key="index" >
             <div class="container full-height">
               <div class="flex column justify-center full-height">
-                <p style="font-size: 5vw" class="text-white  text-avenir-600 q-mb-lg">{{slide.title}}</p>
-                <p style="font-size: 2vw" class="text-white  text-weight-bold" v-html="slide.text"></p>
+                <p  class="text-white offer-slider-title text-avenir-600 q-mb-lg">{{slide.title}}</p>
+                <p  class="text-white offer-slider-text text-weight-bold" v-html="slide.text"></p>
                 <div v-if="slide.button_url" class="q-mt-xl">
                   <q-btn class="q-py-sm q-px-lg" rounded color="white" text-color="dark"
                          size="18px" no-caps unelevated :label="slide.button_text" :to="slide.button_url"/>
@@ -60,7 +60,7 @@
         <h3 class="title q-mb-lg ">Доход</h3>
 
         <div class="row q-col-gutter-md-xl ">
-          <div class=" col-12 col-md-9">
+          <div class=" col-12 col-md-9 q-mb-lg q-mb-md-none">
             <p class="q-mb-lg q-mb-md-xl text-lh-150 ">
               Наша работа позволяет сформировать доходность для каждой картины, при этом уровень ликвидности не зависит от художественной ценности и материальной стоимости актива, прибыль с картин получается при условии участия в экспозиционной и продажной деятельности на территории Китая и России.
 
@@ -391,8 +391,9 @@ export default {
       newsItems:[
         {date:'17 февраля 2020', tag:'Денис Белькевич',title:'Просто о сложном: Art Investment',text:'Предметы искусства с инвестиционной точки зрения такой же материальный актив, как драгоценные металлы, недвижимость, акции и другие ценные бумаги. В середине 1980-х «язык искусства» начали переводить на понятный инвестору финансовый язык. С 2000-х годов, после появления доступных статистических баз данных и инвестиционной аналитики, искусство начали использовать в качестве осмысленного финансового инструмента.',url:'https://artinvestment.ru/invest/analytics/20200217_art_invest_2.html'},
         {date:'22 ноября 2020', tag:'Ксения Хофманн',title:'Произведения искусства как инструмент инвестиций',text:'Произведения искусства могут расти в цене и приносить своим вкладчикам прибыль подобно акциям и другим известным нам активам. Например, картина «Спаситель мира», написанная Леонардо Да Винчи в 1499 году, сейчас стоит более $450 млн, а «Алжирские женщины» Пабло Пикассо – почти $180 млн.',url:'https://vc.ru/finance/179696-proizvedeniya-iskusstva-kak-instrument-investiciy'},
-        {date:'4 сентября 2021', tag:'Алексей Кудрявцев',title:'Открытие платформы Artdox 1 ноября 2021 года',
-          text:'Первого ноября в Москве при поддержке Digi Gravure и Академии акварели и изящных искусств Сергея Андрияки открывается новый портал доходного искусства Artdox. Все желающие получат возможноть приобрести уникальные по качеству работы именитых художников и получать прибыль от выставлений репродукций на выставках и экспозициях',url:'https://vc.ru/finance/179696-proizvedeniya-iskusstva-kak-instrument-investiciy'},
+        {date:'4 сентября 2021', tag:'Анна Ангелова',title:'Разбираемся, что такое NFT и криптоискусство',
+          text:'NFT и криптоискусство стали громким трендом последних недель, и чаще всего их обсуждают в связи со стоимостью лотов – которая иногда шокирует. В самом деле, сколько вы готовы заплатить за цифровую картину или небольшое видео, которые формально будут вашими, но останутся в общем доступе?',
+          url:'https://texterra.ru/blog/nft-i-kriptoiskusstvo-novyy-gromkiy-i-strannyy-trend-na-kotorom-zarabatyvayut-milliony-i-piaryatsya.html'},
       ],
       interierItems:[
         {title:'Заказ картин',text:'Если картины нет в наличии, вы можете сделать Заказ.',
@@ -472,6 +473,10 @@ export default {
     max-height: 700px
     height: 700px
     background: $grey-2
+    &-title
+      font-size: 50px
+    &-text
+      font-size: 25px
   &-slide
     background: $grey-2
     color: #fff
@@ -550,6 +555,10 @@ export default {
 @media (max-width: 480px)
   .offer-slider
     height: 500px
+    &-title
+      font-size: 25px
+    &-text
+      font-size: 16px
 .interier
   &-grid
     display: grid
